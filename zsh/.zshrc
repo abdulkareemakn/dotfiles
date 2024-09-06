@@ -32,12 +32,16 @@ unset __conda_setup
 #Added manually for CONDA
 conda config --set auto_activate_base false
 
+# oh my posh 
+export PATH=$PATH:/home/abdulkareem/.local/bin
+
+eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/jblab_2021.omp.json )"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -132,3 +136,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias src="source ~/.zshrc"
