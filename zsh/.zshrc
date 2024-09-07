@@ -37,6 +37,12 @@ export PATH=$PATH:/home/abdulkareem/.local/bin
 
 eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/jblab_2021.omp.json )"
 
+#starship prompt
+#eval "$(starship init zsh)"
+
+#starship preset pastel-powerline -o ~/.config/starship.toml
+
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
