@@ -145,4 +145,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias zshrc="nvim ~/.zshrc"
 alias src="source ~/.zshrc"
+alias ls="exa -al"
+alias cat="bat"
