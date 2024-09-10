@@ -149,3 +149,7 @@ alias zshrc="nvim ~/.zshrc"
 alias src="source ~/.zshrc"
 alias ls="exa -al"
 alias cat="bat"
+
+
+# Zoxide, Smarter CD
+eval "$(zoxide init zsh)"

@@ -1,0 +1,5 @@
+alias zshrc="nvim ~/.zshrc"
+alias src="source ~/.zshrc"
+alias ls="exa -Al"
+alias cat="bat"
+alias please="sudo !!"
