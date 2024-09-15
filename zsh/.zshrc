@@ -35,7 +35,7 @@ conda config --set auto_activate_base false
 # oh my posh 
 export PATH=$PATH:/home/abdulkareem/.local/bin
 
-eval "$(oh-my-posh init zsh --config /home/abdulkareem/dotfiles/oh-my-posh/theme.omp.toml )"
+eval "$(oh-my-posh init zsh --config ~/dotfiles/oh-my-posh/theme.omp.toml )"
 
 #eval "$(oh-my-posh init zsh)"
 
