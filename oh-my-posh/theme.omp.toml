@@ -149,8 +149,8 @@ playing_icon = "\uf04b "
 
 
 [[blocks.segments]]
-background = "#2e9599"
-foreground = "#111111"
+background = "#34495e"
+foreground = "#ffffff"
 invert_powerline = true
 leading_diamond = "\ue0b2"
 style = "diamond"
