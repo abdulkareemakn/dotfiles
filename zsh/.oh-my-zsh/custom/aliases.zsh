@@ -1,6 +1,5 @@
 alias zshrc="micro ~/.zshrc"
-alias src="source ~/.zshrc"
-alias ls="exa -Al --group-directories-first"
+alias ls="exa -l --group-directories-first"
+alias la="exa -Al --group-directories-first"
 alias cat="bat"
 alias ..="cd .."
-alias upgrade="sudo pacman -Syu"
