@@ -37,8 +37,9 @@ export PATH=$PATH:/home/abdulkareem/.local/bin
 
 eval "$(oh-my-posh init zsh --config ~/dotfiles/oh-my-posh/theme.omp.toml )"
 
-#eval "$(oh-my-posh init zsh)"
+#eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/jandedobbeleer.omp.json )"
 
+#eval "$(oh-my-posh init zsh)"
 
 #starship prompt
 #eval "$(starship init zsh)"
