@@ -6,7 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export TERMINAL=kitty
 export EDITOR=micro
-
+export TERM=xterm-kitty
 
 #NVM 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
