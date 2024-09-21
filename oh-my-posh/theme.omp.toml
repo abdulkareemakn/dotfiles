@@ -77,7 +77,7 @@ fetch_status = true
 fetch_upstream_icon = true
 
 [[blocks.segments]]
-background = "#FFD43B"
+background = "#FFDF00"
 foreground = "#111111"
 powerline_symbol = "\ue0b0"
 style = "powerline"
@@ -86,7 +86,7 @@ template = "  {{ .Full }} "
 type = "python"
 
 [blocks.segments.properties]
-display_mode = "context"
+display_mode = "environment"
 fetch_virtual_env = true
 home_enabled=true
 display_default=true
