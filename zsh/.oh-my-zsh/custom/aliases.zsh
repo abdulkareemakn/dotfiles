@@ -15,7 +15,15 @@ alias mkdir="mkdir -pv"
 alias upgrade="sudo pacman -Syu"
 alias install="sudo pacman -S"
 alias search="yay -Ss"
+alias remove="sudo pacman -R"
 
 # Python Environments
 alias CS50="source /home/abdulkareem/projects/python/CS50/bin/activate"
- 
+alias rc="ruff check"
+alias rf="ruff format"
+
+# git
+alias gst="git status"
+alias gad="git add"
+alias gc="git commit -m"
+alias gp="git push origin main"
