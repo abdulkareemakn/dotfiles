@@ -5,7 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 export TERMINAL=kitty
-export EDITOR=/usr/bin/kitty
+export EDITOR=nvim
 export TERM=xterm-kitty
 
 #NVM 

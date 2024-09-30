@@ -1,4 +1,6 @@
-alias zshrc="micro ~/.zshrc"
+alias zshrc="nvim ~/.zshrc"
+alias aliases="nvim /home/abdulkareem/.oh-my-zsh/custom/aliases.zsh"
+
 
 # File System Aliases
 alias ls="exa -lh --group-directories-first"
