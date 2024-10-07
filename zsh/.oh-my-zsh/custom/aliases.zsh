@@ -25,7 +25,7 @@ alias rc="ruff check"
 alias rf="ruff format"
 
 # git
-alias gst="git status"
-alias gad="git add"
+alias gs="git status"
+alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push origin main"
