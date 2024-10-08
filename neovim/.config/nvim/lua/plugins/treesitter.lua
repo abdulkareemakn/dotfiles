@@ -6,7 +6,8 @@ local M = {
 
 		configs.setup({
 
-			ensure_installed = { "c", "lua", "cpp", "python", "javascript", "html", "go", "toml", "json" },
+			--	ensure_installed = { "c", "lua", "cpp", "python", "javascript", "html", "go", "toml", "json" },
+			auto_install = true,
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
