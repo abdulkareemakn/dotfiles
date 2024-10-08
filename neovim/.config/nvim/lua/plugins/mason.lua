@@ -38,23 +38,63 @@ return {
 			lspconfig.eslint.setup({
 				capabilities = capabilities,
 			})
-			--lspconfig.pylsp.setup({})
-			lspconfig.ruff.setup({
+			lspconfig.pyright.setup({
 				capabilities = capabilities,
+				settings = {
+					pyright = {
+						-- Using Ruff's import organizer
+						disableOrganizeImports = true,
+					},
+					python = {
+						analysis = {
+							-- Ignore all files for analysis to exclusively use Ruff for linting
+							ignore = { "*" },
+						},
+					},
+				},
+			})
+			lspconfig.ts_ls.setup({
+				capabilities = capabilities,
+			})
+			--lspconfig.pylsp.setup({})
+			--lspconfig.pylsp.setup({
+			--	capabilities = capabilities,
+			--	settings = {
+			--		pylsp = {
+			--			plugins = {
+			--				pycodestyle = { enabled = false }, -- Disable pylsp linting
+			--				pyflakes = { enabled = false }, -- Disable pylsp linting
+			--				pylint = { enabled = false }, -- Disable pylint
+			--				autopep8 = { enabled = false }, -- Disable pylsp formatting
+			--				black = { enabled = false }, -- Disable black in pylsp
+			--				yapf = { enabled = false }, -- Disable yapf formatting
+			--			},
+			--		},
+			--	},
+			--	on_attach = function(client, bufnr)
+			--		-- Disable formatting in pylsp to avoid conflicts with Ruff
+			--		client.server_capabilities.documentFormattingProvider = false
+			--		client.server_capabilities.documentRangeFormattingProvider = false
+			--	end,
+			--		})
+			lspconfig.ruff.setup({
+				--			on_attach = function(client, bufnr)
+				--				-- Disable everything except formatting and linting
+				--				client.server_capabilities.documentFormattingProvider = true
+				--				client.server_capabilities.documentRangeFormattingProvider = true
+				--				client.server_capabilities.diagnosticProvider = true
+				--			end,
 			})
 			--		lspconfig.clangd.setup({})
 			--		lspconfig.clangd.setup({})
 			--
-			config = function()
-				require("lspconfig").ruff.setup({
-					init_options = {
-						settings = {
-							-- Server settings should go here
-						},
-					},
-				})
-				require("lspconfig").eslint.setup({})
-			end
+			--				require("lspconfig").ruff.setup({
+			--					init_options = {
+			--						settings = {
+			--							-- Server settings should go here
+			--						},
+			--					},
+			--				})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
