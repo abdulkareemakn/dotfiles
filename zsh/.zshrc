@@ -8,34 +8,33 @@ export TERMINAL=kitty
 export EDITOR=nvim
 export TERM=xterm-kitty
 
-#NVM 
+#NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
-
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 #CONDA
 # >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/abdulkareem/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/abdulkareem/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/abdulkareem/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/abdulkareem/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# # !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/home/abdulkareem/miniconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/abdulkareem/miniconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/abdulkareem/miniconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/abdulkareem/miniconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
 
-#Added manually for CONDA
-conda config --set auto_activate_base false
+# #Added manually for CONDA
+# conda config --set auto_activate_base false
 
-# oh my posh 
+# oh my posh
 export PATH=$PATH:/home/abdulkareem/.local/bin
 
-eval "$(oh-my-posh init zsh --config /home/abdulkareem/.cache/oh-my-posh/themes/amro.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/amro.omp.json)"
 
 #eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/jandedobbeleer.omp.json )"
 
@@ -46,12 +45,11 @@ eval "$(oh-my-posh init zsh --config /home/abdulkareem/.cache/oh-my-posh/themes/
 
 #starship preset pastel-powerline -o ~/.config/starship.toml
 
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME=""
+#ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -113,7 +111,7 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( )
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
@@ -146,12 +144,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-
-
-
-
-
 # Zoxide, Smarter CD
 eval "$(zoxide init zsh)"
-
