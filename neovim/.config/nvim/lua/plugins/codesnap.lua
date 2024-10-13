@@ -21,6 +21,8 @@ return {
 					save_path = os.getenv("XDG_PICTURES_DIR") or (os.getenv("HOME") .. "/Pictures"),
 				},
 			})
+
+			--vim.keymap.set("x", "<leader>gs", "<cmd>CodeSnapSave<cr>")
 		end,
 	},
 }
