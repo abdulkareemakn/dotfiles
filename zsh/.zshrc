@@ -34,7 +34,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # oh my posh
 export PATH=$PATH:/home/abdulkareem/.local/bin
 
-eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/amro.omp.json)"
+eval "$(oh-my-posh init zsh --config /home/abdulkareem/dotfiles/oh-my-posh/theme.omp.toml)"
 
 #eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/jandedobbeleer.omp.json )"
 
