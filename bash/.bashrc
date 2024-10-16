@@ -33,3 +33,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+. "/home/abdulkareem/.deno/env"
