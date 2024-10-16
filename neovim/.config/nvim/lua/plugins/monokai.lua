@@ -1,5 +1,6 @@
 return {
 	"loctvl842/monokai-pro.nvim",
+	enabled = true,
 	config = function()
 		require("monokai-pro").setup({
 			filter = "machine",
