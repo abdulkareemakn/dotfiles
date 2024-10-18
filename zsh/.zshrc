@@ -9,8 +9,8 @@ export EDITOR=nvim
 export TERM=xterm-kitty
 
 #NVM
-#export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 #CONDA
 # >>> conda initialize >>>
@@ -34,15 +34,16 @@ export TERM=xterm-kitty
 # oh my posh
 export PATH=$PATH:/home/abdulkareem/.local/bin
 
-eval "$(oh-my-posh init zsh --config /home/abdulkareem/dotfiles/oh-my-posh/theme.omp.toml)"
+#eval "$(oh-my-posh init zsh --config /home/abdulkareem/dotfiles/oh-my-posh/theme.omp.toml)"
 
 #eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/jandedobbeleer.omp.json )"
 
 #eval "$(oh-my-posh init zsh)"
 
 #starship prompt
-#eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
+#STARSHIP_CONFIG=/home/abdulkareem/.config/starship/starship.toml
 #starship preset pastel-powerline -o ~/.config/starship.toml
 
 # Set name of the theme to load --- if set to "random", it will

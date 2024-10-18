@@ -19,6 +19,10 @@ alias install="sudo pacman -S"
 alias search="yay -Ss"
 alias remove="sudo pacman -R"
 
+# yay
+alias aur install="yay -S"
+alias aur update="yay"
+
 # Python Environments
 alias CS50="source /home/abdulkareem/projects/python/CS50/bin/activate"
 alias rc="ruff check"
