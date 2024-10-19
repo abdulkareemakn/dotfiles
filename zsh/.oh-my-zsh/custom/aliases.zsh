@@ -20,8 +20,8 @@ alias search="yay -Ss"
 alias remove="sudo pacman -R"
 
 # yay
-alias aur install="yay -S"
-alias aur update="yay"
+alias aurinstall="yay -S"
+alias aurupdate="yay"
 
 # Python Environments
 alias CS50="source /home/abdulkareem/projects/python/CS50/bin/activate"
@@ -33,5 +33,4 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push origin main"
-
 

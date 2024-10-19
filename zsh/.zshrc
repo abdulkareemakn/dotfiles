@@ -147,4 +147,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Zoxide, Smarter CD
 eval "$(zoxide init zsh)"
+
+# deno, JavaScript runtime
 . "/home/abdulkareem/.deno/env"
+
