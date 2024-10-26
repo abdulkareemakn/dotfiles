@@ -151,3 +151,7 @@ eval "$(zoxide init zsh)"
 # deno, JavaScript runtime
 . "/home/abdulkareem/.deno/env"
 
+# doom emacs
+export PATH="$HOME/.config/emacs/bin:$PATH"
+
+. "$HOME/.cargo/env"
