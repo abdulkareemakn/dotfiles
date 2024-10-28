@@ -155,3 +155,10 @@ eval "$(zoxide init zsh)"
 export PATH="$HOME/.config/emacs/bin:$PATH"
 
 . "$HOME/.cargo/env"
+
+# bun completions
+[ -s "/home/abdulkareem/.bun/_bun" ] && source "/home/abdulkareem/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
