@@ -38,3 +38,7 @@ alias gp="git push origin main"
 #emacs
 alias emacs="emacs -nw"
 alias emacs-nw="emacs"
+
+# gcc
+alias build='function _run_cpp() { g++ "$1" -o "${1%.cpp}" && ./"${1%.cpp}"; }; _run_cpp'
+
