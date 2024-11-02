@@ -15,7 +15,7 @@ return {
 					"bashls",
 					"clangd",
 					"gopls",
-					"pyright",
+					"basedpyright",
 					"ruff",
 					"ts_ls",
 				},
