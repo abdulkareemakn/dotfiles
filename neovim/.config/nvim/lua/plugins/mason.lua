@@ -47,7 +47,7 @@ return {
 			lspconfig.eslint.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.pyright.setup({
+			lspconfig.basedpyright.setup({
 				capabilities = capabilities,
 				settings = {
 					pyright = {
@@ -65,27 +65,6 @@ return {
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
-			--lspconfig.pylsp.setup({})
-			--lspconfig.pylsp.setup({
-			--	capabilities = capabilities,
-			--	settings = {
-			--		pylsp = {
-			--			plugins = {
-			--				pycodestyle = { enabled = false }, -- Disable pylsp linting
-			--				pyflakes = { enabled = false }, -- Disable pylsp linting
-			--				pylint = { enabled = false }, -- Disable pylint
-			--				autopep8 = { enabled = false }, -- Disable pylsp formatting
-			--				black = { enabled = false }, -- Disable black in pylsp
-			--				yapf = { enabled = false }, -- Disable yapf formatting
-			--			},
-			--		},
-			--	},
-			--	on_attach = function(client, bufnr)
-			--		-- Disable formatting in pylsp to avoid conflicts with Ruff
-			--		client.server_capabilities.documentFormattingProvider = false
-			--		client.server_capabilities.documentRangeFormattingProvider = false
-			--	end,
-			--		})
 			lspconfig.ruff.setup({
 				--			on_attach = function(client, bufnr)
 				--				-- Disable everything except formatting and linting
@@ -94,9 +73,6 @@ return {
 				--				client.server_capabilities.diagnosticProvider = true
 				--			end,
 			})
-			--		lspconfig.clangd.setup({})
-			--		lspconfig.clangd.setup({})
-			--
 			--				require("lspconfig").ruff.setup({
 			--					init_options = {
 			--						settings = {
