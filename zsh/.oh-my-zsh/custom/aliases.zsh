@@ -25,7 +25,7 @@ alias aurupdate="yay"
 
 # Python Environments
 alias CS50="source /home/abdulkareem/projects/python/CS50/bin/activate"
-alias school="source /home/abdulkareem/projects/python/school/school/bin/activate"
+alias school="source /home/abdulkareem/projects/python/school/bin/activate"
 alias rc="ruff check"
 alias rf="ruff format"
 
