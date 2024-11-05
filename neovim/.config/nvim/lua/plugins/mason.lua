@@ -47,7 +47,7 @@ return {
 			lspconfig.eslint.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.basedpyright.setup({
+			lspconfig.pyright.setup({
 				capabilities = capabilities,
 				settings = {
 					pyright = {
