@@ -6,8 +6,6 @@ alias aliases="nvim /home/abdulkareem/.oh-my-zsh/custom/aliases.zsh"
 alias ls="exa -lh --group-directories-first"
 alias la="exa -Alh --group-directories-first"
 
-alias cat="bat"
-
 alias ..="cd .."
 alias ...="cd ../.."
 
