@@ -47,20 +47,8 @@ return {
 			lspconfig.eslint.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.pyright.setup({
+			lspconfig.basedpyright.setup({
 				capabilities = capabilities,
-				settings = {
-					pyright = {
-						-- Using Ruff's import organizer
-						disableOrganizeImports = true,
-					},
-					python = {
-						analysis = {
-							-- Ignore all files for analysis to exclusively use Ruff for linting
-							ignore = { "*" },
-						},
-					},
-				},
 			})
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
@@ -84,7 +72,7 @@ return {
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
-			vim.keymap.set("n", "rn", vim.lsp.buf.rename, {})
+			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
 
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 		end,
