@@ -2,6 +2,8 @@ return {
 	{
 		"kwsp/halcyon-neovim",
 		enabled = true,
-		config = function() end,
+
+		lazy = false,
+		priority = 100,
 	},
 }
