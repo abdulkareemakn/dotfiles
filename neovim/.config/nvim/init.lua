@@ -18,7 +18,17 @@ vim.keymap.set("n", "<S-CR>", "m`O<Esc>``")
 vim.cmd("colorscheme catppuccin-latte")
 
 -- Themes
+
+-- Halcyon, Catppuccin
 vim.keymap.set("n", "<leader>kt", ":Themery<CR>")
+
+-- Material
+vim.keymap.set("n", "<leader>th", function()
+	require("material.functions").find_style()
+end)
+
+-- Monokai
+vim.keymap.set("n", "<leader>mn", ":MonokaiProSelect<CR>")
 
 -- Cursor
 vim.cmd([[
