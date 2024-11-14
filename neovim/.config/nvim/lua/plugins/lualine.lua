@@ -3,7 +3,10 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		require("lualine").setup({
-			options = { theme = "dracula" },
+			options = { theme = "material" },
+		})
+		require("material").setup({
+			lualine_style = "default", -- the default style
 		})
 	end,
 }
