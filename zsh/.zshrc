@@ -165,3 +165,13 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # uv
 eval "$(uv generate-shell-completion zsh)"
+
+# cd
+cd() {
+  if [ -z "$1" ]; then
+    builtin cd ~ 
+  else
+    builtin cd "$1" && ls
+  fi
+}
+
