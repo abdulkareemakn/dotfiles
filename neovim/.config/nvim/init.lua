@@ -15,11 +15,9 @@ vim.keymap.set("n", "<CR>", "m`o<Esc>``")
 vim.keymap.set("n", "<S-CR>", "m`O<Esc>``")
 
 -- colorscheme
-vim.cmd("colorscheme catppuccin-latte")
+-- vim.cmd("colorscheme catppuccin-latte")
 
 -- Themes
-
--- Halcyon, Catppuccin
 vim.keymap.set("n", "<leader>kt", ":Themery<CR>")
 
 -- Material
