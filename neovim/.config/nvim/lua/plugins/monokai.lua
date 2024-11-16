@@ -5,7 +5,7 @@ return {
 	enabled = true,
 	config = function()
 		require("monokai-pro").setup({
-			-- 			filter = "machine",
+			filter = "machine",
 		})
 		-- 		vim.cmd("colorscheme monokai-pro")
 	end,

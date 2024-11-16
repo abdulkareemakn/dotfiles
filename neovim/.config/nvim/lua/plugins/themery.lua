@@ -6,8 +6,12 @@ return {
 			livePreview = true,
 
 			themes = {
-				{ name = "Halcyon", colorscheme = "halcyon" },
 				{ name = "Catppuccin", colorscheme = "catppuccin-latte" },
+				{ name = "Material", colorscheme = "material", before = [[vim.g.material_style = "lighter"]] },
+				{ name = "Ayu Light", colorscheme = "ayu", before = [[vim.g.ayucolor = "light"]] },
+
+				{ name = "Monokai", colorscheme = "monokai-pro" },
+				{ name = "Ayu Mirage", colorscheme = "ayu", before = [[vim.g.ayucolor = "mirage"]] },
 			},
 		})
 	end,
