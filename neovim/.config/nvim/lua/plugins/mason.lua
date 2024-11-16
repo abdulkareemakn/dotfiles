@@ -49,6 +49,16 @@ return {
 			})
 			lspconfig.basedpyright.setup({
 				capabilities = capabilities,
+				settings = {
+					basedpyright = {
+						analysis = {
+							diagnosticSeverityOverrides = {
+								reportUnusedVariable = "none",
+								reportUnusedImport = "none",
+							},
+						},
+					},
+				},
 			})
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
