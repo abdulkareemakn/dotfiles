@@ -22,7 +22,7 @@ alias aurinstall="yay -S"
 alias aurupdate="yay"
 
 # Python Environments
-alias cs50="cd ~/projects/python/CS50/src; source /home/abdulkareem/projects/python/CS50/bin/activate"
+alias CS50="cd ~/projects/python/CS50/src; source /home/abdulkareem/projects/python/CS50/bin/activate"
 alias school="source /home/abdulkareem/projects/python/school/bin/activate"
 alias rc="ruff check"
 alias rf="ruff format"
@@ -44,13 +44,3 @@ alias build='function _run_cpp() { g++ "$1" -o "${1%.cpp}" && ./"${1%.cpp}"; }; 
 # fastfetch
 alias iusearchbtw="fastfetch"
 
-# CS50
-CS50 () {
-  project_name = "$2"
-
-  mkdir "$project_name"
-  cd "$project_name"
-  touch "$project_name.py"
-  nvim "$project_name.py"
-
-}
