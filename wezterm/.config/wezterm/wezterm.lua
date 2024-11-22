@@ -33,5 +33,15 @@ config.keys = {
 	},
 }
 
+-- Panes
+config.keys = {
+	-- This will create a new split and run your default program inside it
+	{
+		key = "F2",
+		mods = "",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+}
+
 -- and finally, return the configuration to wezterm
 return config
