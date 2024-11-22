@@ -24,24 +24,24 @@ config.window_background_opacity = 1.0
 -- Font
 config.font = wezterm.font("FiraCode Nerd Font", { weight = "Medium", italic = false })
 
--- Full Screen
 config.keys = {
+	-- Full Screen
 	{
 		key = "n",
-		mods = "SHIFT|CTRL",
+		mods = "CTRL|SHIFT",
 		action = wezterm.action.ToggleFullScreen,
 	},
-}
 
--- Panes
-config.keys = {
-	-- This will create a new split and run your default program inside it
+	-- Panes
 	{
 		key = "F2",
 		mods = "",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 }
+
+-- Encoding
+config.enable_csi_u_key_encoding = true
 
 -- and finally, return the configuration to wezterm
 return config
