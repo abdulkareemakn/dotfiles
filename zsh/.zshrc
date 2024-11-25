@@ -161,6 +161,7 @@ eval "$(zoxide init zsh)"
 # doom emacs
 export PATH="$HOME/.config/emacs/bin:$PATH"
 
+# cargo
 . "$HOME/.cargo/env"
 
 # bun completions
@@ -172,6 +173,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # uv
 eval "$(uv generate-shell-completion zsh)"
+
+# thefuck
+eval $(thefuck --alias)
 
 # cd
 cd() {

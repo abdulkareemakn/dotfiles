@@ -5,8 +5,8 @@ alias cls="clear"
 
 
 # File System Aliases
-alias ls="exa -lh --group-directories-first"
-alias la="exa -Alh --group-directories-first"
+alias ls="eza -lh --group-directories-first --icons=always"
+alias la="eza -Alh --group-directories-first --icons=always"
 
 alias ..="cd .."
 alias ...="cd ../.."
