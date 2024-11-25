@@ -10,6 +10,7 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
+					"jsonls",
 					"eslint",
 					"lua_ls",
 					"bashls",
@@ -18,6 +19,7 @@ return {
 					"basedpyright",
 					"ruff",
 					"ts_ls",
+					"taplo",
 				},
 			})
 		end,
@@ -70,6 +72,27 @@ return {
 				--				client.server_capabilities.documentRangeFormattingProvider = true
 				--				client.server_capabilities.diagnosticProvider = true
 				--			end,
+			})
+			require("lspconfig").jsonls.setup({
+				capabilities = capabilities,
+				settings = {
+					json = {
+						schemas = require("schemastore").json.schemas(),
+						validate = { enable = true },
+					},
+				},
+			})
+			require("lspconfig").taplo.setup({
+				capabilities = capabilities,
+				settings = {
+					taplo = {
+						schema = {
+							associations = {
+								["~/.config/starship.toml"] = "https://starship.rs/config-schema.json",
+							},
+						},
+					},
+				},
 			})
 			--				require("lspconfig").ruff.setup({
 			--					init_options = {
