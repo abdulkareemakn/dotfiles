@@ -24,6 +24,7 @@ config.window_background_opacity = 1.0
 -- Font
 config.font = wezterm.font("FiraCode Nerd Font", { weight = "Medium", italic = false })
 
+-- Keybindings
 config.keys = {
 	-- Full Screen
 	{
@@ -37,6 +38,16 @@ config.keys = {
 		key = "F2",
 		mods = "",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+}
+
+-- Mouse keybindings
+config.mouse_bindings = {
+	-- Ctrl-click will open the link under the mouse cursor
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "CTRL",
+		action = wezterm.action.OpenLinkAtMouseCursor,
 	},
 }
 
