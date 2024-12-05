@@ -8,7 +8,7 @@ vim.g.mapleader = " "
 vim.opt.number = true
 
 -- Relative Line Numbers
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 -- Colors
 vim.cmd("set termguicolors")
