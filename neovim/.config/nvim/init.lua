@@ -4,6 +4,9 @@ require("config.lazy")
 -- Leader
 vim.g.mapleader = " "
 
+-- Absolute Line Numbers
+vim.opt.number = true
+
 -- Relative Line Numbers
 vim.opt.relativenumber = true
 
