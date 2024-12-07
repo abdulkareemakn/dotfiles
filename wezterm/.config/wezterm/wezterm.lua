@@ -7,7 +7,22 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = "MaterialDesignColors"
+function get_appearance()
+	if wezterm.gui then
+		return wezterm.gui.get_appearance()
+	end
+	return "Dark"
+end
+
+function scheme_for_appearance(appearance)
+	if appearance:find("Dark") then
+		return "MaterialDesignColors"
+	else
+		return "Material"
+	end
+end
+
+config.color_scheme = scheme_for_appearance(get_appearance())
 
 -- Cursor
 config.default_cursor_style = "SteadyBar"
