@@ -17,6 +17,11 @@ vim.cmd("set termguicolors")
 vim.keymap.set("n", "<CR>", "m`o<Esc>``")
 vim.keymap.set("n", "<S-CR>", "m`O<Esc>``")
 
+-- Zen Mode
+vim.keymap.set("n", "<leader>z", function()
+	Snacks.zen()
+end, { desc = "Toggle Zen Mode" })
+
 -- colorscheme
 -- vim.cmd("colorscheme catppuccin-latte")
 
