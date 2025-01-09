@@ -1,0 +1,25 @@
+# Theme
+theme = MaterialDesignColors
+
+# Font-Family
+# font-family = "MonaspiceNe NF Italic"
+font-family = "FiraCode Nerd Font Med"
+
+# Cursor
+cursor-color = #00ffff
+cursor-style = "bar"
+
+# Mouse
+mouse-hide-while-typing = true
+
+# Fullscreen
+fullscreen = true
+
+# Title
+title = " "
+
+# Window
+window-decoration = false
+
+#
+copy-on-select = true
