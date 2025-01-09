@@ -9,11 +9,3 @@ vim.opt.expandtab = true
 
 -- Colors
 vim.cmd("set termguicolors")
-
--- Cursor
-vim.cmd([[
-highlight Cursor guibg=Black guifg=White
-highlight iCursor guibg=Black guifg=White
-set guicursor=n-v-c:block-Cursor
-set guicursor+=i:ver25-iCursor
-]])
