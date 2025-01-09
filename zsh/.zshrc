@@ -38,12 +38,6 @@ eval "$(zoxide init zsh)"
 # Thefuck
 eval $(thefuck --alias FUCK)
 
-# Spicetify
-export PATH=$PATH:/home/abdulkareem/.spicetify
-
-# NVM
-source /usr/share/nvm/init-nvm.sh
-
 # uv
 eval "$(uv generate-shell-completion zsh)"
 
