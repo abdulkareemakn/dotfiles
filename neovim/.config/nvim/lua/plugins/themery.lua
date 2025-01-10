@@ -74,6 +74,6 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<leader>th", ":Themery<CR>", {desc='Change theme'})
+		vim.keymap.set("n", "<leader>th", ":Themery<CR>", { desc = "Change theme" })
 	end,
 }
