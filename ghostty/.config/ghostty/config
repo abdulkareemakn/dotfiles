@@ -23,3 +23,6 @@ window-decoration = false
 
 #
 copy-on-select = true
+
+# Panes
+keybind = shift+alt+r=new_split:right
