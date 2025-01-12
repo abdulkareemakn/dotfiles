@@ -10,6 +10,10 @@ map("n", "<S-A-Up>", "yyP", { desc = "Clone current line up" })
 -- Theme switcher
 map("n", "<leader>th", ":Themery<CR>", { desc = "Change theme" })
 
+-- Normal Mode
+map("i", "jk", "<Esc>", { desc = "Switch to normal Mode" })
+map("i", "kj", "<Esc>", { desc = "Switch to normal Mode" })
+
 
 -- map("v", "<S-A-Down>", "<Esc>yp", { desc = "Clone code block down" })
 -- map("v", "<S-A-Up>", "yP", { desc = "Clone code block up" })
