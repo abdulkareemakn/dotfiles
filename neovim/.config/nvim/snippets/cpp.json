@@ -1,0 +1,9 @@
+{
+    "endl":{
+        "prefix": "endl",
+        "body": [
+            " << std::endl;"
+        ],
+        "description": "A snippet to insert std::endl."
+    }
+}

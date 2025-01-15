@@ -36,6 +36,10 @@ map("n", "gd", function() Snacks.picker.lsp_definitions() end, { desc = "Goto De
 map("n", "gI", function() Snacks.picker.lsp_implementations() end, { desc = "Goto Implementation" })
 map("n", "<leader>ss", function() Snacks.picker.lsp_symbols() end, { desc = "LSP Symbols" })
 
+-- Scissors
+map("n", "<leader>se", function() require("scissors").editSnippet() end, { desc = "Snippet: Edit" })
+map({ "n", "x" }, "<leader>sa", function() require("scissors").addNewSnippet() end, { desc = "Snippet: Add" })
+
 -- Pickers
 
 
