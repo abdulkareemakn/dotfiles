@@ -52,8 +52,9 @@ function y() {
 }
 
 # History Setup
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+# setopt HIST_IGNORE_DUPS
+# setopt HIST_IGNORE_ALL_DUPS
 
 # File System Aliases
 alias ls="lsd --icon=always -l"
