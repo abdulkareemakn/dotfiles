@@ -42,7 +42,7 @@ return {
 					local opts = { noremap = true, silent = true, buffer = bufnr }
 
 					-- Go to definition
-					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts, { desc = "Goto Definition" })
+--					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts, { desc = "Goto Definition" })
 
 					-- Go to declaration
 					vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts, { desc = "Goto Declaration" })
@@ -51,7 +51,7 @@ return {
 					vim.keymap.set("n", "gy", vim.lsp.buf.type_definition, opts)
 
 					-- Go to implementation
-					vim.keymap.set("n", "gI", vim.lsp.buf.implementation, opts)
+--					vim.keymap.set("n", "gI", vim.lsp.buf.implementation, opts)
 
 					-- Show hover documentation
 					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
@@ -62,9 +62,6 @@ return {
 
 					-- Renaming
 					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-
-					-- Formatting
-					vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, opts)
 
 					-- List references
 					vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
