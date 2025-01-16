@@ -6,6 +6,13 @@ return {
         dashboard = { enabled = true },
         input = { enabled = true },
         quickfile = { enabled = true },
-        picker = { enabled = true },
+        picker = {
+            enabled = true,
+            formatters = {
+                file = {
+                    filename_first = true,
+                },
+            },
+        },
     },
 }
