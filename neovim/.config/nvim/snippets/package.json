@@ -1,17 +1,21 @@
 {
-    "name": "my-snippets",
-    "contributes": {
-        "snippets": [
-            {
-                "path": ".\/cpp.json",
-                "language": "cpp"
-            },
-            {
-                "path": ".\/json.json",
-                "language": [
-                    "json"
-                ]
-            }
+  "name": "my-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "path": "./cpp.json",
+        "language": "cpp"
+      },
+      {
+        "path": "./json.json",
+        "language": [
+          "json"
         ]
-    }
+      },
+      {
+        "path": "./html.json",
+        "language": "html"
+      }
+    ]
+  }
 }

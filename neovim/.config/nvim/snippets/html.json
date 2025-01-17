@@ -1,0 +1,9 @@
+{
+    "lorem": {
+        "prefix": "lorem",
+        "body": [
+            "Lorem ipsum odor amet, consectetuer adipiscing elit. Ante faucibus bibendum aenean; sociosqu dolor massa. Ipsum dui adipiscing enim hac mi praesent ultrices natoque. Morbi nascetur arcu magnis nostra rutrum suscipit. Aliquet dapibus ligula habitant, senectus amet sem."
+        ],
+        "description": "Generate random lorem ipsum text."
+    }
+}

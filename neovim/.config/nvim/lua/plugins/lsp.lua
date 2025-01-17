@@ -134,6 +134,14 @@ return {
                 on_attach = on_attach,
                 capabilities = capabilities,
             })
+            lspconfig.html.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+            lspconfig.cssls.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
 
             vim.api.nvim_create_autocmd("LspAttach", {
                 group = vim.api.nvim_create_augroup("lsp_attach_disable_ruff_hover", { clear = true }),
