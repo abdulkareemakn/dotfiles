@@ -15,7 +15,7 @@ antigen use oh-my-zsh
 antigen bundle command-not-found
 
 # Syntax Highlighting, Completions and Autocomplete
-antigen bundle zsh-users/zsh-syntax-highlighting
+# antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 
@@ -30,13 +30,13 @@ export TERMINAL=wezterm
 export EDITOR=nvim
 
 # Starship Prompt
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # Zoxide
 eval "$(zoxide init zsh)"
 
 # Thefuck
-eval $(thefuck --alias FUCK)
+# eval $(thefuck --alias FUCK)
 
 # uv
 eval "$(uv generate-shell-completion zsh)"
