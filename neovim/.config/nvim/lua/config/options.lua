@@ -1,11 +1,20 @@
+local opt = vim.opt
+
 -- Line Numbers
-vim.opt.number = true
-vim.opt.relativenumber = true
+opt.number = true
+opt.relativenumber = true
 
 -- Spacing
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+
+-- Searching
+opt.ignorecase = true
+opt.smartcase = true
+
+-- Clipboard
+opt.clipboard:append("unnamedplus")
 
 -- Colors
 vim.cmd("set termguicolors")
