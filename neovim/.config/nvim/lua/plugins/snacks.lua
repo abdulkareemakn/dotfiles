@@ -14,5 +14,6 @@ return {
                 },
             },
         },
+        notifier = { enabled = true },
     },
 }
