@@ -8,17 +8,30 @@ fi
 # Antigen
 source /home/abdulkareem/antigen.zsh
 
+# Antibody
+# source '/usr/share/zsh-antidote/antidote.zsh'
+
+
+# antidote load
+
 # Loading oh-my-zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo
 antigen bundle command-not-found
+antigen bundle copyfile
+antigen bundle dirhistory
+
 
 # Syntax Highlighting, Completions and Autocomplete
-# antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 
+# For remembering aliases
+antigen bundle "MichaelAquilina/zsh-you-should-use"
+
+# Powerlevel10k
 antigen theme romkatv/powerlevel10k
 
 
@@ -26,7 +39,7 @@ antigen apply
 
 
 # Environment Variables
-export TERMINAL=wezterm
+export TERMINAL=kitty
 export EDITOR=nvim
 
 # Starship Prompt
@@ -36,7 +49,7 @@ export EDITOR=nvim
 eval "$(zoxide init zsh)"
 
 # Thefuck
-# eval $(thefuck --alias FUCK)
+eval $(thefuck --alias fml)
 
 # uv
 eval "$(uv generate-shell-completion zsh)"
@@ -52,9 +65,19 @@ function y() {
 }
 
 # History Setup
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
 setopt HIST_SAVE_NO_DUPS
-# setopt HIST_IGNORE_DUPS
-# setopt HIST_IGNORE_ALL_DUPS
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
 
 # File System Aliases
 alias ls="lsd --icon=always -l"
@@ -80,6 +103,7 @@ alias zshrc="nvim ~/.zshrc"
 
 alias cls="clear"
 
+alias nv="nvim"
 
 alias ..="cd .."
 alias ...="cd ../.."
