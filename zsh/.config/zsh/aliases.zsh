@@ -1,17 +1,16 @@
+alias zshrc="nvim ~/.zshrc"
+
+alias aliases="nvim ~/dotfiles/zsh/.config/zsh/aliases.zsh"
+
 # File System Aliases
 alias ls="lsd --icon=always -l"
 alias la="lsd -A --icon=always -l"
-
-alias zshrc="nvim ~/.zshrc"
 
 alias cls="clear"
 
 alias nv="nvim"
 
-alias ..="cd .."
-alias ...="cd ../.."
-
-alias mkdir="mkdir -pv"
+alias md="mkdir -pv"
 
 # pacman aliases
 alias upgrade="sudo pacman -Syu"

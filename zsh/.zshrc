@@ -29,7 +29,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 
 # For remembering aliases
-antigen bundle "MichaelAquilina/zsh-you-should-use"
+antigen bundle MichaelAquilina/zsh-you-should-use
 
 # Powerlevel10k
 antigen theme romkatv/powerlevel10k
@@ -92,11 +92,9 @@ cd() {
 	fi
 }
 
-# Function that automatically changes into the newly created directory
 mkcd() {
-    mkdir -p "$1" && cd "$1"
+  mkdir -p $argv && cd $argv
 }
-
 
 please() {
     sudo $(fc -ln -1)
