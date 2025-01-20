@@ -42,6 +42,10 @@ antigen apply
 export TERMINAL=kitty
 export EDITOR=nvim
 
+if [ -f ~/.config/zsh/aliases.zsh ]; then
+    source ~/.config/zsh/aliases.zsh
+fi
+
 # Starship Prompt
 # eval "$(starship init zsh)"
 
@@ -79,10 +83,6 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 
-# File System Aliases
-alias ls="lsd --icon=always -l"
-alias la="lsd -A --icon=always -l"
-
 # Function that calls ls everytime cd is run
 cd() {
 	if [ -z "$1" ]; then
@@ -98,40 +98,9 @@ mkcd() {
 }
 
 
-# Aliases
-alias zshrc="nvim ~/.zshrc"
-
-alias cls="clear"
-
-alias nv="nvim"
-
-alias ..="cd .."
-alias ...="cd ../.."
-
-alias mkdir="mkdir -pv"
-
-# pacman aliases
-alias upgrade="sudo pacman -Syu"
-alias install="sudo pacman -S"
-alias search="yay -Ss"
-alias remove="sudo pacman -R"
-
-# yay
-alias aurinstall="yay -S"
-alias aurupdate="yay"
-
-# Python Environments
-alias cs50="cd /home/abdulkareem/projects/python/CS50P/src/project/; source /home/abdulkareem/projects/python/CS50P/.venv/bin/activate"
-alias school="source /home/abdulkareem/projects/python/school/bin/activate"
-alias rc="ruff check"
-alias rf="ruff format"
-
-# git
-alias gs="git status"
-alias ga="git add"
-alias gaa="git add ."
-alias gc="git commit -m"
-alias gp="git push origin main"
+please() {
+    sudo $(fc -ln -1)
+}
 
 # gcc
 build() {
@@ -139,20 +108,7 @@ build() {
 }
 compdef '_files -g "*.cpp"' build
 
-# fastfetch
-alias iusearchbtw="fastfetch"
 
-please() {
-    sudo $(fc -ln -1)
-}
-
-# CS50x
-alias make50='make -s CC=clang CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow" LDLIBS="-lcrypt -lcs50 -lm"'
-
-alias x="cd /home/abdulkareem/projects/CS50x/"
-
-# 100 days
-alias 100="cd /home/abdulkareem/projects/python/100-days-of-code/; source /home/abdulkareem/projects/python/100-days-of-code/.venv/bin/activate"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
