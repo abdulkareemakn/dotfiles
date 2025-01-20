@@ -25,6 +25,9 @@ map("n", "<leader>th", ":Themery<CR>", { desc = "Change theme" })
 map("i", "jk", "<Esc>", { desc = "Switch to normal Mode" })
 map("i", "kj", "<Esc>", { desc = "Switch to normal Mode" })
 
+-- Terminal
+map("n", "<leader>ct", ":lua Snacks.terminal.get()<CR>", { desc = "Open Terminal" })
+
 -- Buffers
 -- map("n", "<leader>bb", ":Telescope buffers<CR>", { desc = "See open buffers" })
 map("n", "<leader>bb", function()

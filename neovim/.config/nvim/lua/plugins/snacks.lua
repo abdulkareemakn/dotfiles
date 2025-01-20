@@ -3,6 +3,7 @@ return {
     priority = 500,
     lazy = false,
     opts = {
+        bigfile = { enabled = true },
         dashboard = { enabled = true },
         input = { enabled = true },
         quickfile = { enabled = true },
@@ -15,5 +16,7 @@ return {
             },
         },
         notifier = { enabled = true },
+        scope = { enabled = true },
+        terminal = { enabled = true },
     },
 }
