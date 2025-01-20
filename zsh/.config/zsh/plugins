@@ -1,0 +1,17 @@
+# Powerlevel10k
+romkatv/powerlevel10k 
+
+# oh-my-zsh
+getantidote/use-omz
+
+ohmyzsh/ohmyzsh path:lib
+
+# oh-my-zsh plugins
+ohmyzsh/ohmyzsh path:plugins/copyfile
+ohmyzsh/ohmyzsh path:plugins/dirhistory
+
+# Other plugins
+zsh-users/zsh-autosuggestions 
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-completions kind:fpath path:src
+MichaelAquilina/zsh-you-should-use

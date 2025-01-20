@@ -1,6 +1,8 @@
 alias zshrc="nvim ~/.zshrc"
 
-alias aliases="nvim ~/dotfiles/zsh/.config/zsh/aliases.zsh"
+alias aliases="nvim ~/.config/zsh/aliases.zsh"
+alias zsh-plugins="nvim ~/.config/zsh/plugins"
+# alias antiload=antidote bundle <~/.config/zsh/plugin >~/.config/zsh/plugins/.zsh_plugins.zsh
 
 # File System Aliases
 alias ls="lsd --icon=always -l"

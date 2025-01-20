@@ -6,38 +6,39 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Antigen
-source /home/abdulkareem/antigen.zsh
+# source /home/abdulkareem/antigen.zsh
 
-# Antibody
-# source '/usr/share/zsh-antidote/antidote.zsh'
+# Antidote
+source '/usr/share/zsh-antidote/antidote.zsh'
 
-
-# antidote load
+antidote load ~/.config/zsh/plugins
+# antidote bundle <~/.config/zsh/plugin >~/.config/zsh/plugins/.zsh_plugins.zsh
+# source ~/dotfiles/zsh/.config/zsh/plugins/.zsh_plugins.zsh
 
 # Loading oh-my-zsh
-antigen use oh-my-zsh
+# antigen use oh-my-zsh
 
 # Bundles from the default repo
-antigen bundle command-not-found
-antigen bundle copyfile
-antigen bundle dirhistory
+# antigen bundle command-not-found
+# antigen bundle copyfile
+# antigen bundle dirhistory
 
 
 # Syntax Highlighting, Completions and Autocomplete
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
+# antigen bundle zsh-users/zsh-syntax-highlighting
+# antigen bundle zsh-users/zsh-completions
+# antigen bundle zsh-users/zsh-autosuggestions
 
 # For remembering aliases
-antigen bundle MichaelAquilina/zsh-you-should-use
-
-# Powerlevel10k
-antigen theme romkatv/powerlevel10k
-
-
-antigen apply
-
-
+# antigen bundle MichaelAquilina/zsh-you-should-use
+#
+# # Powerlevel10k
+# antigen theme romkatv/powerlevel10k
+#
+#
+# antigen apply
+#
+#
 # Environment Variables
 export TERMINAL=kitty
 export EDITOR=nvim
@@ -105,8 +106,6 @@ build() {
     g++ -Wall "$1" -o "${1%.cpp}" && ./"${1%.cpp}"
 }
 compdef '_files -g "*.cpp"' build
-
-
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
