@@ -7,11 +7,12 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
+config.color_scheme = "MaterialDesign"
 -- config.color_scheme = "Material (base16)"
-config.color_scheme = "Material (base16)"
 
 -- Cursor
 config.default_cursor_style = "SteadyBar"
+-- config.default_cursor_style = "BlinkingBlock"
 
 -- Title Bar
 config.window_decorations = "RESIZE"
@@ -23,7 +24,14 @@ config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 1.0
 
 -- Font
-config.font = wezterm.font("FiraCode Nerd Font", { weight = "Medium", italic = false })
+config.font = wezterm.font({
+	family = "MonaspiceNeNF-Medium",
+	harfbuzz_features = { "calt", "liga", "ss01", "ss03", "ss06", "ss07", "ss08", "ss09" },
+})
+
+config.font_size = 12.0
+
+config.line_height = 1.0
 
 -- Keybindings
 config.keys = {

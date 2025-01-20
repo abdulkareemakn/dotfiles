@@ -2,12 +2,20 @@
 theme = MaterialDesignColors
 
 # Font-Family
-# font-family = "MonaspiceNe NF Italic"
-font-family = "FiraCode Nerd Font Med"
+# font-family = "MonaspiceNe NF Bold Italic"
+font-family = MonaspiceNe NF Medium
+# font-family = MonaspiceNe NF Bold
+# font-family = "FiraCode Nerd Font Med"
+
+# Text
+# bold-is-bright = true
 
 # Cursor
 cursor-color = #00ffff
 cursor-style = "bar"
+cursor-style-blink = false
+# shell-integration-features = no-cursor
+
 
 # Mouse
 mouse-hide-while-typing = true
