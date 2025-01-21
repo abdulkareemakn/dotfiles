@@ -1,7 +1,3 @@
-# Theme
-# Aura
-include current-theme.conf
-
 # Font Family
 font_family      family="MonaspiceNe Nerd Font" style="Regular" postscript_name="MonaspiceNeNF-Regular"
 bold_font        auto
@@ -15,6 +11,10 @@ font_features MonaspiceNeNF-Regular +ss01 +ss03 +ss06 +ss07 +ss08 +ss09 +liga
 font_size 12.0
 
 copy_on_select yes
+
+# Theme
+# Material Design Colors
+include current-theme.conf
 
 # Window Decorations
 hide_window_decorations yes
@@ -30,3 +30,8 @@ enable_audio_bell no
 # background_tint 0.8
 # background_opacity 0.90
 
+
+# BEGIN_KITTY_THEME
+# Coolnight
+include current-theme.conf
+# END_KITTY_THEME
