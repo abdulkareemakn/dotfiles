@@ -1,6 +1,8 @@
 alias zshrc="nvim ~/.zshrc"
+alias kitty-config="nvim ~/.config/kitty/kitty.conf"
 
 alias aliases="nvim ~/.config/zsh/aliases.zsh"
+alias history="nvim ~/.zsh_history"
 alias zsh-plugins="nvim ~/.config/zsh/plugins"
 # alias antiload=antidote bundle <~/.config/zsh/plugin >~/.config/zsh/plugins/.zsh_plugins.zsh
 
