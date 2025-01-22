@@ -1,7 +1,8 @@
 return {
-    "echasnovski/mini.diff",
-    version = false,
-    config = function()
-        require("mini.diff").setup()
-    end,
+	"echasnovski/mini.diff",
+	enabled = false,
+	version = false,
+	config = function()
+		require("mini.diff").setup()
+	end,
 }
