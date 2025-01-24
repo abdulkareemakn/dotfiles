@@ -7,7 +7,7 @@ alias zsh-plugins="nvim ~/.config/zsh/plugins"
 # alias antiload=antidote bundle <~/.config/zsh/plugin >~/.config/zsh/plugins/.zsh_plugins.zsh
 
 # File System Aliases
-alias ls="lsd --icon=always -l"
+alias ls="lsd --icon=always -lv"
 alias la="lsd -A --icon=always -l"
 
 alias cls="clear"
@@ -49,3 +49,10 @@ alias x="cd /home/abdulkareem/projects/CS50x/"
 
 # 100 days
 alias 100="cd /home/abdulkareem/projects/python/100-days-of-code/; source /home/abdulkareem/projects/python/100-days-of-code/.venv/bin/activate"
+
+# PDF
+alias pdfstart="sudo systemctl start stirling-pdf.service; chromium 127.0.0.1:6969"
+alias pdfstop="sudo systemctl stop stirling-pdf.service"
+alias pdfref="sudo systemctl restart stirling-pdf.service"
+alias pdfset="sudo nvim /var/lib/stirling-pdf/configs/settings.yml"
+alias pdfenv="sudo nvim /etc/stirling-pdf/stirling-pdf.env"

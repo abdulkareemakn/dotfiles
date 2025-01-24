@@ -89,7 +89,7 @@ cd() {
 	if [ -z "$1" ]; then
 	  builtin cd ~
 	else 
-	  builtin cd "$1" && lsd --icon=always -l
+	  builtin cd "$1" && lsd --icon=always -lv
 	fi
 }
 
