@@ -3,7 +3,6 @@
   "blink.cmp": { "branch": "main", "commit": "1cc3b1a908fbcfd15451c4772759549724f38524" },
   "bufferline.nvim": { "branch": "main", "commit": "5726c4e291224181903e960119a11e20ac677a0a" },
   "catppuccin": { "branch": "main", "commit": "f67b886d65a029f12ffa298701fb8f1efd89295d" },
-  "chameleon.nvim": { "branch": "main", "commit": "dd7f556d91b1a3e814bebf530604d1bdd6f1d23f" },
   "conform.nvim": { "branch": "master", "commit": "9180320205d250429f0f80e073326c674e2a7149" },
   "cspell.nvim": { "branch": "main", "commit": "be04e47348c04f89614d99cf73a7ce1165a2e3ec" },
   "friendly-snippets": { "branch": "main", "commit": "efff286dd74c22f731cdec26a70b46e5b203c619" },
@@ -53,6 +52,8 @@
   "themery.nvim": { "branch": "main", "commit": "bfa58f4b279d21cb515b28023e1b68ec908584b2" },
   "tokyonight.nvim": { "branch": "main", "commit": "c3ab53c3f544e4a04f2a05d43451fd9bedff51b4" },
   "trouble.nvim": { "branch": "main", "commit": "4d36b8979287f5facc03fd6d955ace67db667e1d" },
+  "typr": { "branch": "main", "commit": "c2f12aa8ba94eb9b6f4ab3e1d155687eaff99473" },
   "vim-kitty": { "branch": "main", "commit": "ceaae754267f9578b6313890596ee34a19c00dad" },
-  "vim-wakatime": { "branch": "master", "commit": "cf51327a9e08935569614d1cb24e779ee9f45519" }
+  "vim-wakatime": { "branch": "master", "commit": "cf51327a9e08935569614d1cb24e779ee9f45519" },
+  "volt": { "branch": "main", "commit": "1a7d6b1dfb2f176715ccc9e838be32d044f8a734" }
 }
