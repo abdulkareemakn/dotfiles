@@ -1,5 +1,9 @@
 alias zshrc="nvim ~/.zshrc"
+
 alias kitty-config="nvim ~/.config/kitty/kitty.conf"
+alias hpc="nvim ~/.config/hypr/hyprland.conf"
+alias i3c="nvim ~/.config/i3/config"
+alias sc="nvim ~/.config/sway/config"
 
 alias aliases="nvim ~/.config/zsh/aliases.zsh"
 alias history="nvim ~/.zsh_history"
@@ -12,7 +16,7 @@ alias la="lsd -A --icon=always -l"
 
 alias cls="clear"
 
-alias nv="nvim"
+alias nv="nvim" 
 
 alias md="mkdir -pv"
 
