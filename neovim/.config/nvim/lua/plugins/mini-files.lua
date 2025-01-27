@@ -1,7 +1,8 @@
 return {
-    "echasnovski/mini.files",
-    version = false,
-    config = function()
-        require("mini.files").setup()
-    end,
+	"echasnovski/mini.files",
+	event = "VeryLazy",
+	version = false,
+	config = function()
+		require("mini.files").setup()
+	end,
 }
