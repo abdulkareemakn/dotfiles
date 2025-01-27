@@ -4,11 +4,11 @@ return {
 	config = function()
 		require("themery").setup({
 			themes = {
-				{
-					name = "Ayu Light",
-					colorscheme = "ayu",
-					before = [[vim.g.ayucolor="light"]],
-				},
+				-- {
+				-- 	name = "Ayu Light",
+				-- 	colorscheme = "ayu",
+				-- 	before = [[vim.g.ayucolor="light"]],
+				-- },
 
 				{ name = "Catppuccin Latte", colorscheme = "catppuccin-latte" },
 
@@ -34,18 +34,18 @@ return {
 
 				{ name = "OneLight", colorscheme = "onelight" },
 
-				{ name = "Rose Pine Dawn", colorscheme = "rose-pine-dawn" },
+				-- { name = "Rose Pine Dawn", colorscheme = "rose-pine-dawn" },
 
-				{
-					name = "Ayu Dark",
-					colorscheme = "ayu",
-					before = [[vim.g.ayucolor="dark"]],
-				},
-				{
-					name = "Ayu Mirage",
-					colorscheme = "ayu",
-					before = [[vim.g.ayucolor="mirage"]],
-				},
+				-- {
+				-- 	name = "Ayu Dark",
+				-- 	colorscheme = "ayu",
+				-- 	before = [[vim.g.ayucolor="dark"]],
+				-- },
+				-- {
+				-- 	name = "Ayu Mirage",
+				-- 	colorscheme = "ayu",
+				-- 	before = [[vim.g.ayucolor="mirage"]],
+				-- },
 
 				{ name = "TokyoNight Day", colorscheme = "tokyonight-day" },
 
@@ -132,8 +132,10 @@ return {
 				{ name = "OneDark Vivid", colorscheme = "onedark_vivid" },
 				{ name = "OneDark Dark", colorscheme = "onedark_dark" },
 
-				{ name = "Rose Pine", colorscheme = "rose-pine-main" },
-				{ name = "Rose Pine Moon", colorscheme = "rose-pine-moon" },
+				{ name = "Oxocarbon", colorscheme = "oxocarbon" },
+
+				-- { name = "Rose Pine", colorscheme = "rose-pine-main" },
+				-- { name = "Rose Pine Moon", colorscheme = "rose-pine-moon" },
 
 				{ name = "TokyoNight Night", colorscheme = "tokyonight-night" },
 				{ name = "TokyoNight Storm", colorscheme = "tokyonight-storm" },

@@ -1,1 +1,4 @@
-return { "ayu-theme/ayu-vim" }
+return {
+	"ayu-theme/ayu-vim",
+	enabled = false,
+}
