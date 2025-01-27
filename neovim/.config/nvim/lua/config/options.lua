@@ -16,5 +16,14 @@ opt.smartcase = true
 -- Clipboard
 opt.clipboard:append("unnamedplus")
 
+-- Panes
+opt.splitright = true
+
+-- Word Wrap
+opt.wrap = false
+
+-- Scroll
+opt.scrolloff = 999
+
 -- Colors
 vim.cmd("set termguicolors")

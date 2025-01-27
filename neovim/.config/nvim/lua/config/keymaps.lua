@@ -75,5 +75,10 @@ end, { desc = "Snippet: Add" })
 
 -- Pickers
 
+-- Git
+map("n", "<leader>g", function()
+	Snacks.lazygit()
+end, { desc = "Opens lazygit" })
+
 -- map("v", "<S-A-Down>", "<Esc>yp", { desc = "Clone code block down" })
 -- map("v", "<S-A-Up>", "yP", { desc = "Clone code block up" })
