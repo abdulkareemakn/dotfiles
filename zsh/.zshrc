@@ -5,40 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Antigen
-# source /home/abdulkareem/antigen.zsh
-
 # Antidote
 source '/usr/share/zsh-antidote/antidote.zsh'
 
 antidote load ~/.config/zsh/plugins
-# antidote bundle <~/.config/zsh/plugin >~/.config/zsh/plugins/.zsh_plugins.zsh
-# source ~/dotfiles/zsh/.config/zsh/plugins/.zsh_plugins.zsh
 
-# Loading oh-my-zsh
-# antigen use oh-my-zsh
-
-# Bundles from the default repo
-# antigen bundle command-not-found
-# antigen bundle copyfile
-# antigen bundle dirhistory
-
-
-# Syntax Highlighting, Completions and Autocomplete
-# antigen bundle zsh-users/zsh-syntax-highlighting
-# antigen bundle zsh-users/zsh-completions
-# antigen bundle zsh-users/zsh-autosuggestions
-
-# For remembering aliases
-# antigen bundle MichaelAquilina/zsh-you-should-use
-#
-# # Powerlevel10k
-# antigen theme romkatv/powerlevel10k
-#
-#
-# antigen apply
-#
-#
 # Environment Variables
 export TERMINAL=kitty
 export EDITOR=nvim
