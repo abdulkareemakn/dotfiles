@@ -1,0 +1,3 @@
+return {
+	"kwsp/halcyon-neovim",
+}

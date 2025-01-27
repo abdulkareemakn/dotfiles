@@ -1,5 +1,6 @@
 return {
-    "rebelot/kanagawa.nvim",
-    lazy = false,
-    priority = 995,
+	"rebelot/kanagawa.nvim",
+	enabled = false,
+	lazy = false,
+	priority = 995,
 }
