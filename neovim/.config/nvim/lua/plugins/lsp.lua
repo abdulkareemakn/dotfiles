@@ -65,7 +65,7 @@ return {
 					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 
 					-- List references
-					vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+					-- vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 
 					-- Show diagnostic
 					vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
@@ -83,7 +83,7 @@ return {
 					vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 
 					-- Show document symbols
-					vim.keymap.set("n", "<leader>ds", vim.lsp.buf.document_symbol, opts)
+					-- vim.keymap.set("n", "<leader>ds", vim.lsp.buf.document_symbol, opts)
 
 					-- Show workspace symbols
 					vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)

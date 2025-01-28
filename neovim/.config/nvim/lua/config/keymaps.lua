@@ -52,7 +52,7 @@ end, { desc = "Diagnostics" })
 
 map("n", "<leader>ht", function()
 	Snacks.picker.colorschemes()
-end, { desc = "Diagnostics" })
+end, { desc = "Colorschemes" })
 
 -- LSP
 map("n", "gd", function()
@@ -61,6 +61,9 @@ end, { desc = "Goto Definition" })
 map("n", "gI", function()
 	Snacks.picker.lsp_implementations()
 end, { desc = "Goto Implementation" })
+map("n", "gr", function()
+	Snacks.picker.lsp_references()
+end, { desc = "See References" })
 map("n", "<leader>ss", function()
 	Snacks.picker.lsp_symbols()
 end, { desc = "LSP Symbols" })
@@ -76,9 +79,17 @@ end, { desc = "Snippet: Add" })
 -- Pickers
 
 -- Git
-map("n", "<leader>g", function()
-	Snacks.lazygit()
+map("n", "<leader>gl", function()
+	Snacks.lazygit.open()
 end, { desc = "Opens lazygit" })
+
+map("n", "<leader>gd", function()
+	Snacks.picker.git_diff()
+end, { desc = "Git diff" })
+
+map("n", "<leader>gs", function()
+	Snacks.picker.git_status()
+end, { desc = "Git status" })
 
 -- map("v", "<S-A-Down>", "<Esc>yp", { desc = "Clone code block down" })
 -- map("v", "<S-A-Up>", "yP", { desc = "Clone code block up" })
