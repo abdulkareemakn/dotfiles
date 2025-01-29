@@ -37,6 +37,9 @@ map("n", "<leader>bn", ":bnext<CR>", { desc = "Next Buffer" })
 map("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous Buffer" })
 map("n", "<leader>bd", ":bdelete<CR>", { desc = "Delete Buffer" })
 
+map("n", "<Tab>", ":bnext<CR>", { desc = "Next Buffer" })
+map("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous Buffer" })
+
 -- Files
 map("n", "<C-f>", ":lua MiniFiles.open()<CR>", { desc = "File Explorer" })
 map("n", "<leader><space>", function()

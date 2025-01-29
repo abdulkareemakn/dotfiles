@@ -32,7 +32,7 @@ return {
 					before = [[vim.g.material_style="lighter"]],
 				},
 
-				{ name = "OneLight", colorscheme = "onelight" },
+				-- { name = "OneLight", colorscheme = "onelight" },
 
 				-- { name = "Rose Pine Dawn", colorscheme = "rose-pine-dawn" },
 
@@ -128,9 +128,9 @@ return {
 					before = [[require("monokai-pro").setup({filter="classic"})]],
 				},
 
-				{ name = "OneDark", colorscheme = "onedark" },
-				{ name = "OneDark Vivid", colorscheme = "onedark_vivid" },
-				{ name = "OneDark Dark", colorscheme = "onedark_dark" },
+				-- { name = "OneDark", colorscheme = "onedark" },
+				-- { name = "OneDark Vivid", colorscheme = "onedark_vivid" },
+				-- { name = "OneDark Dark", colorscheme = "onedark_dark" },
 
 				{ name = "Oxocarbon", colorscheme = "oxocarbon" },
 
