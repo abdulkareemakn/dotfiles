@@ -1,8 +1,9 @@
 return {
 	"folke/snacks.nvim",
-	priority = 500,
+	priority = 1050,
 	lazy = false,
 	opts = {
+		animate = { enabled = true },
 		bigfile = { enabled = true },
 		dashboard = { enabled = true },
 		input = { enabled = true },
@@ -17,6 +18,7 @@ return {
 			},
 		},
 		quickfile = { enabled = true },
+		rename = { enabled = true },
 		scope = { enabled = true },
 		scroll = { enabled = true },
 		terminal = { enabled = true },

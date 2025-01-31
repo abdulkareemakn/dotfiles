@@ -26,7 +26,9 @@ map("i", "jk", "<Esc>", { desc = "Switch to normal Mode" })
 map("i", "kj", "<Esc>", { desc = "Switch to normal Mode" })
 
 -- Terminal
-map("n", "<leader>ct", ":lua Snacks.terminal.get()<CR>", { desc = "Open Terminal" })
+map("n", "<leader>ct", function()
+	Snacks.terminal.get()
+end, { desc = "Open Terminal" })
 
 -- Buffers
 -- map("n", "<leader>bb", ":Telescope buffers<CR>", { desc = "See open buffers" })
@@ -41,7 +43,14 @@ map("n", "<Tab>", ":bnext<CR>", { desc = "Next Buffer" })
 map("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous Buffer" })
 
 -- Files
-map("n", "<C-f>", ":lua MiniFiles.open()<CR>", { desc = "File Explorer" })
+map("n", "<C-f>", function()
+	MiniFiles.open()
+end, { desc = "File Explorer" })
+
+map("n", "<leader>ff", function()
+	Snacks.picker.explorer()
+end, { desc = "Snacks Explorer and Picker" })
+
 map("n", "<leader><space>", function()
 	Snacks.picker.files()
 end, { desc = "Find Files" })
@@ -93,6 +102,14 @@ end, { desc = "Git diff" })
 map("n", "<leader>gs", function()
 	Snacks.picker.git_status()
 end, { desc = "Git status" })
+
+map("n", "<leader>gb", function()
+	Snacks.picker.git_branches()
+end, { desc = "Git branches" })
+
+map("n", "<leader>pp", function()
+	Snacks.picker()
+end, { desc = "See all snacks pickers" })
 
 -- map("v", "<S-A-Down>", "<Esc>yp", { desc = "Clone code block down" })
 -- map("v", "<S-A-Up>", "yP", { desc = "Clone code block up" })
