@@ -24,12 +24,20 @@ config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 1.0
 
 -- Font
-config.font = wezterm.font({
-	family = "MonaspiceNeNF-Medium",
-	harfbuzz_features = { "calt", "liga", "ss01", "ss03", "ss06", "ss07", "ss08", "ss09" },
-})
+-- config.font = wezterm.font({
+-- 	family = "MonaspiceNeNF-Medium",
+-- 	harfbuzz_features = { "calt", "liga", "ss01", "ss03", "ss06", "ss07", "ss08", "ss09" },
+-- })
 
-config.font_size = 12.0
+-- config.font = wezterm.font({
+-- 	family = "CaskaydiaCove Nerd Font",
+-- 	weight = "Bold",
+-- })
+
+-- config.font = wezterm.font("CaskaydiaCove Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" })
+config.font = wezterm.font("CaskaydiaCove Nerd Font", { weight = "DemiBold", stretch = "Normal", style = "Normal" })
+
+config.font_size = 12.5
 
 config.line_height = 1.0
 
