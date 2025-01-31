@@ -1,6 +1,7 @@
 alias zshrc="nvim ~/.zshrc"
 
 alias kitty-config="nvim ~/.config/kitty/kitty.conf"
+alias ssp="nvim ~/.config/starship/starship.toml"
 alias hpc="nvim ~/.config/hypr/hyprland.conf"
 alias i3c="nvim ~/.config/i3/config"
 alias sc="nvim ~/.config/sway/config"
@@ -11,10 +12,16 @@ alias zsh-plugins="nvim ~/.config/zsh/plugins"
 # alias antiload=antidote bundle <~/.config/zsh/plugin >~/.config/zsh/plugins/.zsh_plugins.zsh
 
 # File System Aliases
-alias ls="lsd --icon=always -lv"
-alias la="lsd -A --icon=always -l"
 
-alias cls="clear"
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+
+alias ls="lsd --icon=always -lv"
+alias la="lsd --icon=always -lA"
+
+alias c="clear"
 
 alias nv="nvim" 
 

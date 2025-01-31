@@ -10,8 +10,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+source "$HOME/.config/zsh/options.zsh"
+source "$HOME/.config/zsh/history.zsh"
+source "$HOME/.config/zsh/aliases.zsh"
+
 # Antidote
-source '/usr/share/zsh-antidote/antidote.zsh'
+source "/usr/share/zsh-antidote/antidote.zsh"
 
 antidote load ~/.config/zsh/plugins
 
@@ -19,9 +23,6 @@ antidote load ~/.config/zsh/plugins
 export TERMINAL=kitty
 export EDITOR=nvim
 
-if [ -f ~/.config/zsh/aliases.zsh ]; then
-    source ~/.config/zsh/aliases.zsh
-fi
 
 # Starship Prompt
 # eval "$(starship init zsh)"
@@ -35,6 +36,9 @@ eval $(thefuck --alias fml)
 # uv
 eval "$(uv generate-shell-completion zsh)"
 
+# fzf
+source <(fzf --zsh)
+
 # yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -46,19 +50,6 @@ function y() {
 }
 
 # History Setup
-HISTSIZE=5000
-HISTFILE=~/.zsh_history
-SAVEHIST=$HISTSIZE
-HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
-setopt HIST_SAVE_NO_DUPS
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
-
 
 # Function that calls ls everytime cd is run
 cd() {
