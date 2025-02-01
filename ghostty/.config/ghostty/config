@@ -32,7 +32,7 @@ title = " "
 window-decoration = false
 
 #
-copy-on-select = true
+copy-on-select = clipboard
 
 # Panes
 keybind = shift+alt+r=new_split:right
