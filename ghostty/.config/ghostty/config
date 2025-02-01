@@ -2,10 +2,12 @@
 theme = MaterialDesignColors
 
 # Font-Family
-# font-family = "MonaspiceNe NF Bold Italic"
-font-family = MonaspiceNe NF Medium
-# font-family = MonaspiceNe NF Bold
-# font-family = "FiraCode Nerd Font Med"
+font-family = ""
+font-family = "CaskaydiaCove NF SemiBold"
+
+font-feature = ss19
+font-feature = ss20
+
 
 # Text
 # bold-is-bright = true
@@ -13,8 +15,8 @@ font-family = MonaspiceNe NF Medium
 # Cursor
 cursor-color = #00ffff
 cursor-style = "bar"
-cursor-style-blink = false
-# shell-integration-features = no-cursor
+cursor-style-blink = true
+shell-integration-features = no-cursor
 
 
 # Mouse

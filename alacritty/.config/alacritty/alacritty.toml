@@ -1,5 +1,5 @@
 [general]
-import = ["./themes/aura.toml"]
+import = ["./themes/MaterialDesignColors.toml"]
 
 [window]
 decorations = "none"
@@ -7,12 +7,12 @@ opacity = 0.9
 startup_mode = "Fullscreen"
 
 [font]
-normal = { family = "MonaspiceNe Nerd Font", style = "Medium" }
-bold = { family = "MonaspiceNe Nerd Font", style = "Bold" }
-italic = { family = "MonaspiceNe Nerd Font", style = "Italic" }
-bold_italic = { family = "MonaspceNe Nerd Font", style = "Bold Italic" }
+normal = { family = "CaskaydiaCove Nerd Font", style = "SemiBold" }
+bold = { family = "CaskaydiaCove Nerd Font", style = "Bold" }
+italic = { family = "CaskaydiaCove Nerd Font", style = "Italic" }
+bold_italic = { family = "CaskaydiaCove Nerd Font", style = "Bold Italic" }
 
-size = 12.0
+size = 13.0
 
 [selection]
 save_to_clipboard = true
