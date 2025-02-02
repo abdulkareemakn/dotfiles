@@ -28,8 +28,6 @@ source "$HOME/.config/zsh/copyfile.plugin.zsh"
 source "$HOME/.config/zsh/extract.plugin.zsh"
 
 # Environment Variables
-export TERMINAL=kitty
-export EDITOR=nvim
 
 
 # Starship Prompt

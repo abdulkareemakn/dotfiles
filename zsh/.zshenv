@@ -1,3 +1,8 @@
+export TERMINAL=kitty
+export EDITOR=nvim
+
+export PATH="$HOME/bin:$PATH"
+
 # uv
 export PATH="/home/abdulkareem/.local/bin:$PATH"
 
