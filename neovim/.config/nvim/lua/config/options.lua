@@ -20,7 +20,7 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 
 -- Word Wrap
-opt.wrap = false
+-- opt.wrap = false
 
 -- Scroll
 opt.scrolloff = 999
