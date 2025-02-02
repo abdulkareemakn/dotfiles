@@ -6,18 +6,26 @@ nerdfetch
 
 echo -e "\n"
 
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+source "$HOME/.config/zsh/key-bindings.zsh"
+
+fpath+=('/usr/share/zsh/site-functions')
+fpath+=("$HOME/.config/zsh/_extract")
+
 
 source "$HOME/.config/zsh/options.zsh"
 source "$HOME/.config/zsh/history.zsh"
 source "$HOME/.config/zsh/aliases.zsh"
 
-# Antidote
-source "/usr/share/zsh-antidote/antidote.zsh"
+source "$HOME/.config/zsh/completion.zsh"
 
-antidote load ~/.config/zsh/plugins
+source "$HOME/.config/zsh/copyfile.plugin.zsh"
+source "$HOME/.config/zsh/extract.plugin.zsh"
 
 # Environment Variables
 export TERMINAL=kitty
@@ -76,3 +84,7 @@ compdef '_files -g "*.cpp"' build
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
