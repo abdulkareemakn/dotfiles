@@ -6,11 +6,13 @@ nerdfetch
 
 echo -e "\n"
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/prompt.toml)"
 
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 source "$HOME/.config/zsh/key-bindings.zsh"
 
@@ -31,6 +33,7 @@ source "$HOME/.config/zsh/extract.plugin.zsh"
 
 
 # Starship Prompt
+# export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 # eval "$(starship init zsh)"
 
 # Zoxide
@@ -81,7 +84,7 @@ build() {
 compdef '_files -g "*.cpp"' build
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh

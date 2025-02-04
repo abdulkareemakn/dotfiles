@@ -5,6 +5,7 @@ alias ssp="nvim ~/.config/starship/starship.toml"
 alias hpc="nvim ~/.config/hypr/hyprland.conf"
 alias i3c="nvim ~/.config/i3/config"
 alias sc="nvim ~/.config/sway/config"
+alias omp="nvim ~/.config/oh-my-posh/prompt.toml"
 
 alias aliases="nvim ~/.config/zsh/aliases.zsh"
 alias history="nvim ~/.zsh_history"
@@ -30,11 +31,11 @@ alias md="mkdir -pv"
 # pacman aliases
 alias upgrade="sudo pacman -Syu"
 alias install="sudo pacman -S"
-alias search="yay -Ss"
+alias search="paru -Ss"
 alias remove="sudo pacman -R"
 
 # yay
-alias aurinstall="yay -S"
+alias aurinstall="paru -S"
 alias aurupdate="yay"
 
 # Python Environments
