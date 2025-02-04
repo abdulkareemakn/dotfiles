@@ -2,7 +2,7 @@
 SHELL = "/usr/bin/bash"
 
 [general]
-import = ["./themes/MaterialDesignColors.toml"]
+import = ["./themes/Monokai Pro Machine.toml"]
 
 
 [window]
