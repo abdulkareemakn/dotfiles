@@ -6,6 +6,8 @@ nerdfetch
 
 echo -e "\n"
 
+# source /usr/lib/spaceship-prompt/spaceship.zsh
+
 # eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/prompt.toml)"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
@@ -20,8 +22,6 @@ fpath+=('/usr/share/zsh/site-functions')
 fpath+=("$HOME/.config/zsh/_extract")
 
 
-source "$HOME/.config/zsh/options.zsh"
-source "$HOME/.config/zsh/history.zsh"
 source "$HOME/.config/zsh/aliases.zsh"
 
 source "$HOME/.config/zsh/completion.zsh"
@@ -59,6 +59,24 @@ function y() {
 }
 
 # History Setup
+HISTFILE=~/.zsh_history
+HISTSIZE=5000
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+
+# History
+setopt hist_expire_dups_first 
+setopt hist_ignore_dups       
+setopt hist_ignore_space      
+setopt hist_verify            
+setopt share_history          
+setopt appendhistory
+setopt sharehistory
+setopt HIST_SAVE_NO_DUPS
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
 # Function that calls ls everytime cd is run
 cd() {
@@ -69,6 +87,9 @@ cd() {
 	fi
 }
 
+# Changes dir if the command is the name of a dir
+setopt auto_cd 
+
 mkcd() {
   mkdir -p $argv && cd $argv
 }
@@ -77,11 +98,17 @@ please() {
     sudo $(fc -ln -1)
 }
 
+function clipcopy() { cat "${1:-/dev/stdin}" | wl-copy &>/dev/null &|; }
+
 # gcc
 build() {
     g++ -Wall "$1" -o "${1%.cpp}" && ./"${1%.cpp}"
 }
 compdef '_files -g "*.cpp"' build
+
+music() {
+    mpv $(yt-dlp -f bestaudio --get-url "$1")
+}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
