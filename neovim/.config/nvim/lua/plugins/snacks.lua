@@ -17,12 +17,6 @@ return {
 						action = ":lua Snacks.dashboard.pick('live_grep')",
 					},
 					{
-						icon = " ",
-						key = "r",
-						desc = "Recent Files",
-						action = ":lua Snacks.dashboard.pick('oldfiles')",
-					},
-					{
 						icon = " ",
 						key = "c",
 						desc = "Config",
@@ -45,10 +39,14 @@ return {
 		lazygit = { enabled = true },
 		notifier = { enabled = true },
 		picker = {
-			enabled = true,
 			formatters = {
 				file = {
 					filename_first = true,
+				},
+			},
+			sources = {
+				explorer = {
+					layout = { layout = { position = "right" } },
 				},
 			},
 		},
