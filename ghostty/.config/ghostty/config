@@ -8,14 +8,16 @@ font-family = "CaskaydiaCove NF SemiBold"
 font-feature = ss19
 font-feature = ss20
 
+font-size = 13.0
+
 
 # Text
 # bold-is-bright = true
 
 # Cursor
 cursor-color = #00ffff
-cursor-style = "bar"
-cursor-style-blink = true
+cursor-style = "block"
+cursor-style-blink = false
 shell-integration-features = no-cursor
 
 

@@ -18,6 +18,7 @@ opt.clipboard:append("unnamedplus")
 
 -- Panes
 opt.splitright = true
+opt.splitbelow = true
 
 -- Word Wrap
 -- opt.wrap = false
