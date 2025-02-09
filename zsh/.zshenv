@@ -1,3 +1,8 @@
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
+
 export TERMINAL=kitty
 export EDITOR=nvim
 
@@ -18,3 +23,5 @@ source /usr/share/nvm/init-nvm.sh
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+export PATH="$PATH:/home/abdulkareem/.local/share/JetBrains/Toolbox/scripts"
