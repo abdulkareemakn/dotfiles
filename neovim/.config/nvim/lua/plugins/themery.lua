@@ -12,11 +12,11 @@ return {
 
 				{ name = "Catppuccin Latte", colorscheme = "catppuccin-latte" },
 
-				{ name = "Github Light", colorscheme = "github_light" },
-				{ name = "Github Light Default", colorscheme = "github_light_default" },
-				{ name = "Github Light High Contrast", colorscheme = "github_light_high_contrast" },
-				{ name = "Github Light Colorblind", colorscheme = "github_light_colorblind" },
-				{ name = "Github Light Tritanopia", colorscheme = "github_light_tritanopia" },
+				-- { name = "Github Light", colorscheme = "github_light" },
+				-- { name = "Github Light Default", colorscheme = "github_light_default" },
+				-- { name = "Github Light High Contrast", colorscheme = "github_light_high_contrast" },
+				-- { name = "Github Light Colorblind", colorscheme = "github_light_colorblind" },
+				-- { name = "Github Light Tritanopia", colorscheme = "github_light_tritanopia" },
 
 				{
 					name = "Gruvbox Light",
@@ -26,11 +26,11 @@ return {
 
 				-- { name = "Kanagawa Lotus", colorscheme = "kanagawa-lotus" },
 
-				{
-					name = "Material Lighter",
-					colorscheme = "material",
-					before = [[vim.g.material_style="lighter"]],
-				},
+				-- {
+				-- 	name = "Material Lighter",
+				-- 	colorscheme = "material",
+				-- 	before = [[vim.g.material_style="lighter"]],
+				-- },
 
 				-- { name = "OneLight", colorscheme = "onelight" },
 
@@ -53,12 +53,12 @@ return {
 				{ name = "Catppuccin Macchiato", colorscheme = "catppuccin-macchiato" },
 				{ name = "Catppuccin Mocha", colorscheme = "catppuccin-mocha" },
 
-				{ name = "Github Dark", colorscheme = "github_dark" },
-				{ name = "Github Dark Dimmed", colorscheme = "github_dark_dimmed" },
-				{ name = "Github Dark Default", colorscheme = "github_dark_default" },
-				{ name = "Github Dark High Contrast", colorscheme = "github_dark_high_contrast" },
-				{ name = "Github Dark Colorblink", colorscheme = "github_dark_colorblind" },
-				{ name = "Github Dark Tritanopia", colorscheme = "github_dark_tritanopia" },
+				-- { name = "Github Dark", colorscheme = "github_dark" },
+				-- { name = "Github Dark Dimmed", colorscheme = "github_dark_dimmed" },
+				-- { name = "Github Dark Default", colorscheme = "github_dark_default" },
+				-- { name = "Github Dark High Contrast", colorscheme = "github_dark_high_contrast" },
+				-- { name = "Github Dark Colorblink", colorscheme = "github_dark_colorblind" },
+				-- { name = "Github Dark Tritanopia", colorscheme = "github_dark_tritanopia" },
 
 				{
 					name = "Gruvbox Dark",
@@ -66,34 +66,34 @@ return {
 					before = [[vim.o.background="dark"]],
 				},
 
-				{ name = "Halcyon", colorscheme = "halcyon" },
+				-- { name = "Halcyon", colorscheme = "halcyon" },
 
 				-- { name = "Kanagawa Wave", colorscheme = "kanagawa-wave" },
 				-- { name = "Kanagawa Dragon", colorscheme = "kanagawa-dragon" },
 
-				{
-					name = "Material Darker",
-					colorscheme = "material",
-					before = [[vim.g.material_style="darker"]],
-				},
-
-				{
-					name = "Material Oceanic",
-					colorscheme = "material",
-					before = [[vim.g.material_style="oceanic"]],
-				},
-
-				{
-					name = "Material Palenight",
-					colorscheme = "material",
-					before = [[vim.g.material_style="palenight"]],
-				},
-
-				{
-					name = "Material Deep Ocean",
-					colorscheme = "material",
-					before = [[vim.g.material_style="deep ocean"]],
-				},
+				-- {
+				-- 	name = "Material Darker",
+				-- 	colorscheme = "material",
+				-- 	before = [[vim.g.material_style="darker"]],
+				-- },
+				--
+				-- {
+				-- 	name = "Material Oceanic",
+				-- 	colorscheme = "material",
+				-- 	before = [[vim.g.material_style="oceanic"]],
+				-- },
+				--
+				-- {
+				-- 	name = "Material Palenight",
+				-- 	colorscheme = "material",
+				-- 	before = [[vim.g.material_style="palenight"]],
+				-- },
+				--
+				-- {
+				-- 	name = "Material Deep Ocean",
+				-- 	colorscheme = "material",
+				-- 	before = [[vim.g.material_style="deep ocean"]],
+				-- },
 
 				{
 					name = "Monokai Pro",
