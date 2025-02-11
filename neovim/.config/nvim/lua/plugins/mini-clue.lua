@@ -35,14 +35,18 @@ return {
 				-- `z` key
 				{ mode = "n", keys = "z" },
 				{ mode = "x", keys = "z" },
+
+				-- Mini Bracketed
+				{ mode = "n", keys = "[" },
+				{ mode = "n", keys = "]" },
 			},
 
 			clues = {
 				-- Enhance this by adding descriptions for <Leader> mapping groups
 				{ mode = "n", keys = "<leader>b", desc = "Buffers" },
 				{ mode = "n", keys = "<leader>c", desc = "Code" },
-				{ mode = "n", keys = "<leader>t", desc = "Theme" },
 				{ mode = "n", keys = "<leader>g", desc = "Git" },
+				{ mode = "n", keys = "<leader>t", desc = "Theme" },
 				miniclue.gen_clues.builtin_completion(),
 				miniclue.gen_clues.g(),
 				miniclue.gen_clues.marks(),
