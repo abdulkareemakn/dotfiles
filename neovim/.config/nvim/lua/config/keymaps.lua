@@ -111,5 +111,9 @@ map("n", "<leader>pp", function()
 	Snacks.picker()
 end, { desc = "See all snacks pickers" })
 
+-- Leap
+map({ "n", "x", "o" }, "t", "<Plug>(leap-forward)")
+map({ "n", "x", "o" }, "T", "<Plug>(leap-backward)")
+map({ "n", "x", "o" }, "gs", "<Plug>(leap-from-window)")
 -- map("v", "<S-A-Down>", "<Esc>yp", { desc = "Clone code block down" })
 -- map("v", "<S-A-Up>", "yP", { desc = "Clone code block up" })
