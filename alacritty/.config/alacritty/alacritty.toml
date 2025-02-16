@@ -1,5 +1,5 @@
-[env]
-SHELL = "/usr/bin/bash"
+[terminal]
+shell = "/usr/bin/zsh"
 
 [general]
 import = ["./themes/MaterialDesignColors.toml"]
@@ -22,7 +22,7 @@ size = 13.0
 save_to_clipboard = true
 
 [cursor]
-style = { shape = "Beam", blinking = "On" }
+style = { shape = "Block", blinking = "On" }
 thickness = 0.2
 
 [mouse]
