@@ -3,8 +3,9 @@ return {
 	priority = 1050,
 	lazy = false,
 	opts = {
-		animate = { enabled = true },
+		animate = { enabled = false },
 		bigfile = { enabled = true },
+		bufdelete = { enabled = true },
 		dashboard = {
 			preset = {
 				keys = {
@@ -35,6 +36,7 @@ return {
 			},
 		},
 		explorer = { enabled = true },
+		image = { enabled = true },
 		input = { enabled = true },
 		lazygit = { enabled = true },
 		notifier = { enabled = true },
@@ -53,7 +55,7 @@ return {
 		quickfile = { enabled = true },
 		rename = { enabled = true },
 		scope = { enabled = true },
-		scroll = { enabled = true },
+		scroll = { enabled = false },
 		terminal = {
 			enabled = true,
 			win = {

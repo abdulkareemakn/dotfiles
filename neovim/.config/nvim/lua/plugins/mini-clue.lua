@@ -47,6 +47,7 @@ return {
 				{ mode = "n", keys = "<leader>c", desc = "Code" },
 				{ mode = "n", keys = "<leader>g", desc = "Git" },
 				{ mode = "n", keys = "<leader>t", desc = "Theme" },
+				{ mode = "n", keys = "<leader>x", desc = "Trouble" },
 				miniclue.gen_clues.builtin_completion(),
 				miniclue.gen_clues.g(),
 				miniclue.gen_clues.marks(),
