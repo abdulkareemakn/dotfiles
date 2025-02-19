@@ -66,6 +66,8 @@ return {
 					before = [[vim.o.background="dark"]],
 				},
 
+				{ name = "Gruvbox Material", colorscheme = "gruvbox-material" },
+
 				-- { name = "Halcyon", colorscheme = "halcyon" },
 
 				-- { name = "Kanagawa Wave", colorscheme = "kanagawa-wave" },

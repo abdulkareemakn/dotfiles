@@ -41,7 +41,7 @@ eval "$(zoxide init zsh)"
 eval $(thefuck --alias fml)
 
 # uv
-eval "$(uv generate-shell-completion zsh)"
+# eval "$(uv generate-shell-completion zsh)"
 
 # fzf
 source <(fzf --zsh)

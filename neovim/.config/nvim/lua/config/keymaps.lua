@@ -21,10 +21,6 @@ map("n", "<C-s>", ":w<CR>", { desc = "Save file" })
 -- Theme switcher
 map("n", "<leader>th", ":Themery<CR>", { desc = "Change theme" })
 
--- Normal Mode
-map("i", "jk", "<Esc>", { desc = "Switch to normal Mode" })
-map("i", "kj", "<Esc>", { desc = "Switch to normal Mode" })
-
 -- Terminal
 map("n", "<leader>ct", function()
 	Snacks.terminal.get()
@@ -37,7 +33,9 @@ map("n", "<leader>bb", function()
 end, { desc = "Buffers" })
 map("n", "<leader>bn", ":bnext<CR>", { desc = "Next Buffer" })
 map("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous Buffer" })
-map("n", "<leader>bd", ":bdelete<CR>", { desc = "Delete Buffer" })
+map("n", "<leader>bd", function()
+	Snacks.bufdelete()
+end, { desc = "Delete Buffer" })
 
 map("n", "<Tab>", ":bnext<CR>", { desc = "Next Buffer" })
 map("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous Buffer" })
@@ -54,9 +52,14 @@ end, { desc = "Snacks Explorer and Picker" })
 map("n", "<leader><space>", function()
 	Snacks.picker.files()
 end, { desc = "Find Files" })
+
 map("n", "<leader>fg", function()
 	Snacks.picker.grep()
 end, { desc = "Grep" })
+
+map("n", "<leader>fb", function()
+	Snacks.picker.grep_buffers()
+end)
 
 map("n", "<leader>sd", function()
 	Snacks.picker.diagnostics()
@@ -115,5 +118,12 @@ end, { desc = "See all snacks pickers" })
 map({ "n", "x", "o" }, "t", "<Plug>(leap-forward)")
 map({ "n", "x", "o" }, "T", "<Plug>(leap-backward)")
 map({ "n", "x", "o" }, "gs", "<Plug>(leap-from-window)")
+
+-- Splits
+map("n", "<C-h>", "<C-w>h", { desc = "Focus left" })
+map("n", "<C-j>", "<C-w>j", { desc = "Focus down" })
+map("n", "<C-k>", "<C-w>k", { desc = "Focus up" })
+map("n", "<C-l>", "<C-w>l", { desc = "Focus right" })
+
 -- map("v", "<S-A-Down>", "<Esc>yp", { desc = "Clone code block down" })
 -- map("v", "<S-A-Up>", "yP", { desc = "Clone code block up" })
