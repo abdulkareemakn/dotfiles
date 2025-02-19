@@ -5,6 +5,9 @@ return {
 		event = "VeryLazy",
 		config = function()
 			require("mini.jump").setup({
+				delay = {
+					highlight = 100000000000,
+				},
 				mappings = {
 					forward_till = "",
 					backward_till = "",
