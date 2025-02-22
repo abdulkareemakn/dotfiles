@@ -18,8 +18,8 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
-alias ls="lsd --icon=always --group-directories-first -l"
-alias la="lsd --icon=always --group-directories-first -lA"
+alias ls="lsd --icon=always --group-directories-first -l --git"
+alias la="lsd --icon=always --group-directories-first -lA --git"
 
 alias c="clear"
 

@@ -11,12 +11,12 @@ opacity = 0.9
 startup_mode = "Fullscreen"
 
 [font]
-normal = { family = "CaskaydiaCove Nerd Font", style = "SemiBold" }
-bold = { family = "CaskaydiaCove Nerd Font", style = "Bold" }
-italic = { family = "CaskaydiaCove Nerd Font", style = "Italic" }
-bold_italic = { family = "CaskaydiaCove Nerd Font", style = "Bold Italic" }
+normal = { family = "VictorMono Nerd Font", style = "Medium" }
+bold = { family = "VictorMono Nerd Font", style = "Bold" }
+italic = { family = "VictorMono Nerd Font", style = "Italic" }
+bold_italic = { family = "VictorMono Nerd Font", style = "Bold Italic" }
 
-size = 13.0
+size = 14
 
 [selection]
 save_to_clipboard = true

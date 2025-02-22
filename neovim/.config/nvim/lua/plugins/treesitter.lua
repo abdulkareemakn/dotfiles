@@ -11,6 +11,12 @@ return {
 				sync_install = false,
 				highlight = { enable = true },
 				indent = { enable = true },
+				textobjects = {
+					select = { enable = false },
+					swap = { enable = true },
+					move = { enable = true },
+					lsp_interop = { enable = true },
+				},
 			})
 		end,
 	},

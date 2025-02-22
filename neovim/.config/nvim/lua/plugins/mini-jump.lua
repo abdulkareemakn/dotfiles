@@ -20,7 +20,11 @@ return {
 		version = false,
 		event = "VeryLazy",
 		config = function()
-			require("mini.jump2d").setup({})
+			require("mini.jump2d").setup({
+				mappings = {
+					start_jumping = "m",
+				},
+			})
 		end,
 	},
 }

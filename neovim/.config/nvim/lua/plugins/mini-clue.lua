@@ -43,9 +43,11 @@ return {
 
 			clues = {
 				-- Enhance this by adding descriptions for <Leader> mapping groups
-				{ mode = "n", keys = "<leader>b", desc = "Buffers" },
+				{ mode = "n", keys = "<leader>b", desc = " Buffers" },
 				{ mode = "n", keys = "<leader>c", desc = "Code" },
-				{ mode = "n", keys = "<leader>g", desc = "Git" },
+				{ mode = "n", keys = "<leader>g", desc = "󰊢 Git" },
+				{ mode = "n", keys = "<leader>l", desc = "Leap Forward" },
+				{ mode = "n", keys = "<leader>L", desc = "Leap Backward" },
 				{ mode = "n", keys = "<leader>t", desc = "Theme" },
 				{ mode = "n", keys = "<leader>x", desc = "Trouble" },
 				miniclue.gen_clues.builtin_completion(),

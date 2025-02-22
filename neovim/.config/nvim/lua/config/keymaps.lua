@@ -115,8 +115,8 @@ map("n", "<leader>pp", function()
 end, { desc = "See all snacks pickers" })
 
 -- Leap
-map({ "n", "x", "o" }, "t", "<Plug>(leap-forward)")
-map({ "n", "x", "o" }, "T", "<Plug>(leap-backward)")
+map({ "n", "x", "o" }, "<leader>l", "<Plug>(leap-forward)")
+map({ "n", "x", "o" }, "<leader>L", "<Plug>(leap-backward)")
 map({ "n", "x", "o" }, "gs", "<Plug>(leap-from-window)")
 
 -- Splits
