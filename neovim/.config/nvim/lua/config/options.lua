@@ -26,5 +26,7 @@ opt.splitbelow = true
 -- Scroll
 opt.scrolloff = 999
 
+opt.fillchars:append({ eob = " " })
+
 -- Colors
 vim.cmd("set termguicolors")

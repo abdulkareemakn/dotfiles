@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- Colorscheme
-config.color_scheme = "MaterialDesign"
+config.color_scheme = "catppuccin-mocha"
 
 -- Fonts
 config.font = wezterm.font("CaskaydiaCove Nerd Font", { weight = "DemiBold", stretch = "Normal", style = "Normal" })

@@ -15,6 +15,10 @@
       {
         "path": "./html.json",
         "language": "html"
+      },
+      {
+        "path": "./java.json",
+        "language": "java"
       }
     ]
   }

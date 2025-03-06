@@ -1,21 +1,28 @@
 # Theme
-theme = MaterialDesignColors
+theme = Dracula
 
 # Font-Family
 font-family = ""
-font-family = "CaskaydiaCove NF SemiBold"
+font-family = "Berkeley Mono Trial"
+font-family-bold = "CaskaydiaCove NF"
+font-family-italic = "CaskaydiaCove NF"
+font-family-bold-italic = "CaskaydiaCove NF"
 
-font-feature = ss19
-font-feature = ss20
+font-style = "SemiBold"
+font-style-bold = "Bold"
+font-style-italic = "Italic"
+font-style-bold-italic = "Bold Italic"
+
+font-synthetic-style = false
+
+font-feature = ss19, ss20
 
 font-size = 13.0
-
 
 # Text
 # bold-is-bright = true
 
 # Cursor
-cursor-color = #00ffff
 cursor-style = "block"
 cursor-style-blink = false
 shell-integration-features = no-cursor
@@ -32,9 +39,6 @@ title = " "
 
 # Window
 window-decoration = false
-
-#
-copy-on-select = clipboard
 
 # Panes
 keybind = shift+alt+r=new_split:right
