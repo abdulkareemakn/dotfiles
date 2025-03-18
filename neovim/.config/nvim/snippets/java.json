@@ -1,7 +1,30 @@
 {
-  "printf": {
-    "prefix": "printf",
-    "body": ["System.out.printf(\"$0\\n\")"],
-    "description": "printf"
-  }
+    "printf": {
+        "prefix": "souf",
+        "body": [
+            "System.out.printf(\"$0\\n\");"
+        ],
+        "description": "printf"
+    },
+    "println": {
+        "prefix": "soul",
+        "body": [
+            "System.out.println(\"$0\");"
+        ],
+        "description": "println"
+    },
+    "print": {
+        "prefix": "soup",
+        "body": [
+            "System.out.print(\"$0\");"
+        ],
+        "description": "print"
+    },
+    "read": {
+        "prefix": "read",
+        "body": [
+            "Scanner read = new Scanner(System.in);\n"
+        ],
+        "description": "create an object of the Scanner class."
+    }
 }

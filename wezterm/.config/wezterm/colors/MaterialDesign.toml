@@ -2,9 +2,9 @@
 [colors]
 foreground = "#e7ebed"
 background = "#1d262a"
-cursor_bg = "#eaeaea"
-cursor_border = "#eaeaea"
-cursor_fg = "#000000"
+cursor_bg = "#11FFFF"
+cursor_border = "#11FFFF"
+cursor_fg = "#11FFFF"
 selection_bg = "#4e6a78"
 selection_fg = "#e7ebed"
 
