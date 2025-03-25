@@ -5,3 +5,5 @@ sudo pacman -S --needed --noconfirm zsh kitty neovim zoxide uv fzf thefuck stars
 paru -S --needed --noconfirm zsh-theme-powerlevel10k-git zsh-you-should-use
 
 chsh -s $(which zsh)
+
+git clone
