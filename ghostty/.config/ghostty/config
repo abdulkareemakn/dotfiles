@@ -1,9 +1,9 @@
 # Theme
-theme = Dracula
+theme = MaterialDesignColors
 
 # Font-Family
 font-family = ""
-font-family = "Berkeley Mono Trial"
+font-family = "CaskaydiaCove NF"
 font-family-bold = "CaskaydiaCove NF"
 font-family-italic = "CaskaydiaCove NF"
 font-family-bold-italic = "CaskaydiaCove NF"
