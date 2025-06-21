@@ -18,8 +18,8 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
-alias ls="lsd --icon=always --group-directories-first -l --git"
-alias la="lsd --icon=always --group-directories-first -lA --git"
+alias ls="lsd --icon=always --group-directories-first -l"
+alias la="lsd --icon=always --group-directories-first -lA"
 
 alias cls="clear"
 
@@ -30,11 +30,11 @@ alias md="mkdir -pv"
 # pacman aliases
 alias upgrade="sudo pacman -Syu"
 alias install="sudo pacman -S"
-alias search="paru -Ss"
+alias search="yay -Ss"
 alias remove="sudo pacman -R"
 
 # yay
-alias aurinstall="paru -S"
+alias aurinstall="yay -S"
 alias aurupdate="yay"
 
 # Python Environments
@@ -67,3 +67,5 @@ alias pdfstop="sudo systemctl stop stirling-pdf.service"
 alias pdfref="sudo systemctl restart stirling-pdf.service"
 alias pdfset="sudo nvim /var/lib/stirling-pdf/configs/settings.yml"
 alias pdfenv="sudo nvim /etc/stirling-pdf/stirling-pdf.env"
+
+alias paru="yay"

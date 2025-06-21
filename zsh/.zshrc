@@ -32,7 +32,7 @@ source "$HOME/.config/zsh/extract.plugin.zsh"
 
 # Starship Prompt
 # export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # Zoxide
 eval "$(zoxide init zsh)"
@@ -115,8 +115,11 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/something.toml)"
-
 vidinfo() {
     ffprobe -v error -show_format -show_streams -print_format json "$1" > ~/streaming/metadata & copyfile ~/streaming/metadata
+}
+
+metadata() {
+    touch ./metadata;
+    ffprobe -v error -show_format -show_streams -print_format json "$1" > ./metadata && copyfile ./metadata
 }
