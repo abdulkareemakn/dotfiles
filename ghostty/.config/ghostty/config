@@ -3,12 +3,12 @@ theme = MaterialDesignColors
 
 # Font-Family
 font-family = ""
-font-family = "CaskaydiaCove NF"
-font-family-bold = "CaskaydiaCove NF"
-font-family-italic = "CaskaydiaCove NF"
-font-family-bold-italic = "CaskaydiaCove NF"
+font-family = "GeistMono Nerd Font"
+font-family-bold = "GeistMono Nerd Font"
+font-family-italic = "GeistMono Nerd Font"
+font-family-bold-italic = "GeistMono Nerd Font"
 
-font-style = "SemiBold"
+font-style = "Medium"
 font-style-bold = "Bold"
 font-style-italic = "Italic"
 font-style-bold-italic = "Bold Italic"

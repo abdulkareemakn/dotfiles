@@ -18,8 +18,8 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
-alias ls="lsd --icon=always --group-directories-first -l"
-alias la="lsd --icon=always --group-directories-first -lA"
+alias ls="lsd --icon=always --group-directories-first -lv"
+alias la="lsd --icon=always --group-directories-first -lAv"
 
 alias cls="clear"
 
@@ -69,3 +69,7 @@ alias pdfset="sudo nvim /var/lib/stirling-pdf/configs/settings.yml"
 alias pdfenv="sudo nvim /etc/stirling-pdf/stirling-pdf.env"
 
 alias paru="yay"
+
+# Docker
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"

@@ -43,6 +43,8 @@ eval $(thefuck --alias fml)
 # uv
 # eval "$(uv generate-shell-completion zsh)"
 
+source /usr/share/nvm/init-nvm.sh
+
 # fzf
 source <(fzf --zsh)
 
@@ -99,10 +101,10 @@ please() {
 function clipcopy() { cat "${1:-/dev/stdin}" | wl-copy &>/dev/null &|; }
 
 # gcc
-build() {
-    g++ -Wall "$1" -o "${1%.cpp}" && ./"${1%.cpp}"
-}
-compdef '_files -g "*.cpp"' build
+# build() {
+#     g++ -Wall "$1" -o "${1%.cpp}" && ./"${1%.cpp}"
+# }
+# compdef '_files -g "*.cpp"' build
 
 music() {
     mpv $(yt-dlp -f bestaudio --get-url "$1")
