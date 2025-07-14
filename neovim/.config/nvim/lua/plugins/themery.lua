@@ -20,11 +20,11 @@ return {
                 { name = "Github Light Colorblind",    colorscheme = "github_light_colorblind" },
                 { name = "Github Light Tritanopia",    colorscheme = "github_light_tritanopia" },
 
-                {
-                    name = "Gruvbox Light",
-                    colorscheme = "gruvbox",
-                    before = [[vim.o.background="light"]],
-                },
+                -- {
+                --     name = "Gruvbox Light",
+                --     colorscheme = "gruvbox",
+                --     before = [[vim.o.background="light"]],
+                -- },
 
                 -- { name = "Kanagawa Lotus", colorscheme = "kanagawa-lotus" },
 
@@ -49,28 +49,28 @@ return {
                 -- 	before = [[vim.g.ayucolor="mirage"]],
                 -- },
 
-                { name = "TokyoNight Day",            colorscheme = "tokyonight-day" },
+                { name = "TokyoNight Day",             colorscheme = "tokyonight-day" },
 
-                { name = "Carbonfox",                 colorscheme = "carbonfox" },
+                { name = "Carbonfox",                  colorscheme = "carbonfox" },
 
-                { name = "Catppuccin Frappe",         colorscheme = "catppuccin-frappe" },
-                { name = "Catppuccin Macchiato",      colorscheme = "catppuccin-macchiato" },
-                { name = "Catppuccin Mocha",          colorscheme = "catppuccin-mocha" },
+                { name = "Catppuccin Frappe",          colorscheme = "catppuccin-frappe" },
+                { name = "Catppuccin Macchiato",       colorscheme = "catppuccin-macchiato" },
+                { name = "Catppuccin Mocha",           colorscheme = "catppuccin-mocha" },
 
-                { name = "Dracula",                   colorscheme = "dracula" },
+                { name = "Dracula",                    colorscheme = "dracula" },
 
-                { name = "Github Dark",               colorscheme = "github_dark" },
-                { name = "Github Dark Dimmed",        colorscheme = "github_dark_dimmed" },
-                { name = "Github Dark Default",       colorscheme = "github_dark_default" },
-                { name = "Github Dark High Contrast", colorscheme = "github_dark_high_contrast" },
-                { name = "Github Dark Colorblink",    colorscheme = "github_dark_colorblind" },
-                { name = "Github Dark Tritanopia",    colorscheme = "github_dark_tritanopia" },
+                { name = "Github Dark",                colorscheme = "github_dark" },
+                { name = "Github Dark Dimmed",         colorscheme = "github_dark_dimmed" },
+                { name = "Github Dark Default",        colorscheme = "github_dark_default" },
+                { name = "Github Dark High Contrast",  colorscheme = "github_dark_high_contrast" },
+                { name = "Github Dark Colorblink",     colorscheme = "github_dark_colorblind" },
+                { name = "Github Dark Tritanopia",     colorscheme = "github_dark_tritanopia" },
 
-                {
-                    name = "Gruvbox Dark",
-                    colorscheme = "gruvbox",
-                    before = [[vim.o.background="dark"]],
-                },
+                -- {
+                --     name = "Gruvbox Dark",
+                --     colorscheme = "gruvbox",
+                --     before = [[vim.o.background="dark"]],
+                -- },
 
                 -- { name = "Halcyon", colorscheme = "halcyon" },
 

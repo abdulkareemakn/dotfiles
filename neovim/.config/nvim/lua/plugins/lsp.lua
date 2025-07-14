@@ -23,10 +23,11 @@ return {
                     "clangd",
                     "basedpyright",
                     "ruff",
-                    -- "ts_ls",
+                    "ts_ls",
                     "taplo",
-                    -- "gopls",
-                    -- "jsonls",
+                    "gopls",
+                    "jsonls",
+                    "yamlls"
                 },
             })
         end,
@@ -147,6 +148,10 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.jdtls.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+            lspconfig.yamlls.setup({
                 on_attach = on_attach,
                 capabilities = capabilities,
             })

@@ -18,8 +18,12 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
-alias ls="lsd --icon=always --group-directories-first -lv"
-alias la="lsd --icon=always --group-directories-first -lAv"
+func -() {
+    cd -
+}
+
+alias ls="lsd --icon=always --group-directories-first -lh"
+alias la="lsd --icon=always --group-directories-first -lAh"
 
 alias cls="clear"
 
