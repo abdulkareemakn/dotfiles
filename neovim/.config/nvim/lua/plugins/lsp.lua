@@ -20,7 +20,7 @@ return {
                 ensure_installed = {
                     -- LSPs
                     "lua_ls",
-                    "clangd",
+                    -- "clangd",
                     "basedpyright",
                     "ruff",
                     "ts_ls",

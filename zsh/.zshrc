@@ -43,8 +43,6 @@ eval $(thefuck --alias fml)
 # uv
 # eval "$(uv generate-shell-completion zsh)"
 
-source /usr/share/nvm/init-nvm.sh
-
 # fzf
 source <(fzf --zsh)
 

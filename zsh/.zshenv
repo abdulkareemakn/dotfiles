@@ -8,6 +8,8 @@ export EDITOR=nvim
 
 export PATH="$HOME/bin:$PATH"
 
+export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
+
 # uv
 export PATH="/home/abdulkareem/.local/bin:$PATH"
 
