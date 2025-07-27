@@ -4,12 +4,12 @@ return {
         "williamboman/mason.nvim",
         config = function()
             require("mason").setup({
-                ensure_installed = {
-                    "clang-format",
-                    "stylua",
-                    "prettierd",
-                    "shfmt",
-                },
+                -- ensure_installed = {
+                --     "clang-format",
+                --     "stylua",
+                --     "prettierd",
+                --     "shfmt",
+                -- },
             })
         end,
     },
@@ -17,18 +17,18 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = {
-                    -- LSPs
-                    "lua_ls",
-                    -- "clangd",
-                    "basedpyright",
-                    "ruff",
-                    "ts_ls",
-                    "taplo",
-                    "gopls",
-                    "jsonls",
-                    "yamlls"
-                },
+                -- ensure_installed = {
+                --     -- LSPs
+                --     "lua_ls",
+                --     -- "clangd",
+                --     "basedpyright",
+                --     "ruff",
+                --     "ts_ls",
+                --     "taplo",
+                --     "gopls",
+                --     "jsonls",
+                --     "yamlls"
+                -- },
             })
         end,
     },

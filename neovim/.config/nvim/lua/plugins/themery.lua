@@ -12,7 +12,7 @@ return {
 
                 { name = "Catppuccin Latte",           colorscheme = "catppuccin-latte" },
 
-                { name = "Dayfox",                     colorscheme = "dayfox" },
+                -- { name = "Dayfox",                     colorscheme = "dayfox" },
 
                 { name = "Github Light",               colorscheme = "github_light" },
                 { name = "Github Light Default",       colorscheme = "github_light_default" },
@@ -51,13 +51,13 @@ return {
 
                 { name = "TokyoNight Day",             colorscheme = "tokyonight-day" },
 
-                { name = "Carbonfox",                  colorscheme = "carbonfox" },
+                -- { name = "Carbonfox",                  colorscheme = "carbonfox" },
 
                 { name = "Catppuccin Frappe",          colorscheme = "catppuccin-frappe" },
                 { name = "Catppuccin Macchiato",       colorscheme = "catppuccin-macchiato" },
                 { name = "Catppuccin Mocha",           colorscheme = "catppuccin-mocha" },
 
-                { name = "Dracula",                    colorscheme = "dracula" },
+                -- { name = "Dracula",                    colorscheme = "dracula" },
 
                 { name = "Github Dark",                colorscheme = "github_dark" },
                 { name = "Github Dark Dimmed",         colorscheme = "github_dark_dimmed" },
@@ -134,21 +134,21 @@ return {
                     before = [[require("monokai-pro").setup({filter="classic"})]],
                 },
 
-                { name = "Nightfox",         colorscheme = "nightfox" },
-                { name = "Nordfox",          colorscheme = "nordfox" },
+                -- { name = "Nightfox",         colorscheme = "nightfox" },
+                -- { name = "Nordfox",          colorscheme = "nordfox" },
 
                 -- { name = "OneDark", colorscheme = "onedark" },
                 -- { name = "OneDark Vivid", colorscheme = "onedark_vivid" },
                 -- { name = "OneDark Dark", colorscheme = "onedark_dark" },
 
-                { name = "Oxocarbon",        colorscheme = "oxocarbon" },
+                -- { name = "Oxocarbon",        colorscheme = "oxocarbon" },
 
                 { name = "Poimandres",       colorscheme = "poimandres" },
 
                 -- { name = "Rose Pine", colorscheme = "rose-pine-main" },
                 -- { name = "Rose Pine Moon", colorscheme = "rose-pine-moon" },
 
-                { name = "Terafox",          colorscheme = "terafox" },
+                -- { name = "Terafox",          colorscheme = "terafox" },
 
                 { name = "TokyoNight Night", colorscheme = "tokyonight-night" },
                 { name = "TokyoNight Storm", colorscheme = "tokyonight-storm" },

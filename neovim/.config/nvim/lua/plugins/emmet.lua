@@ -1,5 +1,6 @@
 return {
 	"olrtg/nvim-emmet",
+    enabled = false,
 	ft = { "html" },
 	event = "VeryLazy",
 	config = function()

@@ -19,9 +19,5 @@ return {
 				},
 			})
 		end,
-	},
-	{
-		"fladson/vim-kitty",
-		ft = "kitty",
-	},
+	}
 }

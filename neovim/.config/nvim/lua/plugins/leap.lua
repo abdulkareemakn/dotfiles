@@ -1,5 +1,6 @@
 return {
 	"ggandor/leap.nvim",
+    enabled = false,
 	event = "VeryLazy",
 	dependencies = {
 		"tpope/vim-repeat",
