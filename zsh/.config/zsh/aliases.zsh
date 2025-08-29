@@ -23,13 +23,15 @@ func -() {
 }
 
 alias ls="lsd --icon=always --group-directories-first -l"
-alias la="lsd --icon=always --group-directories-first -lAh"
+alias la="lsd --icon=always --group-directories-first -lA"
 
 alias cls="clear"
 
 alias nv="nvim" 
 
 alias md="mkdir -pv"
+
+alias cd="z"
 
 # pacman aliases
 alias upgrade="sudo pacman -Syu"

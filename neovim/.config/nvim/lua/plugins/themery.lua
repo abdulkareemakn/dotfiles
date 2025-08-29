@@ -20,11 +20,11 @@ return {
                 { name = "Github Light Colorblind",    colorscheme = "github_light_colorblind" },
                 { name = "Github Light Tritanopia",    colorscheme = "github_light_tritanopia" },
 
-                -- {
-                --     name = "Gruvbox Light",
-                --     colorscheme = "gruvbox",
-                --     before = [[vim.o.background="light"]],
-                -- },
+                {
+                    name = "Gruvbox Light",
+                    colorscheme = "gruvbox",
+                    before = [[vim.o.background="light"]],
+                },
 
                 -- { name = "Kanagawa Lotus", colorscheme = "kanagawa-lotus" },
 
@@ -66,11 +66,11 @@ return {
                 { name = "Github Dark Colorblink",     colorscheme = "github_dark_colorblind" },
                 { name = "Github Dark Tritanopia",     colorscheme = "github_dark_tritanopia" },
 
-                -- {
-                --     name = "Gruvbox Dark",
-                --     colorscheme = "gruvbox",
-                --     before = [[vim.o.background="dark"]],
-                -- },
+                {
+                    name = "Gruvbox Dark",
+                    colorscheme = "gruvbox",
+                    before = [[vim.o.background="dark"]],
+                },
 
                 -- { name = "Halcyon", colorscheme = "halcyon" },
 

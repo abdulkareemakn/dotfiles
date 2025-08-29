@@ -40,6 +40,8 @@ eval "$(zoxide init zsh)"
 # Thefuck
 eval $(thefuck --alias fml)
 
+# eval "$(atuin init zsh)"
+
 # uv
 # eval "$(uv generate-shell-completion zsh)"
 
@@ -77,19 +79,19 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Function that calls ls everytime cd is run
-cd() {
-	if [ -z "$1" ]; then
-	  builtin cd ~
-	else 
-	  builtin cd "$1" && lsd --icon=always -lv
-	fi
-}
+# cd() {
+# 	if [ -z "$1" ]; then
+# 	  builtin cd ~
+# 	else 
+# 	  builtin cd "$1" && lsd --icon=always -lv
+# 	fi
+# }
 
 # Changes dir if the command is the name of a dir
 setopt auto_cd 
 
 mkcd() {
-  mkdir -p $argv && cd $argv
+  mkdir -p $argv && z $argv
 }
 
 please() {
