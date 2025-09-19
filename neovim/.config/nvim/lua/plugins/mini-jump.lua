@@ -1,6 +1,6 @@
 return {
 	{
-		"echasnovski/mini.jump",
+		"nvim-mini/mini.jump",
 		version = false,
 		event = "VeryLazy",
 		config = function()
@@ -16,7 +16,7 @@ return {
 		end,
 	},
 	{
-		"echasnovski/mini.jump2d",
+		"nvim-mini/mini.jump2d",
 		version = false,
 		event = "VeryLazy",
 		config = function()

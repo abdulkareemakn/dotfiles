@@ -1,5 +1,5 @@
 return {
-	"echasnovski/mini.hipatterns",
+	"nvim-mini/mini.hipatterns",
 	version = false,
 	event = "VeryLazy",
 	config = function()

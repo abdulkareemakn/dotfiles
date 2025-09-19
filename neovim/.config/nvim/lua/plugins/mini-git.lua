@@ -1,5 +1,5 @@
 return {
-	"echasnovski/mini-git",
+	"nvim-mini/mini-git",
 	enabled = false,
 	version = false,
 	main = "mini.git",
