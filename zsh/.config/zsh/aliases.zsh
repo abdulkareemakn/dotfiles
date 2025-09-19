@@ -31,8 +31,6 @@ alias nv="nvim"
 
 alias md="mkdir -pv"
 
-alias cd="z"
-
 # pacman aliases
 alias upgrade="sudo pacman -Syu"
 alias install="sudo pacman -S"
