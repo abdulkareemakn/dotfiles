@@ -1,12 +1,12 @@
 # Theme
-theme = MaterialDesignColors
+theme = "Catppuccin Mocha"
 
 # Font-Family
 font-family = ""
-font-family = "Zed Mono"
-font-family-bold = "Zed Mono"
-font-family-italic = "Zed Mono"
-font-family-bold-italic = "Zed Mono"
+font-family = "JetBrainsMono Nerd Font"
+font-family-bold = "JetBrainsMono Nerd Font"
+font-family-italic = "JetBrainsMono Nerd Font"
+font-family-bold-italic = "JetBrainsMono Nerd Font"
 
 font-style = "Medium"
 font-style-bold = "Bold"
@@ -23,7 +23,7 @@ font-size = 13.0
 # bold-is-bright = true
 
 # Cursor
-cursor-style = "block"
+cursor-style = "bar"
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
@@ -32,7 +32,7 @@ shell-integration-features = no-cursor
 mouse-hide-while-typing = true
 
 # Fullscreen
-fullscreen = true
+fullscreen = false
 
 # Title
 title = " "
