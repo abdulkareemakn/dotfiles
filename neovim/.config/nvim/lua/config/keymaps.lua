@@ -4,6 +4,9 @@ local map = vim.keymap.set
 map("n", "<CR>", "m`o<Esc>``", { desc = "Insert blankline below" })
 map("n", "<S-CR>", "m`O<Esc>``", { desc = "Insert blankline above" })
 
+vim.keymap.set("n", "<leader>ww", ":write<CR>", { desc = "Write file" })
+vim.keymap.set("n", "<leader>q", ":quit<CR>")
+
 -- Clear search highlights
 map("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
@@ -23,7 +26,7 @@ map("n", "<leader>th", ":Themery<CR>", { desc = "Change theme" })
 
 -- Terminal
 map("n", "<leader>ct", function()
-	Snacks.terminal.get()
+	Snacks.terminal.open()
 end, { desc = "Open Terminal" })
 
 -- Buffers
@@ -127,3 +130,17 @@ map("n", "<C-l>", "<C-w>l", { desc = "Focus right" })
 
 -- map("v", "<S-A-Down>", "<Esc>yp", { desc = "Clone code block down" })
 -- map("v", "<S-A-Up>", "yP", { desc = "Clone code block up" })
+--
+
+vim.keymap.set("n", "<leader>cr", function()
+	local file = vim.fn.expand("%:p") -- full path to file
+	local name = vim.fn.expand("%:p:r") -- same path, no extension
+	local cmd = { "bash", "-c", string.format("g++ %s -o %s && %s", file, name, name) }
+
+	Snacks.terminal.open(cmd, {
+		cwd = vim.fn.expand("%:p:h"), -- run in the file's directory
+		start_insert = true, -- enter insert mode so you see output
+		auto_close = false, -- keep terminal open after exit
+		win = { position = "bottom" }, -- floating window (you can change to "bottom")
+	})
+end, { desc = "Compile & run current C++ file" })
