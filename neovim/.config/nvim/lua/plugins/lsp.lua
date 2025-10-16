@@ -1,6 +1,17 @@
 return {
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = {
+			{
+				"folke/lazydev.nvim",
+				ft = "lua",
+				opts = {
+					library = {
+						{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+					},
+				},
+			},
+		},
 
 		config = function()
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
@@ -38,11 +49,12 @@ return {
 				-- Show diagnostic
 				vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
 
+				-- Handled by mini-bracketed
 				-- Go to next diagnostic
-				vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+				-- vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
 
 				-- Go to previous diagnostic
-				vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+				-- vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 
 				-- Show diagnostic list
 				vim.keymap.set("n", "<leader>dl", vim.diagnostic.setqflist, opts)
@@ -54,18 +66,23 @@ return {
 				-- vim.keymap.set("n", "<leader>ds", vim.lsp.buf.document_symbol, opts)
 
 				-- Show workspace symbols
-				vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
+				-- vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
 			end
 
-			local servers = {
-				"lua_ls",
-				"clangd",
-				"jsonls",
-				"yamlls",
+			-- vim.lsp.enable({ " lua_ls " })
+
+			vim.lsp.config.clangd = {
+				cmd = { "clangd", "--background-index" },
+				root_markers = { "compile_commands.json", "compile_flags.txt" },
+				filetypes = { "c", "cpp" },
 			}
 
+			vim.lsp.enable({ "clangd" })
+
+			local servers = { "lua_ls", "yamlls", "hyprls", "jsonls" }
+
 			for _, server in ipairs(servers) do
-				vim.lsp.config(server, {
+				lspconfig[server].setup({
 					on_attach = on_attach,
 					capabilities = capabilities,
 				})

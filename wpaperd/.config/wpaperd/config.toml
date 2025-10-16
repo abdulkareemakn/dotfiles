@@ -1,0 +1,5 @@
+[eDP-1]
+path = "/home/abdulkareem/Pictures/Wallpapers/hyprland/"
+duration = "30s"
+sorting = "random"
+mode = "fit"

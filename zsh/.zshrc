@@ -2,6 +2,7 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
+
 nerdfetch
 
 echo -e "\n"
@@ -10,9 +11,9 @@ echo -e "\n"
 
 source /usr/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 source "$HOME/.config/zsh/key-bindings.zsh"
 
@@ -37,8 +38,13 @@ source "$HOME/.config/zsh/extract.plugin.zsh"
 # Zoxide
 eval "$(zoxide init zsh)"
 
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/amro.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/star.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/catppuccin-mocha.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/catppuccin.omp.json)"
+
 # Thefuck
-eval $(thefuck --alias fml)
+# eval $(thefuck --alias fml)
 
 # eval "$(atuin init zsh)"
 
@@ -46,7 +52,11 @@ eval $(thefuck --alias fml)
 # eval "$(uv generate-shell-completion zsh)"
 
 # fzf
-source <(fzf --zsh)
+# source <(fzf --zsh)
+if command -v fzf >/dev/null; then
+  source /usr/share/fzf/completion.zsh
+  source /usr/share/fzf/key-bindings.zsh
+fi
 
 # yazi
 function y() {
@@ -98,8 +108,6 @@ please() {
     sudo $(fc -ln -1)
 }
 
-function clipcopy() { cat "${1:-/dev/stdin}" | wl-copy &>/dev/null &|; }
-
 # gcc
 # build() {
 #     g++ -Wall "$1" -o "${1%.cpp}" && ./"${1%.cpp}"
@@ -115,7 +123,6 @@ music() {
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 vidinfo() {
     ffprobe -v error -show_format -show_streams -print_format json "$1" > ~/streaming/metadata & copyfile ~/streaming/metadata
@@ -125,3 +132,6 @@ metadata() {
     touch ./metadata;
     ffprobe -v error -show_format -show_streams -print_format json "$1" > ./metadata && copyfile ./metadata
 }
+
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh

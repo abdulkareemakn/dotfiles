@@ -27,9 +27,9 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 export PATH="$PATH:/home/abdulkareem/.local/share/JetBrains/Toolbox/scripts"
-export PATH="$PATH:/home/abdulkareem/pnpm"
+# export PATH="$PATH:/home/abdulkareem/pnpm"
 export PATH="$PATH:/home/abdulkareem/go/bin"
 
-export PNPM_HOME="$HOME/pnpm"
+# export PNPM_HOME="$HOME/pnpm"
 
 export GOPATH="$HOME/go"

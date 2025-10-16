@@ -22,6 +22,8 @@ func -() {
     cd -
 }
 
+alias cd="z"
+
 alias ls="lsd --icon=always --group-directories-first -l"
 alias la="lsd --icon=always --group-directories-first -lA"
 
@@ -64,15 +66,6 @@ alias x="cd /home/abdulkareem/projects/CS50x/"
 
 # 100 days
 alias 100="cd /home/abdulkareem/projects/python/100-days-of-code/; source /home/abdulkareem/projects/python/100-days-of-code/.venv/bin/activate"
-
-# PDF
-alias pdfstart="sudo systemctl start stirling-pdf.service; chromium 127.0.0.1:6969"
-alias pdfstop="sudo systemctl stop stirling-pdf.service"
-alias pdfref="sudo systemctl restart stirling-pdf.service"
-alias pdfset="sudo nvim /var/lib/stirling-pdf/configs/settings.yml"
-alias pdfenv="sudo nvim /etc/stirling-pdf/stirling-pdf.env"
-
-alias paru="yay"
 
 # Docker
 alias dcu="docker compose up -d"
