@@ -1,7 +1,8 @@
 * {
   all: unset;
   font-size: 14px;
-  font-family: "MesloLGS Nerd Font Bold";
+  font-family: "MesloLGS Nerd Font";
+  font-weight: 700;
   transition: 200ms;
 }
 

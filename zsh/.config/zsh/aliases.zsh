@@ -22,8 +22,6 @@ func -() {
     cd -
 }
 
-alias cd="z"
-
 alias ls="lsd --icon=always --group-directories-first -l"
 alias la="lsd --icon=always --group-directories-first -lA"
 

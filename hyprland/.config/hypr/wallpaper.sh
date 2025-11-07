@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Configuration
-WALLPAPER_DIR="$HOME/Pictures/Wallpapers/hyprland"
+WALLPAPER_DIR="$HOME/wallpapers"
 CONFIG_FILE="$HOME/.config/hypr/hyprpaper.conf"
 INTERVAL=600  # 10 minutes in seconds
 MONITOR="eDP-1"  # Change this to your monitor name

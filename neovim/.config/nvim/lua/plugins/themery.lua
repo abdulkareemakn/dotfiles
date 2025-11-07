@@ -134,6 +134,8 @@ return {
 					before = [[require("monokai-pro").setup({filter="classic"})]],
 				},
 
+                { name = "Nord", colorscheme = "nord"},
+
 				-- { name = "Nightfox",         colorscheme = "nightfox" },
 				-- { name = "Nordfox",          colorscheme = "nordfox" },
 

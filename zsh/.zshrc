@@ -1,19 +1,6 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-
-
 nerdfetch
 
 echo -e "\n"
-
-# source /usr/lib/spaceship-prompt/spaceship.zsh
-
-source /usr/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
-
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
 
 source "$HOME/.config/zsh/key-bindings.zsh"
 
@@ -33,7 +20,7 @@ source "$HOME/.config/zsh/extract.plugin.zsh"
 
 # Starship Prompt
 # export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # Zoxide
 eval "$(zoxide init zsh)"
@@ -133,5 +120,5 @@ metadata() {
     ffprobe -v error -show_format -show_streams -print_format json "$1" > ./metadata && copyfile ./metadata
 }
 
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.config/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
