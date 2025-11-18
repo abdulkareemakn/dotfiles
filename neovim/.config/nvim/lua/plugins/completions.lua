@@ -17,6 +17,7 @@ return {
 		keymap = { preset = "super-tab" },
 		--      snippets = { preset = "luasnip" },
 		completion = {
+			accept = { auto_brackets = { enabled = false } },
 			menu = {
 				draw = {
 					components = {
