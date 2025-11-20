@@ -120,5 +120,5 @@ metadata() {
     ffprobe -v error -show_format -show_streams -print_format json "$1" > ./metadata && copyfile ./metadata
 }
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh

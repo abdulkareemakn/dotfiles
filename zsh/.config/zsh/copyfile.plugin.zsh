@@ -1,7 +1,7 @@
 # Copies the contents of a given file to the system or X Windows clipboard
 #
 # copyfile <file>
-function copyfile {
+function cpf {
   emulate -L zsh
-  wl-copy -selection clipboard -in <"$1"
+  wl-copy <"$1"
 }

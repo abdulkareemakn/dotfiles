@@ -9,6 +9,8 @@ alias omp="nvim ~/.config/oh-my-posh/prompt.toml"
 
 alias aliases="nvim ~/.config/zsh/aliases.zsh"
 alias zsh-plugins="nvim ~/.config/zsh/plugins"
+
+alias ssh="kitten ssh"
 # alias antiload=antidote bundle <~/.config/zsh/plugin >~/.config/zsh/plugins/.zsh_plugins.zsh
 
 # File System Aliases
@@ -24,6 +26,8 @@ func -() {
 
 alias ls="lsd --icon=always --group-directories-first -l"
 alias la="lsd --icon=always --group-directories-first -lA"
+
+alias lg="lazygit"
 
 alias cls="clear"
 
@@ -68,3 +72,7 @@ alias 100="cd /home/abdulkareem/projects/python/100-days-of-code/; source /home/
 # Docker
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
+alias dcl="docker compose logs"
+alias dcp="docker compose pull"
+
+alias yay="paru"
