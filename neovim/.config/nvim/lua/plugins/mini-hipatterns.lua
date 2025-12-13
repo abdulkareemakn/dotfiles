@@ -1,5 +1,6 @@
 return {
 	"nvim-mini/mini.hipatterns",
+	enabled = false,
 	version = false,
 	event = "VeryLazy",
 	config = function()
