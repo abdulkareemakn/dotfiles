@@ -9,7 +9,7 @@ return {
 		dashboard = {
 			preset = {
 				keys = {
-					{ icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+					{ icon = " ", key = "f", desc = "Find File", action = ":lua MiniPick.builtin.files()" },
 					{ icon = "󰙅", key = "e", desc = "File Explorer", action = ":lua Snacks.picker.explorer()" },
 					{
 						icon = " ",
