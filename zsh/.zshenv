@@ -30,3 +30,5 @@ export PATH="$PATH:/home/abdulkareem/go/bin"
 # export PNPM_HOME="$HOME/pnpm"
 
 export GOPATH="$HOME/go"
+
+export ELECTRON_OZONE_PLATFORM_HINT=wayland

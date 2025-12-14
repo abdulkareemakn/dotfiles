@@ -1,5 +1,6 @@
 return {
 	"nvim-mini/mini.files",
+	enabled = false,
 	event = "VeryLazy",
 	version = false,
 	config = function()

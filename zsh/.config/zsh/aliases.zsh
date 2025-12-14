@@ -76,3 +76,5 @@ alias dcl="docker compose logs"
 alias dcp="docker compose pull"
 
 alias yay="paru"
+
+alias loc="tokei src include"

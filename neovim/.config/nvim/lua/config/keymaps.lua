@@ -1,11 +1,11 @@
 local map = vim.keymap.set
 
 -- Line breaks
-map("n", "<CR>", "m`o<Esc>``", { desc = "Insert blankline below" })
-map("n", "<S-CR>", "m`O<Esc>``", { desc = "Insert blankline above" })
+map("n", "<C-CR>", "m`o<Esc>``", { desc = "Insert blankline below" })
+map("n", "<C-S-CR>", "m`O<Esc>``", { desc = "Insert blankline above" })
 
-vim.keymap.set("n", "<leader>ww", ":write<CR>", { desc = "Write file" })
-vim.keymap.set("n", "<leader>q", ":quit<CR>")
+map("n", "<leader>ww", ":write<CR>", { desc = "Write file" })
+map("n", "<leader>q", ":quit<CR>")
 
 -- Clear search highlights
 map("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
@@ -31,8 +31,11 @@ end, { desc = "Open Terminal" })
 
 -- Buffers
 -- map("n", "<leader>bb", ":Telescope buffers<CR>", { desc = "See open buffers" })
+-- map("n", "<leader>bb", function()
+-- 	Snacks.picker.buffers()
+-- end, { desc = "Buffers" })
 map("n", "<leader>bb", function()
-	Snacks.picker.buffers()
+	MiniPick.builtin.buffers()
 end, { desc = "Buffers" })
 map("n", "<leader>bn", ":bnext<CR>", { desc = "Next Buffer" })
 map("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous Buffer" })
@@ -44,16 +47,16 @@ map("n", "<Tab>", ":bnext<CR>", { desc = "Next Buffer" })
 map("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous Buffer" })
 
 -- Files
-map("n", "<C-f>", function()
-	MiniFiles.open()
-end, { desc = "File Explorer" })
+-- map("n", "<C-f>", function()
+-- 	MiniFiles.open()
+-- end, { desc = "File Explorer" })
 
-map("n", "<leader>ff", function()
+map("n", "<leader>fe", function()
 	Snacks.picker.explorer()
 end, { desc = "Snacks Explorer and Picker" })
 
 map("n", "<leader><space>", function()
-	Snacks.picker.files()
+	MiniPick.builtin.files()
 end, { desc = "Find Files" })
 
 map("n", "<leader>fg", function()
@@ -73,17 +76,14 @@ map("n", "<leader>ht", function()
 end, { desc = "Colorschemes" })
 
 -- LSP
-map("n", "gd", function()
-	Snacks.picker.lsp_definitions()
-end, { desc = "Goto Definition" })
-map("n", "gI", function()
-	Snacks.picker.lsp_implementations()
-end, { desc = "Goto Implementation" })
 map("n", "gr", function()
 	Snacks.picker.lsp_references()
 end, { desc = "See References" })
-map("n", "<leader>ss", function()
+map("n", "<leader>ls", function()
 	Snacks.picker.lsp_symbols()
+end, { desc = "LSP Symbols" })
+map("n", "<leader>lS", function()
+	Snacks.picker.lsp_workspace_symbols()
 end, { desc = "LSP Symbols" })
 
 -- Silicon
@@ -118,11 +118,6 @@ map("n", "<leader>pp", function()
 	Snacks.picker()
 end, { desc = "See all snacks pickers" })
 
--- Leap
-map({ "n", "x", "o" }, "<leader>l", "<Plug>(leap-forward)")
-map({ "n", "x", "o" }, "<leader>L", "<Plug>(leap-backward)")
-map({ "n", "x", "o" }, "gs", "<Plug>(leap-from-window)")
-
 -- Splits
 map("n", "<C-h>", "<C-w>h", { desc = "Focus left" })
 map("n", "<C-j>", "<C-w>j", { desc = "Focus down" })
@@ -133,7 +128,15 @@ map("n", "<C-l>", "<C-w>l", { desc = "Focus right" })
 -- map("v", "<S-A-Up>", "yP", { desc = "Clone code block up" })
 --
 
-vim.keymap.set("n", "<leader>cr", function()
+map("n", "]t", function()
+	require("todo-comments").jump_next()
+end, { desc = "Next todo comment" })
+
+map("n", "[t", function()
+	require("todo-comments").jump_prev()
+end, { desc = "Previous todo comment" })
+
+map("n", "<leader>cr", function()
 	local file = vim.fn.expand("%:p") -- full path to file
 	local name = vim.fn.expand("%:p:r") -- same path, no extension
 	local cmd = { "bash", "-c", string.format("g++ %s -o %s && %s", file, name, name) }
@@ -145,3 +148,16 @@ vim.keymap.set("n", "<leader>cr", function()
 		win = { position = "bottom" }, -- floating window (you can change to "bottom")
 	})
 end, { desc = "Compile & run current C++ file" })
+
+-- Scratch
+map("n", "<leader>.", function()
+	Snacks.scratch()
+end, { desc = "Toggle Scratch Buffer" })
+map("n", "<leader>S", function()
+	Snacks.scratch.select()
+end, { desc = "Select Scratch Buffer" })
+
+-- Grug-far
+map("n", "<leader>cg", function()
+	require("grug-far").open({ prefills = { paths = vim.fn.expand("%") } })
+end)

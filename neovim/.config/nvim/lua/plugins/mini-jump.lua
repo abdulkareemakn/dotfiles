@@ -22,7 +22,7 @@ return {
 		config = function()
 			require("mini.jump2d").setup({
 				mappings = {
-					start_jumping = "m",
+					start_jumping = "t",
 				},
 			})
 		end,

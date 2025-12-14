@@ -1,23 +1,11 @@
 return {
-	{
-		"zbirenbaum/copilot.lua",
-		enabled = false,
-		cmd = "Copilot",
-		event = "BufReadPost",
-		config = function()
-			require("copilot").setup({
-				suggestion = { enabled = false },
-				panel = { enabled = false },
-				filetypes = {
-					markdown = true,
-					help = true,
-				},
-			})
-		end,
-	},
-
-	{
-		"giuxtaposition/blink-cmp-copilot",
-		enabled = false,
+	"zbirenbaum/copilot.lua",
+	enabled = false,
+	cmd = "Copilot",
+	event = "InsertEnter",
+	opts = {
+		-- Disable the native interface so Blink can handle it
+		suggestion = { enabled = false },
+		panel = { enabled = false },
 	},
 }
