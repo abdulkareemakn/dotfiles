@@ -23,7 +23,7 @@ return {
 				auto_brackets = { enabled = true },
 			},
 			documentation = { auto_show = true, auto_show_delay_ms = 250 },
-			ghost_text = { enabled = true }, -- Shows the AI suggestion as grey text ahead of cursor
+			-- ghost_text = { enabled = true }, -- Shows the AI suggestion as grey text ahead of cursor
 
 			menu = {
 				draw = {
