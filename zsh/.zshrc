@@ -20,15 +20,12 @@ source "$HOME/.config/zsh/extract.plugin.zsh"
 
 # Starship Prompt
 # export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # Zoxide
 eval "$(zoxide init zsh)"
 
-# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/amro.omp.json)"
-# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/star.omp.json)"
-# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/catppuccin-mocha.omp.json)"
-# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/catppuccin.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/prompt.omp.toml)"
 
 # Thefuck
 # eval $(thefuck --alias fml)
