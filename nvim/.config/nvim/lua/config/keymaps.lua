@@ -4,7 +4,7 @@ local map = vim.keymap.set
 map("n", "<C-CR>", "m`o<Esc>``", { desc = "Insert blankline below" })
 map("n", "<C-S-CR>", "m`O<Esc>``", { desc = "Insert blankline above" })
 
-map("n", "<leader>ww", ":write<CR>", { desc = "Write file" })
+map("n", "<C-s", ":write<CR>", { desc = "Write file" })
 map("n", "<leader>q", ":quit<CR>")
 
 -- Clear search highlights
