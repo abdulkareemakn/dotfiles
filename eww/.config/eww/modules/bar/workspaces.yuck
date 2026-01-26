@@ -1,0 +1,42 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                         EWW BAR - WORKSPACES                              ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; Listener for Hyprland workspaces
+(deflisten workspace_data 
+  :initial '{"workspaces": [], "active": 1}'
+  "~/.config/eww/scripts/hyprland/workspaces.sh")
+
+; Separator widget
+(defwidget ws-separator []
+  (label :class "ws-separator" :text "|"))
+
+; Workspace number widget
+(defwidget workspace-item [ws is-last]
+  (box
+    :class "ws-item"
+    :orientation "h"
+    :space-evenly false
+    :spacing 0
+    (button
+      :class "ws-num ${ws.id == workspace_data.active ? 'active' : ''} ${ws.windows > 0 ? 'occupied' : 'empty'}"
+      :onclick "hyprctl dispatch workspace ${ws.id}"
+      :tooltip "Workspace ${ws.id}: ${ws.windows} window(s)"
+      "${ws.id}")
+    (label 
+      :class "ws-separator" 
+      :text "|"
+      :visible {!is-last})))
+
+; Main workspaces widget
+(defwidget workspaces []
+  (box 
+    :class "workspaces"
+    :orientation "h"
+    :space-evenly false
+    :halign "start"
+    :spacing 0
+    (for ws in {workspace_data.workspaces}
+      (workspace-item 
+        :ws ws 
+        :is-last {ws.id == jq(workspace_data.workspaces, '.[-1].id')}))))

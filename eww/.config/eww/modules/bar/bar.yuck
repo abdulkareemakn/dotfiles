@@ -1,0 +1,74 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                         EWW BAR - MAIN BAR                                ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; Import all bar modules
+(include "./modules/bar/workspaces.yuck")
+(include "./modules/bar/window-title.yuck")
+(include "./modules/bar/systray.yuck")
+(include "./modules/bar/clock.yuck")
+(include "./modules/bar/system-status.yuck")
+(include "./modules/bar/av-controls.yuck")
+(include "./modules/bar/battery.yuck")
+(include "./modules/bar/network.yuck")
+(include "./modules/bar/download.yuck")
+
+; Left section of the bar
+(defwidget bar-left []
+  (box 
+    :class "bar-section bar-left"
+    :orientation "h"
+    :space-evenly false
+    :halign "start"
+    :spacing 12
+    (workspaces)))
+
+; Center section of the bar
+(defwidget bar-center []
+  (box 
+    :class "bar-section bar-center"
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
+    :spacing 12
+    (window-title)))
+
+; Right section of the bar
+(defwidget bar-right []
+  (box 
+    :class "bar-section bar-right"
+    :orientation "h"
+    :space-evenly false
+    :halign "end"
+    :spacing 8
+    (sys-tray)
+    (system-status)
+    (download)
+    (network)
+    (av-controls)
+    (battery)
+    (clock)))
+
+; Main bar widget
+(defwidget bar []
+  (centerbox 
+    :class "bar"
+    :orientation "h"
+    (bar-left)
+    (bar-center)
+    (bar-right)))
+
+; Bar window definition
+(defwindow bar
+  :monitor 0
+  :geometry (geometry 
+              :x "0%"
+              :y "0%"
+              :width "100%"
+              :height "36px"
+              :anchor "top center")
+  :stacking "fg"
+  :exclusive true
+  :focusable false
+  :namespace "eww-bar"
+  (bar))

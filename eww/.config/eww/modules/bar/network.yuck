@@ -1,0 +1,24 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                         EWW BAR - NETWORK                                 ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; Listener for network status
+(deflisten network_data 
+  :initial '{"ssid": "Disconnected", "signal": 0, "icon": "󰤭", "class": "disconnected", "connected": false}'
+  "~/.config/eww/scripts/system/network.sh")
+
+; Network widget
+(defwidget network []
+  (eventbox
+    :onclick "nm-connection-editor &"
+    (box 
+      :class "module network ${network_data.class}"
+      :orientation "h"
+      :space-evenly false
+      :spacing 6
+      :tooltip "Network: ${network_data.ssid}${network_data.connected ? ' (' + network_data.signal + '%)' : ''}"
+      (label :class "module-icon" :text {network_data.icon})
+      (label 
+        :class "module-text" 
+        :text {network_data.ssid}
+        :limit-width 15))))

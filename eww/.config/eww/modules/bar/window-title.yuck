@@ -1,0 +1,21 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                       EWW BAR - WINDOW TITLE                              ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; Listener for active window
+(deflisten active_window 
+  :initial "Desktop"
+  "~/.config/eww/scripts/hyprland/active-window.sh")
+
+; Window title widget
+(defwidget window-title []
+  (box 
+    :class "window-title"
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
+    :visible {active_window != ""}
+    (label 
+      :text "${active_window}"
+      :limit-width 50
+      :tooltip active_window)))

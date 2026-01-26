@@ -1,0 +1,15 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                                                                           ║
+; ║                      EWW CONFIGURATION - MAIN ENTRY                       ║
+; ║                                                                           ║
+; ║  A modern, minimal desktop shell for Hyprland                             ║
+; ║  Theme: Nord                                                              ║
+; ║                                                                           ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; Include the bar configuration
+(include "./modules/bar/bar.yuck")
+
+; Include OSD overlays
+(include "./modules/osd/volume-osd.yuck")
+(include "./modules/osd/brightness-osd.yuck")

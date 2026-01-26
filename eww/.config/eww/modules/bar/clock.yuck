@@ -1,0 +1,17 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                           EWW BAR - CLOCK                                 ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; Clock widget
+(defwidget clock []
+  (box 
+    :class "clock"
+    :orientation "h"
+    :space-evenly false
+    :spacing 8
+    (label 
+      :class "clock-time"
+      :text {formattime(EWW_TIME, "%H:%M")})
+    (label 
+      :class "clock-date"
+      :text {formattime(EWW_TIME, "%a %d %b")})))

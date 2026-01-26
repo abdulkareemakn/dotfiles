@@ -1,0 +1,19 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                       EWW BAR - DOWNLOAD SPEED                            ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; Listener for download speed
+(deflisten download_data 
+  :initial '{"speed": 0, "formatted": "0 B/s", "icon": "󰇚", "active": false}'
+  "~/.config/eww/scripts/system/download.sh")
+
+; Download speed widget
+(defwidget download []
+  (box 
+    :class "module download ${download_data.active ? 'active' : ''}"
+    :orientation "h"
+    :space-evenly false
+    :spacing 6
+    :tooltip "Download: ${download_data.formatted}"
+    (label :class "module-icon" :text {download_data.icon})
+    (label :class "module-text" :text {download_data.formatted})))

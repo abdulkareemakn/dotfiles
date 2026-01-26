@@ -1,0 +1,53 @@
+// ╔══════════════════════════════════════════════════════════════════════════╗
+// ║                                                                           ║
+// ║                       EWW STYLESHEET - MAIN ENTRY                         ║
+// ║                                                                           ║
+// ║  A modern, minimal desktop shell for Hyprland                             ║
+// ║  Theme: Nord                                                              ║
+// ║                                                                           ║
+// ╚══════════════════════════════════════════════════════════════════════════╝
+
+// Import partials
+@import 'styles/colors';
+@import 'styles/bar';
+@import 'styles/osd';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// GLOBAL STYLES
+// ─────────────────────────────────────────────────────────────────────────────
+
+* {
+  all: unset;
+  font-family: "RobotoMono Nerd Font", monospace;
+  font-size: 14px;
+}
+
+// Reset and base styles for all windows
+window {
+  background: transparent;
+}
+
+// Tooltip styling
+tooltip {
+  background: $bg-secondary;
+  border: 1px solid $bar-border;
+  border-radius: 8px;
+  padding: 8px 12px;
+  
+  label {
+    color: $fg-primary;
+    font-size: 12px;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// UTILITY CLASSES
+// ─────────────────────────────────────────────────────────────────────────────
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}

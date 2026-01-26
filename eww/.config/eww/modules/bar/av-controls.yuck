@@ -1,0 +1,50 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                     EWW BAR - VOLUME & BRIGHTNESS                         ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; Listeners
+(deflisten volume_data 
+  :initial '{"volume": 0, "muted": false, "icon": "󰕾"}'
+  "~/.config/eww/scripts/system/volume.sh")
+
+(deflisten brightness_data 
+  :initial '{"brightness": 100, "icon": "󰃠"}'
+  "~/.config/eww/scripts/system/brightness.sh")
+
+; Volume widget
+(defwidget volume []
+  (eventbox
+    :onscroll "wpctl set-volume @DEFAULT_AUDIO_SINK@ $([ '{}' = 'up' ] && echo '5%+' || echo '5%-') --limit 1.0"
+    :onclick "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    :onrightclick "pavucontrol &"
+    (box 
+      :class "module volume ${volume_data.muted ? 'muted' : ''}"
+      :orientation "h"
+      :space-evenly false
+      :spacing 6
+      :tooltip "Volume: ${volume_data.volume}%${volume_data.muted ? ' (Muted)' : ''}"
+      (label :class "module-icon" :text {volume_data.icon})
+      (label :class "module-text" :text "${volume_data.volume}%"))))
+
+; Brightness widget
+(defwidget brightness []
+  (eventbox
+    :onscroll "brightnessctl set $([ '{}' = 'up' ] && echo '5%+' || echo '5%-')"
+    (box 
+      :class "module brightness"
+      :orientation "h"
+      :space-evenly false
+      :spacing 6
+      :tooltip "Brightness: ${brightness_data.brightness}%"
+      (label :class "module-icon" :text {brightness_data.icon})
+      (label :class "module-text" :text "${brightness_data.brightness}%"))))
+
+; Combined audio-visual controls
+(defwidget av-controls []
+  (box 
+    :class "av-controls"
+    :orientation "h"
+    :space-evenly false
+    :spacing 4
+    (volume)
+    (brightness)))

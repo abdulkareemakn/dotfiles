@@ -1,0 +1,78 @@
+// Nord Color Palette
+// https://www.nordtheme.com/
+
+// Polar Night - Dark backgrounds
+$nord0: #2E3440;  // Background
+$nord1: #3B4252;  // Elevated surfaces
+$nord2: #434C5E;  // Selection/highlight
+$nord3: #4C566A;  // Comments/inactive
+
+// Snow Storm - Light text
+$nord4: #D8DEE9;  // Primary text
+$nord5: #E5E9F0;  // Secondary text
+$nord6: #ECEFF4;  // Brightest text
+
+// Frost - Accent colors
+$nord7: #8FBCBB;  // Teal
+$nord8: #88C0D0;  // Cyan
+$nord9: #81A1C1;  // Blue
+$nord10: #5E81AC; // Deep blue
+
+// Aurora - Semantic colors
+$nord11: #BF616A; // Red (error/urgent)
+$nord12: #D08770; // Orange (warning)
+$nord13: #EBCB8B; // Yellow (caution)
+$nord14: #A3BE8C; // Green (success)
+$nord15: #B48EAD; // Purple (special)
+
+// Semantic aliases
+$bg-primary: $nord0;
+$bg-secondary: $nord1;
+$bg-tertiary: $nord2;
+$bg-highlight: $nord3;
+
+$fg-primary: $nord4;
+$fg-secondary: $nord5;
+$fg-bright: $nord6;
+
+$accent-teal: $nord7;
+$accent-cyan: $nord8;
+$accent-blue: $nord9;
+$accent-deep-blue: $nord10;
+
+$color-error: $nord11;
+$color-warning: $nord12;
+$color-caution: $nord13;
+$color-success: $nord14;
+$color-special: $nord15;
+
+// Bar specific
+// Options for bar background:
+//   Solid dark:        #2E3440
+//   Semi-transparent:  rgba(46, 52, 64, 0.85)
+//   Transparent:       transparent
+$bar-bg: #2E3440;
+$bar-bg-solid: #2E3440;
+$bar-module-bg: #3B4252;
+$bar-module-hover: #434C5E;
+$bar-border: rgba(136, 192, 208, 0.3);
+
+// Transparency variants
+$transparent: transparent;
+$semi-transparent: rgba(46, 52, 64, 0.7);
+
+// Workspace states
+$ws-active: $accent-cyan;
+$ws-occupied: $fg-secondary;
+$ws-empty: $bg-highlight;
+$ws-urgent: $color-error;
+
+// System status colors
+$cpu-color: $accent-teal;
+$ram-color: $accent-blue;
+$network-color: $color-caution;
+$battery-color: $color-success;
+$battery-warning: $color-warning;
+$battery-critical: $color-error;
+$volume-color: $accent-cyan;
+$brightness-color: $color-caution;

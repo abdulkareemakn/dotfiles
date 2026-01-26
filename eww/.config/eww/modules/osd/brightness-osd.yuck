@@ -1,0 +1,40 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                       EWW OSD - BRIGHTNESS                                ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; Re-use the brightness data from the bar
+(deflisten brightness_data_osd 
+  :initial '{"brightness": 100, "icon": "󰃠"}'
+  "~/.config/eww/scripts/system/brightness.sh")
+
+; Brightness OSD widget
+(defwidget brightness-osd-widget []
+  (box 
+    :class "osd-container brightness-osd"
+    :orientation "h"
+    :space-evenly false
+    :spacing 16
+    (label 
+      :class "osd-icon"
+      :text {brightness_data_osd.icon})
+    (scale
+      :class "osd-slider brightness-slider"
+      :value {brightness_data_osd.brightness}
+      :min 0
+      :max 100
+      :active false)))
+
+; Brightness OSD window
+(defwindow brightness-osd
+  :monitor 0
+  :geometry (geometry
+              :x "0%"
+              :y "120px"
+              :width "280px"
+              :height "60px"
+              :anchor "bottom center")
+  :stacking "fg"
+  :exclusive false
+  :focusable false
+  :namespace "eww-osd"
+  (brightness-osd-widget))

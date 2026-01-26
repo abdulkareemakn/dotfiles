@@ -1,0 +1,40 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                         EWW OSD - VOLUME                                  ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; Re-use the volume data from the bar
+(deflisten volume_data_osd 
+  :initial '{"volume": 0, "muted": false, "icon": ""}'
+  "~/.config/eww/scripts/system/volume.sh")
+
+; Volume OSD widget
+(defwidget volume-osd-widget []
+  (box 
+    :class "osd-container volume-osd ${volume_data_osd.muted ? 'muted' : ''}"
+    :orientation "h"
+    :space-evenly false
+    :spacing 16
+    (label 
+      :class "osd-icon"
+      :text {volume_data_osd.icon})
+    (scale
+      :class "osd-slider volume-slider"
+      :value {volume_data_osd.volume}
+      :min 0
+      :max 100
+      :active false)))
+
+; Volume OSD window
+(defwindow volume-osd
+  :monitor 0
+  :geometry (geometry
+              :x "0%"
+              :y "120px"
+              :width "280px"
+              :height "60px"
+              :anchor "bottom center")
+  :stacking "fg"
+  :exclusive false
+  :focusable false
+  :namespace "eww-osd"
+  (volume-osd-widget))

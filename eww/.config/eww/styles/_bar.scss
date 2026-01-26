@@ -1,0 +1,290 @@
+// ╔══════════════════════════════════════════════════════════════════════════╗
+// ║                        EWW BAR - BAR STYLES                               ║
+// ╚══════════════════════════════════════════════════════════════════════════╝
+
+// Main bar container
+.bar {
+  background: $bar-bg;
+  border-bottom: 1px solid $bar-border;
+  padding: 0 12px;
+}
+
+.bar-section {
+  padding: 4px 0;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// WORKSPACES
+// ─────────────────────────────────────────────────────────────────────────────
+
+.workspaces {
+  background: transparent;
+  padding: 0 4px;
+}
+
+.ws-item {
+  background: transparent;
+}
+
+.ws-num {
+  padding: 4px 6px;
+  color: $fg-secondary;
+  font-weight: 500;
+  font-size: 13px;
+  background: transparent;
+
+  &:hover {
+    color: $fg-bright;
+  }
+
+  &.active {
+    color: $accent-cyan;
+    font-weight: 700;
+  }
+
+  &.occupied:not(.active) {
+    color: $fg-primary;
+  }
+
+  &.empty:not(.active) {
+    color: $bg-highlight;
+  }
+
+  &.urgent {
+    color: $color-error;
+  }
+}
+
+.ws-separator {
+  color: $bg-highlight;
+  padding: 4px 2px;
+  font-weight: 400;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// WINDOW TITLE
+// ─────────────────────────────────────────────────────────────────────────────
+
+.window-title {
+  color: $fg-secondary;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 16px;
+  background: $bar-module-bg;
+  border-radius: 8px;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SYSTEM TRAY
+// ─────────────────────────────────────────────────────────────────────────────
+
+.systray {
+  background: $bar-module-bg;
+  border-radius: 8px;
+  padding: 4px 8px;
+
+  .tray-icons {
+    padding: 0 4px;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// MODULES (Generic styling for all modules)
+// ─────────────────────────────────────────────────────────────────────────────
+
+.module {
+  background: $bar-module-bg;
+  border-radius: 8px;
+  padding: 4px 10px;
+
+  &:hover {
+    background: $bar-module-hover;
+  }
+
+  .module-icon {
+    font-size: 15px;
+    min-width: 18px;
+  }
+
+  .module-text {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SYSTEM STATUS (CPU, RAM)
+// ─────────────────────────────────────────────────────────────────────────────
+
+.system-status {
+  background: $bar-module-bg;
+  border-radius: 8px;
+  padding: 2px 4px;
+}
+
+.cpu {
+  background: transparent;
+  padding: 2px 6px;
+
+  .module-icon {
+    color: $cpu-color;
+  }
+}
+
+.ram {
+  background: transparent;
+  padding: 2px 6px;
+
+  .module-icon {
+    color: $ram-color;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// NETWORK
+// ─────────────────────────────────────────────────────────────────────────────
+
+.network {
+  .module-icon {
+    color: $network-color;
+  }
+
+  &.connected {
+    .module-icon {
+      color: $color-success;
+    }
+  }
+
+  &.disconnected {
+    .module-icon {
+      color: $color-error;
+    }
+    
+    .module-text {
+      color: $fg-secondary;
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// AUDIO/VISUAL CONTROLS (Volume, Brightness)
+// ─────────────────────────────────────────────────────────────────────────────
+
+.av-controls {
+  background: $bar-module-bg;
+  border-radius: 8px;
+  padding: 2px 4px;
+}
+
+.volume {
+  background: transparent;
+  padding: 2px 6px;
+
+  .module-icon {
+    color: $volume-color;
+  }
+
+  &.muted {
+    .module-icon {
+      color: $color-error;
+    }
+    
+    .module-text {
+      color: $fg-secondary;
+      text-decoration: line-through;
+    }
+  }
+}
+
+.brightness {
+  background: transparent;
+  padding: 2px 6px;
+
+  .module-icon {
+    color: $brightness-color;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// BATTERY
+// ─────────────────────────────────────────────────────────────────────────────
+
+.battery {
+  .module-icon {
+    color: $battery-color;
+  }
+
+  &.charging {
+    .module-icon {
+      color: $color-success;
+    }
+  }
+
+  &.warning {
+    .module-icon {
+      color: $battery-warning;
+    }
+  }
+
+  &.critical {
+    .module-icon {
+      color: $battery-critical;
+    }
+    
+    .module-text {
+      color: $battery-critical;
+    }
+  }
+
+  &.full {
+    .module-icon {
+      color: $color-success;
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// DOWNLOAD SPEED
+// ─────────────────────────────────────────────────────────────────────────────
+
+.download {
+  .module-icon {
+    color: $accent-deep-blue;
+  }
+  
+  .module-text {
+    color: $fg-secondary;
+  }
+
+  &.active {
+    .module-icon {
+      color: $accent-cyan;
+    }
+    
+    .module-text {
+      color: $fg-primary;
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CLOCK
+// ─────────────────────────────────────────────────────────────────────────────
+
+.clock {
+  background: $bar-module-bg;
+  border-radius: 8px;
+  padding: 4px 12px;
+
+  .clock-time {
+    font-size: 13px;
+    font-weight: 700;
+    color: $fg-bright;
+  }
+
+  .clock-date {
+    font-size: 11px;
+    font-weight: 500;
+    color: $fg-secondary;
+  }
+}

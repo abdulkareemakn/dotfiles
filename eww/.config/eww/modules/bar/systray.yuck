@@ -1,0 +1,15 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                         EWW BAR - SYSTEM TRAY                             ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; System tray widget
+(defwidget sys-tray []
+  (box 
+    :class "systray"
+    :orientation "h"
+    :space-evenly false
+    :spacing 8
+    (systray 
+      :class "tray-icons"
+      :icon-size 18
+      :spacing 8)))

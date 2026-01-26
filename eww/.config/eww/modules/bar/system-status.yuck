@@ -1,0 +1,35 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                     EWW BAR - SYSTEM STATUS                               ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; CPU widget
+(defwidget cpu []
+  (box 
+    :class "module cpu"
+    :orientation "h"
+    :space-evenly false
+    :spacing 6
+    :tooltip "CPU: ${round(EWW_CPU.avg, 1)}%"
+    (label :class "module-icon" :text "󰻠")
+    (label :class "module-text" :text "${round(EWW_CPU.avg, 0)}%")))
+
+; RAM widget
+(defwidget ram []
+  (box 
+    :class "module ram"
+    :orientation "h"
+    :space-evenly false
+    :spacing 6
+    :tooltip "RAM: ${round(EWW_RAM.used_mem_perc, 1)}% (${round(EWW_RAM.used_mem / 1073741824, 1)}GB / ${round(EWW_RAM.total_mem / 1073741824, 1)}GB)"
+    (label :class "module-icon" :text "󰍛")
+    (label :class "module-text" :text "${round(EWW_RAM.used_mem_perc, 0)}%")))
+
+; Combined system status widget
+(defwidget system-status []
+  (box 
+    :class "system-status"
+    :orientation "h"
+    :space-evenly false
+    :spacing 4
+    (cpu)
+    (ram)))

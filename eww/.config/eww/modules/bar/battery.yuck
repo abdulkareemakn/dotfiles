@@ -1,0 +1,19 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                         EWW BAR - BATTERY                                 ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; Listener for battery status
+(deflisten battery_data 
+  :initial '{"capacity": 100, "status": "Full", "icon": "󰁹", "charging": false, "class": "full"}'
+  "~/.config/eww/scripts/system/battery.sh")
+
+; Battery widget
+(defwidget battery []
+  (box 
+    :class "module battery ${battery_data.class}"
+    :orientation "h"
+    :space-evenly false
+    :spacing 6
+    :tooltip "Battery: ${battery_data.capacity}% (${battery_data.status})"
+    (label :class "module-icon" :text {battery_data.icon})
+    (label :class "module-text" :text "${battery_data.capacity}%")))
