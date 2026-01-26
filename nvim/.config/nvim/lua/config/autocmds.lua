@@ -39,3 +39,30 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
 	end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "typst",
+	callback = function()
+		vim.b.miniai_config = {
+			custom_textobjects = {
+				-- Dollar sign as text object
+				["$"] = { "%$().-()%$" },
+			},
+		}
+	end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "typst",
+	callback = function(event)
+		local pairs = require("mini.pairs")
+
+		-- Map dollar sign as a pair in this buffer
+		pairs.map_buf(event.buf, "i", "$", {
+			action = "closeopen",
+			pair = "$$",
+			neigh_pattern = "[^\\].",
+			register = { cr = false },
+		})
+	end,
+})

@@ -19,6 +19,7 @@
   "halcyon-neovim": { "branch": "master", "commit": "77350014854d19e2005b6942f74d175f57e49127" },
   "hardtime.nvim": { "branch": "main", "commit": "b4e431934af1fe224a3a801f632c008278cb7628" },
   "lazy.nvim": { "branch": "main", "commit": "85c7ff3711b730b4030d03144f6db6375044ae82" },
+  "lazydev.nvim": { "branch": "main", "commit": "5231c62aa83c2f8dc8e7ba957aa77098cda1257d" },
   "leap.nvim": { "branch": "main", "commit": "10c14af4ddfb34dbd7721f0bfb2b4d91f0558907" },
   "lualine.nvim": { "branch": "master", "commit": "47f91c416daef12db467145e16bed5bbfe00add8" },
   "material.nvim": { "branch": "main", "commit": "8a34cb0d05e12a05b64edaf6ca1c3c7bde545628" },
@@ -54,8 +55,10 @@
   "poimandres.nvim": { "branch": "main", "commit": "a488957d803943a4201ac3b774913fcafa9e6b3a" },
   "snacks.nvim": { "branch": "main", "commit": "fe7cfe9800a182274d0f868a74b7263b8c0c020b" },
   "themery.nvim": { "branch": "main", "commit": "bfa58f4b279d21cb515b28023e1b68ec908584b2" },
+  "tiny-inline-diagnostic.nvim": { "branch": "main", "commit": "ecce93ff7db4461e942c03e0fcc64bd785df4057" },
   "todo-comments.nvim": { "branch": "main", "commit": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668" },
   "tokyonight.nvim": { "branch": "main", "commit": "14fd5ff7f84027064724ec3157fe903199e77ded" },
   "trouble.nvim": { "branch": "main", "commit": "bd67efe408d4816e25e8491cc5ad4088e708a69a" },
+  "typst-preview.nvim": { "branch": "master", "commit": "e123a7ab64e52d836e00dea9251e85b201f38966" },
   "yazi.nvim": { "branch": "main", "commit": "d666962582840f889161109cf970d311c7a447d0" }
 }

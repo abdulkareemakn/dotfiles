@@ -36,7 +36,7 @@ return {
 			},
 		},
 		explorer = { enabled = true },
-		image = { enabled = true },
+		image = { enabled = false },
 		input = { enabled = true },
 		lazygit = { enabled = true },
 		notifier = { enabled = true },
