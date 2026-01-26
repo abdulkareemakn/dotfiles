@@ -1,0 +1,114 @@
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+version = 4
+final_space = true
+
+[transient_prompt]
+template = ' '
+foreground = 'lightGreen'
+background = 'transparent'
+foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}']
+
+[upgrade]
+source = 'cdn'
+interval = '168h'
+auto = false
+notice = false
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+newline = true
+
+[[blocks.segments]]
+template = '{{ .Path }} '
+foreground = 'cyan'
+type = 'path'
+style = 'plain'
+
+[blocks.segments.options]
+style = 'full'
+
+[[blocks.segments]]
+template = ':: {{ if .UpstreamIcon }}{{ .UpstreamIcon }} {{ end }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }} '
+foreground = 'blue'
+type = 'git'
+style = 'plain'
+
+[blocks.segments.options]
+branch_icon = '󰘬 '
+fetch_status = true
+fetch_upstream_icon = true
+
+[[blocks]]
+type = 'prompt'
+alignment = 'right'
+
+[[blocks.segments]]
+template = '| root '
+foreground = 'red'
+type = 'root'
+style = 'plain'
+
+[[blocks.segments]]
+template = '|  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} '
+foreground = '#6CA35E'
+type = 'node'
+style = 'powerline'
+
+[[blocks.segments]]
+template = '|  {{ .Venv }} '
+foreground = 'yellow'
+type = 'python'
+style = 'plain'
+
+[blocks.segments.options]
+display_mode = 'environment'
+fetch_virtual_env = true
+
+# [[blocks.segments]]
+# template = '  {{ .Full }} '
+# foreground = '#51A0CF'
+# type = 'lua'
+# style = 'plain'
+
+[[blocks.segments]]
+template = '{{ if lt .Percentage 20 }}| {{ if not .Error }}{{ .Icon }} {{ .Percentage }}%{{ end }}{{ .Error }} {{ end }}'
+type = 'battery'
+style = 'powerline'
+foreground = 'red'
+invert_powerline = true
+
+[blocks.segments.options]
+charged_icon = ''
+charging_icon = '󰂄'
+
+[[blocks.segments]]
+template = '{{ if ne .Code 0 }}| ✗ {{ .String }} {{ end }}'
+type = 'status'
+style = 'plain'
+foreground = 'red'
+
+[[blocks.segments]]
+template = '| {{ .FormattedMs }} '
+type = 'executiontime'
+style = 'plain'
+foreground = 'yellow'
+
+[blocks.segments.options]
+threshold = 5000
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+newline = true
+
+[[blocks.segments]]
+template = ""
+
+foreground = 'lightGreen'
+type = 'status'
+style = 'powerline'
+foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}']
+
+[blocks.segments.options]
+always_enabled = true
