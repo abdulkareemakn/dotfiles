@@ -1,0 +1,87 @@
+// ╔══════════════════════════════════════════════════════════════════════════╗
+// ║                      EWW NOTIFICATIONS - STYLES                          ║
+// ╚══════════════════════════════════════════════════════════════════════════╝
+
+// Notification popup container
+.notification-popup {
+  padding: 0;
+  background: transparent;
+}
+
+// Individual notification card
+.notification-card {
+  background: $bg-primary;
+  border: 1px solid $bg-highlight;
+  border-radius: 12px;
+  padding: 14px 16px;
+  min-width: 340px;
+  
+  &:hover {
+    background: $bg-secondary;
+    border-color: $accent-cyan;
+  }
+}
+
+// App icon on the left
+.notification-app-icon {
+  font-family: "RobotoMono Nerd Font", "Symbols Nerd Font", monospace;
+  font-size: 28px;
+  color: $accent-cyan;
+  min-width: 36px;
+  min-height: 36px;
+}
+
+// Content area
+.notification-content {
+  min-width: 240px;
+}
+
+// App name in header
+.notification-app {
+  font-size: 11px;
+  color: $fg-secondary;
+  opacity: 0.8;
+}
+
+// Close button
+.notification-close {
+  font-family: "RobotoMono Nerd Font", "Symbols Nerd Font", monospace;
+  font-size: 14px;
+  color: $bg-highlight;
+  padding: 2px 4px;
+  border-radius: 4px;
+  
+  &:hover {
+    color: $color-error;
+    background: rgba($color-error, 0.15);
+  }
+}
+
+// Body text
+.notification-body {
+  font-size: 12px;
+  color: $fg-secondary;
+  margin-top: 2px;
+}
+
+// Summary (title)
+.notification-summary {
+  font-size: 14px;
+  font-weight: bold;
+  color: $fg-bright;
+}
+
+// Open app button
+.notification-open {
+  font-family: "RobotoMono Nerd Font", "Symbols Nerd Font", monospace;
+  font-size: 16px;
+  color: $bg-highlight;
+  padding: 8px;
+  border-radius: 8px;
+  margin-left: 4px;
+  
+  &:hover {
+    color: $accent-cyan;
+    background: rgba($accent-cyan, 0.15);
+  }
+}

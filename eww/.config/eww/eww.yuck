@@ -13,3 +13,6 @@
 ; Include OSD overlays
 (include "./modules/osd/volume-osd.yuck")
 (include "./modules/osd/brightness-osd.yuck")
+
+; Include notifications
+(include "./modules/notifications/notifications.yuck")

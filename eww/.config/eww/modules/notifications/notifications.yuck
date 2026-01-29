@@ -1,0 +1,97 @@
+; ╔══════════════════════════════════════════════════════════════════════════╗
+; ║                       EWW NOTIFICATIONS                                   ║
+; ╚══════════════════════════════════════════════════════════════════════════╝
+
+; Active notifications variable (updated by scripts via eww update)
+(defvar notifications "[]")
+
+; Listener that watches for new notifications and updates the variable
+(deflisten _notification_listener
+  :initial ""
+  "~/.config/eww/scripts/notifications/notifications.sh")
+
+; Get app icon based on app name (fallback icons)
+(defwidget notification-icon [app]
+  (label
+    :class "notification-app-icon"
+    :text {app == "discord" || app == "Discord" ? "󰙯" :
+           app == "Spotify" || app == "spotify" ? "" :
+           app == "firefox" || app == "Firefox" ? "" :
+           app == "chromium" || app == "Chromium" ? "" :
+           app == "telegram" || app == "Telegram" ? "" :
+           app == "slack" || app == "Slack" ? "󰒱" :
+           app == "thunderbird" || app == "Thunderbird" ? "󰇮" :
+           app == "Steam" || app == "steam" ? "" :
+           "󰂚"}))
+
+; Single notification card
+; tiramisu JSON fields: source, icon, id, summary, body, actions, hints, timeout
+(defwidget notification-card [notif]
+  (button
+    :class "notification-card"
+    :onclick "~/.config/eww/scripts/notifications/open-app.sh '${notif.hints}' '${notif.source}' && ~/.config/eww/scripts/notifications/dismiss.sh '${notif.id}'"
+    (box
+      :orientation "h"
+      :space-evenly false
+      :spacing 12
+      ; App icon
+      (notification-icon :app {notif.source})
+      ; Content
+      (box
+        :class "notification-content"
+        :orientation "v"
+        :space-evenly false
+        :spacing 4
+        :hexpand true
+        :width 280
+        ; Header with app name and close button
+        (box
+          :orientation "h"
+          :space-evenly false
+          (label
+            :class "notification-app"
+            :halign "start"
+            :hexpand true
+            :text {notif.source})
+          (button
+            :class "notification-close"
+            :onclick "~/.config/eww/scripts/notifications/dismiss.sh '${notif.id}'"
+            :tooltip "Dismiss"
+            "󰅖"))
+        ; Summary (title)
+        (label
+          :class "notification-summary"
+          :halign "start"
+          :wrap true
+          :text {notif.summary})
+        ; Body (if present)
+        (label
+          :class "notification-body"
+          :halign "start"
+          :wrap true
+          :visible {notif.body != ""}
+          :text {notif.body})))))
+
+; Notification container (holds all notifications)
+(defwidget notification-popup []
+  (box
+    :class "notification-popup ${_notification_listener}"
+    :orientation "v"
+    :space-evenly false
+    :spacing 8
+    (for notif in notifications
+      (notification-card :notif notif))))
+
+; Notification window (overlay)
+(defwindow notifications
+  :monitor 0
+  :geometry (geometry
+              :x "12px"
+              :y "50px"
+              :width "400px"
+              :anchor "top right")
+  :stacking "overlay"
+  :exclusive false
+  :focusable false
+  :namespace "eww-notifications"
+  (notification-popup))
