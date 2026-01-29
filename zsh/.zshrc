@@ -119,3 +119,6 @@ metadata() {
 
 # source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+# bun completions
+[ -s "/home/tmtaxman/.bun/_bun" ] && source "/home/tmtaxman/.bun/_bun"

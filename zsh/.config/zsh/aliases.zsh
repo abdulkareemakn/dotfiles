@@ -55,3 +55,5 @@ alias dcu="docker compose up -d"
 alias dcd="docker compose down"
 alias dcl="docker compose logs"
 alias dcp="docker compose pull"
+
+alias cd="z"
