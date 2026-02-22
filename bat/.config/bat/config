@@ -1,1 +1,6 @@
 --theme="tokyonight"
+
+--italic-text=always
+--style=full
+--color=always
+--decorations=always

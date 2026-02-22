@@ -1,6 +1,6 @@
 return {
-	"loctvl842/monokai-pro.nvim",
-	enabled = true,
-	lazy = false,
-	priority = 1010,
+    "loctvl842/monokai-pro.nvim",
+    enabled = false,
+    lazy = false,
+    priority = 1010,
 }

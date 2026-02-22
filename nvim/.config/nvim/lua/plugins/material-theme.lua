@@ -1,5 +1,5 @@
 return {
-	"marko-cerovac/material.nvim",
-	enabled = true,
-	priority = 1003,
+    "marko-cerovac/material.nvim",
+    enabled = false,
+    priority = 1003,
 }

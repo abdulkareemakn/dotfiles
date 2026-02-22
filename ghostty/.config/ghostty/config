@@ -1,17 +1,17 @@
 # Theme
-theme = Raycast Dark
+theme = TokyoNight
 
 # Font-Family
 font-family = ""
-# font-family = "JetBrainsMono Nerd Font"
-# font-family-bold = "JetBrainsMono Nerd Font"
-# font-family-italic = "JetBrainsMono Nerd Font"
-# font-family-bold-italic = "JetBrainsMono Nerd Font"
+font-family = "JetBrainsMono Nerd Font"
+font-family-bold = "JetBrainsMono Nerd Font"
+font-family-italic = "JetBrainsMono Nerd Font"
+font-family-bold-italic = "JetBrainsMono Nerd Font"
 
-font-family = "RobotoMono Nerd Font"
-font-family-bold = "RobotoMono Nerd Font"
-font-family-italic = "RobotoMono Nerd Font"
-font-family-bold-italic = "RobotoMono Nerd Font"
+# font-family = "RobotoMono Nerd Font"
+# font-family-bold = "RobotoMono Nerd Font"
+# font-family-italic = "RobotoMono Nerd Font"
+# font-family-bold-italic = "RobotoMono Nerd Font"
 
 font-style = "Medium"
 font-style-bold = "Bold"
@@ -22,7 +22,7 @@ font-synthetic-style = false
 
 # font-feature = ss19, ss20
 
-font-size = 12.5
+font-size = 14
 
 # Text
 # bold-is-bright = true
