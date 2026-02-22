@@ -26,7 +26,7 @@ map("n", "<leader>th", ":Themery<CR>", { desc = "Change theme" })
 
 -- Terminal
 map("n", "<leader>ct", function()
-	Snacks.terminal.open()
+    Snacks.terminal.open()
 end, { desc = "Open Terminal" })
 
 -- Buffers
@@ -35,87 +35,87 @@ end, { desc = "Open Terminal" })
 -- 	Snacks.picker.buffers()
 -- end, { desc = "Buffers" })
 map("n", "<leader>bb", function()
-	MiniPick.builtin.buffers()
+    MiniPick.builtin.buffers()
 end, { desc = "Buffers" })
 map("n", "<leader>bn", ":bnext<CR>", { desc = "Next Buffer" })
 map("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous Buffer" })
 map("n", "<leader>bd", function()
-	Snacks.bufdelete()
+    Snacks.bufdelete()
 end, { desc = "Delete Buffer" })
 
 map("n", "<Tab>", ":bnext<CR>", { desc = "Next Buffer" })
 map("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous Buffer" })
 
 -- Files
--- map("n", "<C-f>", function()
--- 	MiniFiles.open()
--- end, { desc = "File Explorer" })
+map("n", "<C-f>", function()
+    MiniFiles.open()
+end, { desc = "File Explorer" })
 
 map("n", "<leader>fe", function()
-	Snacks.picker.explorer()
+    Snacks.picker.explorer()
 end, { desc = "Snacks Explorer and Picker" })
 
 map("n", "<leader><space>", function()
-	MiniPick.builtin.files()
+    MiniPick.builtin.files()
 end, { desc = "Find Files" })
 
 map("n", "<leader>fg", function()
-	Snacks.picker.grep()
+    Snacks.picker.grep()
 end, { desc = "Grep" })
 
 map("n", "<leader>fb", function()
-	Snacks.picker.grep_buffers()
+    Snacks.picker.grep_buffers()
 end)
 
 map("n", "<leader>sd", function()
-	Snacks.picker.diagnostics()
+    Snacks.picker.diagnostics()
 end, { desc = "Diagnostics" })
 
 map("n", "<leader>ht", function()
-	Snacks.picker.colorschemes()
+    Snacks.picker.colorschemes()
 end, { desc = "Colorschemes" })
 
 -- LSP
 map("n", "gr", function()
-	Snacks.picker.lsp_references()
+    Snacks.picker.lsp_references()
 end, { desc = "See References" })
 map("n", "<leader>ls", function()
-	Snacks.picker.lsp_symbols()
+    Snacks.picker.lsp_symbols()
 end, { desc = "LSP Symbols" })
 map("n", "<leader>lS", function()
-	Snacks.picker.lsp_workspace_symbols()
+    Snacks.picker.lsp_workspace_symbols()
 end, { desc = "LSP Symbols" })
 
 -- Silicon
 map("v", "<leader>sc", function()
-	require("nvim-silicon").clip()
+    require("nvim-silicon").clip()
 end, { desc = "Copy code screenshot to clipboard" })
 
 map("v", "<leader>sp", function()
-	require("nvim-silicon").clip()
+    require("nvim-silicon").clip()
 end, { desc = "Save code screenshot" })
 
 -- Pickers
 
 -- Git
 map("n", "<leader>gl", function()
-	Snacks.lazygit.open()
+    Snacks.lazygit.open()
 end, { desc = "Opens lazygit" })
 
 map("n", "<leader>gd", function()
-	Snacks.picker.git_diff()
+    Snacks.picker.git_diff()
 end, { desc = "Git diff" })
 
 map("n", "<leader>gs", function()
-	Snacks.picker.git_status()
+    Snacks.picker.git_status()
 end, { desc = "Git status" })
 
 map("n", "<leader>gb", function()
-	Snacks.picker.git_branches()
+    Snacks.picker.git_branches()
 end, { desc = "Git branches" })
 
 map("n", "<leader>pp", function()
-	Snacks.picker()
+    Snacks.picker()
 end, { desc = "See all snacks pickers" })
 
 -- Splits
@@ -129,35 +129,35 @@ map("n", "<C-l>", "<C-w>l", { desc = "Focus right" })
 --
 
 map("n", "]t", function()
-	require("todo-comments").jump_next()
+    require("todo-comments").jump_next()
 end, { desc = "Next todo comment" })
 
 map("n", "[t", function()
-	require("todo-comments").jump_prev()
+    require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
 
 map("n", "<leader>cr", function()
-	local file = vim.fn.expand("%:p") -- full path to file
-	local name = vim.fn.expand("%:p:r") -- same path, no extension
-	local cmd = { "bash", "-c", string.format("g++ %s -o %s && %s", file, name, name) }
+    local file = vim.fn.expand("%:p") -- full path to file
+    local name = vim.fn.expand("%:p:r") -- same path, no extension
+    local cmd = { "bash", "-c", string.format("g++ %s -o %s && %s", file, name, name) }
 
-	Snacks.terminal.open(cmd, {
-		cwd = vim.fn.expand("%:p:h"), -- run in the file's directory
-		start_insert = true, -- enter insert mode so you see output
-		auto_close = false, -- keep terminal open after exit
-		win = { position = "bottom" }, -- floating window (you can change to "bottom")
-	})
+    Snacks.terminal.open(cmd, {
+        cwd = vim.fn.expand("%:p:h"), -- run in the file's directory
+        start_insert = true,     -- enter insert mode so you see output
+        auto_close = false,      -- keep terminal open after exit
+        win = { position = "bottom" }, -- floating window (you can change to "bottom")
+    })
 end, { desc = "Compile & run current C++ file" })
 
 -- Scratch
 map("n", "<leader>.", function()
-	Snacks.scratch()
+    Snacks.scratch()
 end, { desc = "Toggle Scratch Buffer" })
 map("n", "<leader>S", function()
-	Snacks.scratch.select()
+    Snacks.scratch.select()
 end, { desc = "Select Scratch Buffer" })
 
 -- Grug-far
 map("n", "<leader>cg", function()
-	require("grug-far").open({ prefills = { paths = vim.fn.expand("%") } })
+    require("grug-far").open({ prefills = { paths = vim.fn.expand("%") } })
 end)
