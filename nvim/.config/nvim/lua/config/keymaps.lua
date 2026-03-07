@@ -4,8 +4,8 @@ local map = vim.keymap.set
 map("n", "<C-CR>", "m`o<Esc>``", { desc = "Insert blankline below" })
 map("n", "<C-S-CR>", "m`O<Esc>``", { desc = "Insert blankline above" })
 
-map("n", "<C-s", ":write<CR>", { desc = "Write file" })
-map("n", "<leader>q", ":quit<CR>")
+map("n", "<C-s>", ":write<CR>", { desc = "Write file" })
+map("n", "<C-q>", ":quit<CR>")
 
 -- Clear search highlights
 map("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
@@ -137,14 +137,14 @@ map("n", "[t", function()
 end, { desc = "Previous todo comment" })
 
 map("n", "<leader>cr", function()
-    local file = vim.fn.expand("%:p") -- full path to file
+    local file = vim.fn.expand("%:p")   -- full path to file
     local name = vim.fn.expand("%:p:r") -- same path, no extension
     local cmd = { "bash", "-c", string.format("g++ %s -o %s && %s", file, name, name) }
 
     Snacks.terminal.open(cmd, {
-        cwd = vim.fn.expand("%:p:h"), -- run in the file's directory
-        start_insert = true,     -- enter insert mode so you see output
-        auto_close = false,      -- keep terminal open after exit
+        cwd = vim.fn.expand("%:p:h"),  -- run in the file's directory
+        start_insert = true,           -- enter insert mode so you see output
+        auto_close = false,            -- keep terminal open after exit
         win = { position = "bottom" }, -- floating window (you can change to "bottom")
     })
 end, { desc = "Compile & run current C++ file" })

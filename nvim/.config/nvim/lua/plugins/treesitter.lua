@@ -5,7 +5,7 @@ return {
         lazy = false,
         build = function()
             require("nvim-treesitter").install({
-                "go", "vimdoc", "cpp", "c", "python", "bash"
+                "go", "vimdoc", "cpp", "c", "python", "bash", "yml"
             })
         end,
         config = function()
