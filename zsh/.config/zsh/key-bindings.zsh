@@ -15,8 +15,6 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
   zle -N zle-line-finish
 fi
 
-bindkey -v
-
 bindkey -M viins '^A' beginning-of-line
 bindkey -M viins '^E' end-of-line
 bindkey -M viins '^F' forward-char

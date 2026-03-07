@@ -13,20 +13,18 @@ source "$HOME/.config/zsh/completion.zsh"
 
 source "$HOME/.config/zsh/copyfile.plugin.zsh"
 source "$HOME/.config/zsh/extract.plugin.zsh"
-source "$HOME/.config/zsh/fzf-tab/fzf-tab.plugin.zsh"
+source "$HOME/.config/zsh/copybuffer.plugin.zsh"
+
+source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
 
 # Environment Variables
 
 autoload -U compinit && compinit
 
-bindkey -e
+bindkey -v
 
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-
-# Starship Prompt
-# export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-# eval "$(starship init zsh)"
 
 # Zoxide
 eval "$(zoxide init zsh)"
@@ -128,15 +126,6 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
-
-# Function that calls ls everytime cd is run
-# cd() {
-# 	if [ -z "$1" ]; then
-# 	  builtin cd ~
-# 	else 
-# 	  builtin cd "$1" && lsd --icon=always -lv
-# 	fi
-# }
 
 # Changes dir if the command is the name of a dir
 setopt auto_cd 
