@@ -1,5 +1,6 @@
 return {
 	"ibhagwan/fzf-lua",
+	enabled = false,
 	dependencies = { "nvim-mini/mini.icons" },
 	---@module "fzf-lua"
 	---@type fzf-lua.Config|{}

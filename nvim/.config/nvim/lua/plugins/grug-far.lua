@@ -1,6 +1,6 @@
 return {
 	"MagicDuck/grug-far.nvim",
-	enabled = true,
+	enabled = false,
 	config = function()
 		require("grug-far").setup({})
 	end,
