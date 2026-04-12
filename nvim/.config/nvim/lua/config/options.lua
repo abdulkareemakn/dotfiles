@@ -11,6 +11,7 @@ opt.swapfile = false
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
+opt.smartindent = true
 
 -- Searching
 opt.ignorecase = true
@@ -33,3 +34,7 @@ opt.fillchars:append({ eob = " " })
 
 -- Colors
 vim.cmd("set termguicolors")
+
+opt.cmdheight = 0
+
+require("vim._core.ui2").enable({})
