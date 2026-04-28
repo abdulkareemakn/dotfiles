@@ -6,4 +6,4 @@ require("config.autocmds")
 
 vim.cmd([[colorscheme rose-pine]])
 
-vim.lsp.enable({ "clangd", "yamlls", "luals", "gopls", "taplo", "ruff", "ty", "tinymist", "vtsls" })
+vim.lsp.enable({ "clangd", "yamlls", "luals", "gopls", "taplo", "ruff", "ty", "tinymist", "vtsls", "ts_ls", "astro" })
