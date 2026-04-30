@@ -2,22 +2,22 @@ return {
 	{
 		"zaldih/themery.nvim",
 		lazy = false,
-		enabled = false,
+		enabled = true,
 		config = function()
 			require("themery").setup({
 				themes = {
-					-- {
-					-- 	name = "Ayu Light",
-					-- 	colorscheme = "ayu",
-					-- 	before = [[vim.g.ayucolor="light"]],
-					-- },
+					{
+						name = "Ayu Light",
+						colorscheme = "ayu",
+						before = [[vim.g.ayucolor="light"]],
+					},
 
-					-- { name = "Catppuccin Latte", colorscheme = "catppuccin-latte" },
+					{ name = "Catppuccin Latte", colorscheme = "catppuccin-latte" },
 
 					-- { name = "Dayfox",                     colorscheme = "dayfox" },
 
-					-- { name = "Github Light", colorscheme = "github_light" },
-					-- { name = "Github Light Default", colorscheme = "github_light_default" },
+					{ name = "Github Light", colorscheme = "github_light" },
+					{ name = "Github Light Default", colorscheme = "github_light_default" },
 					-- { name = "Github Light High Contrast", colorscheme = "github_light_high_contrast" },
 					-- { name = "Github Light Colorblind", colorscheme = "github_light_colorblind" },
 					-- { name = "Github Light Tritanopia", colorscheme = "github_light_tritanopia" },
@@ -61,9 +61,9 @@ return {
 
 					-- { name = "Dracula",                    colorscheme = "dracula" },
 
-					-- { name = "Github Dark", colorscheme = "github_dark" },
-					-- { name = "Github Dark Dimmed", colorscheme = "github_dark_dimmed" },
-					-- { name = "Github Dark Default", colorscheme = "github_dark_default" },
+					{ name = "Github Dark", colorscheme = "github_dark" },
+					{ name = "Github Dark Dimmed", colorscheme = "github_dark_dimmed" },
+					{ name = "Github Dark Default", colorscheme = "github_dark_default" },
 					-- { name = "Github Dark High Contrast", colorscheme = "github_dark_high_contrast" },
 					-- { name = "Github Dark Colorblink", colorscheme = "github_dark_colorblind" },
 					-- { name = "Github Dark Tritanopia", colorscheme = "github_dark_tritanopia" },
@@ -103,38 +103,38 @@ return {
 					-- 	before = [[vim.g.material_style="deep ocean"]],
 					-- },
 
-					{
-						name = "Monokai Pro",
-						colorscheme = "monokai-pro",
-						before = [[require("monokai-pro").setup({filter="pro"})]],
-					},
-					{
-						name = "Monokai Pro Octagon",
-						colorscheme = "monokai-pro",
-						before = [[require("monokai-pro").setup({filter="octagon"})]],
-					},
-					{
-						name = "Monokai Pro Machine",
-						colorscheme = "monokai-pro",
-						before = [[require("monokai-pro").setup({filter="machine"})]],
-					},
-					{
-						name = "Monokai Pro Ristretto",
-						colorscheme = "monokai-pro",
-						before = [[require("monokai-pro").setup({filter="ristretto"})]],
-					},
+					-- {
+					-- 	name = "Monokai Pro",
+					-- 	colorscheme = "monokai-pro",
+					-- 	before = [[require("monokai-pro").setup({filter="pro"})]],
+					-- },
+					-- {
+					-- 	name = "Monokai Pro Octagon",
+					-- 	colorscheme = "monokai-pro",
+					-- 	before = [[require("monokai-pro").setup({filter="octagon"})]],
+					-- },
+					-- {
+					-- 	name = "Monokai Pro Machine",
+					-- 	colorscheme = "monokai-pro",
+					-- 	before = [[require("monokai-pro").setup({filter="machine"})]],
+					-- },
+					-- {
+					-- 	name = "Monokai Pro Ristretto",
+					-- 	colorscheme = "monokai-pro",
+					-- 	before = [[require("monokai-pro").setup({filter="ristretto"})]],
+					-- },
 
-					{
-						name = "Monokai Pro Spectrum",
-						colorscheme = "monokai-pro",
-						before = [[require("monokai-pro").setup({filter="spectrum"})]],
-					},
+					-- {
+					-- 	name = "Monokai Pro Spectrum",
+					-- 	colorscheme = "monokai-pro",
+					-- 	before = [[require("monokai-pro").setup({filter="spectrum"})]],
+					-- },
 
-					{
-						name = "Monokai Classic",
-						colorscheme = "monokai-pro",
-						before = [[require("monokai-pro").setup({filter="classic"})]],
-					},
+					-- {
+					-- 	name = "Monokai Classic",
+					-- 	colorscheme = "monokai-pro",
+					-- 	before = [[require("monokai-pro").setup({filter="classic"})]],
+					-- },
 
 					-- { name = "Nord", colorscheme = "nord" },
 

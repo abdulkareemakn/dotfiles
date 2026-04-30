@@ -1,6 +1,6 @@
 return {
-    "catppuccin/nvim",
-    enabled = false,
-    name = "catppuccin",
-    priority = 1000
+	"catppuccin/nvim",
+	enabled = true,
+	name = "catppuccin",
+	priority = 1000,
 }

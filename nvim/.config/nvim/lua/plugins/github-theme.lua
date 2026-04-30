@@ -1,7 +1,7 @@
 return {
 	"projekt0n/github-nvim-theme",
 	name = "github-theme",
-	enabled = false,
+	enabled = true,
 	lazy = false,
 	priority = 1002,
 }

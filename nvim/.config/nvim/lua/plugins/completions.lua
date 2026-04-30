@@ -4,7 +4,7 @@ return {
 	version = "*",
 	event = { "InsertEnter", "CmdlineEnter" },
 	dependencies = {
-		"giuxtaposition/blink-cmp-copilot",
+		"fang2hou/blink-copilot",
 	},
 	opts = {
 		keymap = { preset = "super-tab" },
@@ -28,27 +28,27 @@ return {
 		},
 		-- 4. SOURCES
 		sources = {
-			default = { "lsp", "path", "snippets", "buffer" },
+			default = { "lsp", "path", "snippets", "buffer", "copilot" },
 			per_filetype = {
 				codecompanion = { "codecompanion" },
 			},
 			providers = {
-				-- COPILOT (disabled)
-				-- copilot = {
-				--     name = "copilot",
-				--     module = "blink-cmp-copilot",
-				--     score_offset = 100,
-				--     async = true,
-				--     transform_items = function(_, items)
-				--         local CompletionItemKind = require("blink.cmp.types").CompletionItemKind
-				--         local kind_idx = #CompletionItemKind + 1
-				--         CompletionItemKind[kind_idx] = "Copilot"
-				--         for _, item in ipairs(items) do
-				--             item.kind = kind_idx
-				--         end
-				--         return items
-				--     end,
-				-- },
+				copilot = {
+					name = "copilot",
+					module = "blink-copilot",
+					async = true,
+					score_offset = 100,
+					opts = {
+						max_completions = 3,
+						max_attempts = 4,
+						kind = "Copilot",
+						debounce = 750,
+						auto_refresh = {
+							backward = true,
+							forward = true,
+						},
+					},
+				},
 				snippets = {
 					name = "snippets",
 					enabled = true,
