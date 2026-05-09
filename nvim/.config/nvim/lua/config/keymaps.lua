@@ -161,3 +161,7 @@ end, { desc = "Select Scratch Buffer" })
 map("n", "<leader>cg", function()
 	require("grug-far").open({ prefills = { paths = vim.fn.expand("%") } })
 end)
+
+map("n", "<leader>fp", function()
+	Snacks.picker.projects()
+end, { desc = "Projects" })

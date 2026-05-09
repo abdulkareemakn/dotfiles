@@ -25,6 +25,7 @@ return {
 			javascript = { "prettierd" },
 			cpp = { "clang-format" },
 			sh = { "shfmt" },
+			sql = { "pg_format" },
 		},
 		-- Set default options
 		default_format_opts = {
