@@ -1,0 +1,82 @@
+# Monokai Pro (Filter Spectrum) eza theme
+# based on monokai-pro-spectrum.json
+
+character_spaces:
+  1: { foreground: "#f7f1ff" }
+  2: { foreground: "#fce566" }
+  3: { foreground: "#fd9353" }
+  4: { foreground: "#fc618d" }
+  5: { foreground: "#948ae3" }
+  6: { foreground: "#5ad4e6" }
+
+filekinds:
+  normal: { foreground: "#f7f1ff" }
+  directory: { foreground: "#5ad4e6", is_bold: true }
+  symlink: { foreground: "#948ae3" }
+  pipe: { foreground: "#fd9353" }
+  block_device: { foreground: "#fce566" }
+  char_device: { foreground: "#fce566" }
+  socket: { foreground: "#fc618d" }
+  special: { foreground: "#fce566" }
+  executable: { foreground: "#7bd88f", is_bold: true }
+  mount_point: { foreground: "#5ad4e6" }
+
+perms:
+  user_read: { foreground: "#fce566" }
+  user_write: { foreground: "#fd9353" }
+  user_execute_file: { foreground: "#7bd88f", is_bold: true }
+  user_execute_other: { foreground: "#7bd88f", is_bold: true }
+  group_read: { foreground: "#fce566" }
+  group_write: { foreground: "#fd9353" }
+  group_execute: { foreground: "#7bd88f" }
+  other_read: { foreground: "#fce566" }
+  other_write: { foreground: "#fd9353" }
+  other_execute: { foreground: "#7bd88f" }
+  special_user_file: { foreground: "#948ae3" }
+  special_other: { foreground: "#948ae3" }
+  attribute: { foreground: "#69676c" }
+
+size:
+  major: { foreground: "#7bd88f", is_bold: true }
+  minor: { foreground: "#5ad4e6" }
+  number_byte: { foreground: "#7bd88f" }
+  number_kilo: { foreground: "#7bd88f" }
+  number_mega: { foreground: "#fce566" }
+  number_giga: { foreground: "#fd9353" }
+  number_huge: { foreground: "#fc618d" }
+  unit_byte: { foreground: "#7bd88f" }
+  unit_kilo: { foreground: "#7bd88f" }
+  unit_mega: { foreground: "#fce566" }
+  unit_giga: { foreground: "#fd9353" }
+  unit_huge: { foreground: "#fc618d" }
+
+users:
+  user_you: { foreground: "#fce566", is_bold: true }
+  user_someone_else: { foreground: "#f7f1ff" }
+  group_yours: { foreground: "#fce566", is_bold: true }
+  group_not_yours: { foreground: "#f7f1ff" }
+
+links:
+  normal: { foreground: "#fd9353", is_bold: true }
+  multi_link_file: { foreground: "#fce566", is_bold: true }
+
+git:
+  new: { foreground: "#7bd88f" }
+  modified: { foreground: "#fd9353" }
+  deleted: { foreground: "#fc618d" }
+  renamed: { foreground: "#fce566" }
+  typechange: { foreground: "#948ae3" }
+  ignored: { foreground: "#69676c" }
+  conflicted: { foreground: "#fc618d", is_bold: true }
+
+git_repo:
+  branch_main: { foreground: "#7bd88f" }
+  branch_other: { foreground: "#fce566" }
+  git_clean: { foreground: "#7bd88f" }
+  git_dirty: { foreground: "#fd9353" }
+
+time:
+  modified: { foreground: "#fce566" }
+  changed: { foreground: "#fd9353" }
+  accessed: { foreground: "#5ad4e6" }
+  created: { foreground: "#7bd88f" }
