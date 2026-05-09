@@ -5,12 +5,9 @@
     "height": 24,
     "spacing": 5,
     "modules-left": [
-      "custom/launcher",
-      "hyprland/window",
-      "custom/texttwo",
-      "custom/textthree",
-      "custom/textfour",
-      "custom/textfive"
+      "hyprland/workspaces",
+      "custom/separator",
+      "hyprland/window"
     ],
     "modules-center": [
       "sway/window"
@@ -22,7 +19,8 @@
       "cpu",
       "memory",
       "network",
-      "pulseaudio",
+      "bluetooth",
+      "wireplumber",
       "backlight",
       "keyboard-state",
       "battery",
@@ -30,12 +28,19 @@
       "tray",
       "clock"
     ],
+    "hyprland/workspaces": {
+      "active-only": true
+    },
     "hyprland/window": {
       "format": "{class}",
       "max-length": 20,
       "rewrite": {
         "^(?!.*\\S).*": "Finder"
       }
+    },
+    "custom/separator": {
+      "format": "|",
+      "tooltip": false
     },
     "custom/launcher": {
       "format": "🔍",
@@ -143,9 +148,9 @@
       "format-critical": "{icon} {temperatureC}°C",
       "format": "{icon} {temperatureC}°C",
       "format-icons": [
-        "󰈐",
-        "󰊵",
-        "󰸁"
+        "",
+        "",
+        ""
       ]
     },
     "backlight": {
@@ -168,34 +173,53 @@
         "critical": 15
       },
       "format": "{icon} {capacity}%",
-      "format-charging": "󰂄 {capacity}%",
-      "format-plugged": "󰣽 {capacity}%",
+      "format-charging": " {capacity}%",
+      "format-plugged": " {capacity}%",
       "format-alt": "{icon} {time}",
       "format-icons": [
-        "󰂎",
-        "󰂐",
-        "󰂒",
-        "󰂔",
-        "󰂚"
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
       ]
     },
     "battery#bat2": {
       "bat": "BAT2"
     },
     "network": {
-      "format-wifi": "{essid} ({signalStrength}%) ",
-      "format-ethernet": " {ifname}",
-      "tooltip-format": " {ifname} via {gwaddr}",
-      "format-linked": " {ifname} (No IP)",
-      "format-disconnected": "Disconnected ⚠ {ifname}",
-      "format-alt": " {ifname}: {ipaddr}/{cidr}"
+      "format-wifi": " ",
+      "format-ethernet": " ",
+      "format-linked": "󰖪 ",
+      "format-disconnected": "󰖪 ",
+      "tooltip-format-wifi": "{essid} - {ipaddr}",
+      "tooltip-format-ethernet": "Ethernet - {ipaddr}",
+      "tooltip-format-disconnected": "Disconnected",
+      "on-click": "kitty --class wlctl -e wlctl"
+    },
+    "wireplumber": {
+      "format": "{icon} {volume}%",
+      "format-muted": " ",
+      "format-icons": ["", " ", "  "],
+      "on-click": "pavucontrol",
+      "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+      "scroll-step": 5
+    },
+    "bluetooth": {
+      "format": "",
+      "format-disabled": "󰂲 ",
+      "format-connected": "󰂱 ",
+      "tooltip-format": "{controller_alias}\t{controller_address}",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "on-click": "kitty --class bluetui -e bluetui"
     },
     "pulseaudio": {
       "scroll-step": 5,
       "format": "{icon}  {volume}% {format_source}",
       "format-bluetooth": " {icon} {volume}% {format_source}",
       "format-bluetooth-muted": "  {icon} {format_source}",
-      "format-muted": "  {format_source}",
+      "format-muted": "   {format_source}",
       "format-source": " {volume}%",
       "format-source-muted": "",
       "format-icons": {

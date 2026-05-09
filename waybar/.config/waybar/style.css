@@ -20,7 +20,7 @@ tooltip label {
 #workspaces button {
   padding: 0 5px;
   background: transparent;
-  color: white;
+  color: #000000;
   border-bottom: 3px solid transparent;
 }
 
@@ -59,6 +59,12 @@ tooltip label {
   margin: 2px;
   padding-left: 4px;
   padding-right: 4px;
+  color: #000000;
+}
+
+#custom-separator {
+  margin-left: -3px;
+  margin-right: -3px;
   color: #000000;
 }
 
