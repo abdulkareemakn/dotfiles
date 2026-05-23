@@ -23,6 +23,10 @@
       {
           "path": "./md.json",
           "language": "markdown"
+      },
+      {
+          "path": "./typst.json",
+          "language": "typst"
       }
     ]
   }
