@@ -1,6 +1,6 @@
 return {
 	"nvim-mini/mini.pick",
-	enabled = true,
+	enabled = false,
 	version = false,
 
 	config = function()

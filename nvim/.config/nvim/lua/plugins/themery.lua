@@ -103,38 +103,38 @@ return {
 					-- 	before = [[vim.g.material_style="deep ocean"]],
 					-- },
 
-					-- {
-					-- 	name = "Monokai Pro",
-					-- 	colorscheme = "monokai-pro",
-					-- 	before = [[require("monokai-pro").setup({filter="pro"})]],
-					-- },
-					-- {
-					-- 	name = "Monokai Pro Octagon",
-					-- 	colorscheme = "monokai-pro",
-					-- 	before = [[require("monokai-pro").setup({filter="octagon"})]],
-					-- },
-					-- {
-					-- 	name = "Monokai Pro Machine",
-					-- 	colorscheme = "monokai-pro",
-					-- 	before = [[require("monokai-pro").setup({filter="machine"})]],
-					-- },
-					-- {
-					-- 	name = "Monokai Pro Ristretto",
-					-- 	colorscheme = "monokai-pro",
-					-- 	before = [[require("monokai-pro").setup({filter="ristretto"})]],
-					-- },
+					{
+						name = "Monokai Pro",
+						colorscheme = "monokai-pro",
+						before = [[require("monokai-pro").setup({filter="pro"})]],
+					},
+					{
+						name = "Monokai Pro Octagon",
+						colorscheme = "monokai-pro",
+						before = [[require("monokai-pro").setup({filter="octagon"})]],
+					},
+					{
+						name = "Monokai Pro Machine",
+						colorscheme = "monokai-pro",
+						before = [[require("monokai-pro").setup({filter="machine"})]],
+					},
+					{
+						name = "Monokai Pro Ristretto",
+						colorscheme = "monokai-pro",
+						before = [[require("monokai-pro").setup({filter="ristretto"})]],
+					},
 
-					-- {
-					-- 	name = "Monokai Pro Spectrum",
-					-- 	colorscheme = "monokai-pro",
-					-- 	before = [[require("monokai-pro").setup({filter="spectrum"})]],
-					-- },
+					{
+						name = "Monokai Pro Spectrum",
+						colorscheme = "monokai-pro",
+						before = [[require("monokai-pro").setup({filter="spectrum"})]],
+					},
 
-					-- {
-					-- 	name = "Monokai Classic",
-					-- 	colorscheme = "monokai-pro",
-					-- 	before = [[require("monokai-pro").setup({filter="classic"})]],
-					-- },
+					{
+						name = "Monokai Classic",
+						colorscheme = "monokai-pro",
+						before = [[require("monokai-pro").setup({filter="classic"})]],
+					},
 
 					-- { name = "Nord", colorscheme = "nord" },
 
@@ -163,15 +163,21 @@ return {
 	},
 
 	{
-		-- Lua
 		"f-person/auto-dark-mode.nvim",
+		enabled = false,
 		opts = {
 			{
 				set_dark_mode = function()
 					vim.api.nvim_set_option_value("background", "dark", {})
+					-- require("monokai-pro").setup({ filter = "spectrum" })
+					-- vim.cmd.colorscheme("monokai-pro")
 				end,
 				set_light_mode = function()
-					vim.api.nvim_set_option_value("background", "light", {})
+					vim.api.nvim_set_option_value("background", "light", {
+						vim.cmd.colorscheme("catppuccin-latte"),
+					})
+					-- require("monokai-pro").setup({ filter = "spectrum" })
+					-- vim.cmd.colorscheme("catppuccin-latte")
 				end,
 				update_interval = 3000,
 				fallback = "dark",
