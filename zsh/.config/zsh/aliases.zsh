@@ -30,6 +30,8 @@ alias nv="nvim"
 
 alias md="mkdir -pv"
 
+alias rm="trash"
+
 # pacman aliases
 alias upgrade="sudo pacman -Syu"
 alias install="sudo pacman -S"
@@ -56,6 +58,7 @@ alias dcd="docker compose down"
 alias dcl="docker compose logs"
 alias dcp="docker compose pull"
 alias dcps="docker compose ps"
+alias dcr="docker compose restart"
 
 alias cd="z"
 

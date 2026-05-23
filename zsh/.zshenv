@@ -6,13 +6,13 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export TERMINAL=kitty
 export EDITOR=nvim
 export PAGER="bat --plain"
-export BROWSER=firefox
 
 export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
 
 export BUN_INSTALL="$HOME/.bun"
 export GOPATH="$HOME/go"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 
-path=("$HOME/bin" "$HOME/.cargo/bin" "$HOME/.local/bin" "$BUN_INSTALL/bin" $path "$HOME/go/bin")
+path=("$HOME/bin" "$HOME/.cargo/bin" "$HOME/.local/bin" "$BUN_INSTALL/bin" "$PNPM_HOME" $path "$HOME/go/bin")
 
 export ELECTRON_OZONE_PLATFORM_HINT=wayland

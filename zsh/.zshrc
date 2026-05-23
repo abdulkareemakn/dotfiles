@@ -11,13 +11,10 @@ source "$HOME/.config/zsh/aliases.zsh"
 
 source "$HOME/.config/zsh/completion.zsh"
 
-source "$HOME/.config/zsh/copyfile.plugin.zsh"
 source "$HOME/.config/zsh/extract.plugin.zsh"
 source "$HOME/.config/zsh/copybuffer.plugin.zsh"
 
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
-
-# Environment Variables
 
 autoload -U compinit && compinit
 
@@ -92,9 +89,6 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/prompt.omp.toml)"
 # # Initialize to insert mode
 # export VI_MODE="I"
 
-# uv
-# eval "$(uv generate-shell-completion zsh)"
-
 source <(fzf --zsh)
 
 # yazi
@@ -143,10 +137,6 @@ please() {
 #     g++ -Wall "$1" -o "${1%.cpp}" && ./"${1%.cpp}"
 # }
 # compdef '_files -g "*.cpp"' build
-
-music() {
-    mpv $(yt-dlp -f bestaudio --get-url "$1")
-}
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
