@@ -5,18 +5,17 @@ hl.monitor({ output = "", mode = "preferred", position = "auto", scale = "1.2" }
 local terminal = "kitty"
 local fileManager = "nautilus"
 local menu = "vicinae"
+local bar = "waybar"
 
 hl.on("hyprland.start", function()
 	hl.exec_cmd("darkman run")
 
 	hl.exec_cmd("vicinae server")
 
-	hl.exec_cmd("qs -c noctalia-shell")
-
-	hl.exec_cmd("awww-daemon & awww img ~/Pictures/snow-night-moon.png --transition-type none")
-	-- hl.exec_cmd("waybar")
+	hl.exec_cmd("awww-daemon & awww img ~/Pictures/wallpaper.png --transition-type none")
+	hl.exec_cmd(bar)
 	hl.exec_cmd("clipse -listen")
-	-- hl.exec_cmd("mako")
+	hl.exec_cmd("swaync")
 	hl.exec_cmd("playerctld")
 
 	hl.exec_cmd("hyprctl setcursor capitaine-cursors-light 24")
@@ -26,6 +25,8 @@ end)
 
 hl.env("HYPRCURSOR_SIZE", 24)
 hl.env("XCURSOR_SIZE", 24)
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+hl.env("ELECTRON_ENABLE_WAYLAND", 1)
 
 hl.config({
 	general = {

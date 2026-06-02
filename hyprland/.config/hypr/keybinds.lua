@@ -11,8 +11,8 @@ hl.bind(mainMod .. " + U", hl.dsp.window.float({ action = "toggle" }))
 
 -- Launchers
 -- hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("~/.config/rofi/scripts/launcher_t4"))
-hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("vicinae toggle"))
--- hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("rofi -show drun"))
+-- hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("vicinae toggle"))
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("rofi -show drun"))
 -- hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("fuzzel"))
 
 -- Dwindle layouts

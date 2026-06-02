@@ -11,8 +11,9 @@ export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
 
 export BUN_INSTALL="$HOME/.bun"
 export GOPATH="$HOME/go"
-export PNPM_HOME="$HOME/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm/"
 
 path=("$HOME/bin" "$HOME/.cargo/bin" "$HOME/.local/bin" "$BUN_INSTALL/bin" "$PNPM_HOME" $path "$HOME/go/bin")
 
-export ELECTRON_OZONE_PLATFORM_HINT=wayland
+export ELECTRON_ENABLE_WAYLAND=1
+export ELECTRON_OZONE_PLATFORM_HINT=auto
