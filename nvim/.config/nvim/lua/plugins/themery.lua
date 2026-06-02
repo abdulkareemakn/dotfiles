@@ -2,7 +2,7 @@ return {
 	{
 		"zaldih/themery.nvim",
 		lazy = false,
-		enabled = true,
+		enabled = false,
 		config = function()
 			require("themery").setup({
 				themes = {
@@ -168,16 +168,12 @@ return {
 		opts = {
 			{
 				set_dark_mode = function()
-					vim.api.nvim_set_option_value("background", "dark", {})
-					-- require("monokai-pro").setup({ filter = "spectrum" })
-					-- vim.cmd.colorscheme("monokai-pro")
+					vim.o.background = "dark"
+					vim.cmd.colorscheme("tokyonight-storm")
 				end,
 				set_light_mode = function()
-					vim.api.nvim_set_option_value("background", "light", {
-						vim.cmd.colorscheme("catppuccin-latte"),
-					})
-					-- require("monokai-pro").setup({ filter = "spectrum" })
-					-- vim.cmd.colorscheme("catppuccin-latte")
+					vim.o.background = "light"
+					vim.cmd.colorscheme("catppuccin-latte")
 				end,
 				update_interval = 3000,
 				fallback = "dark",
