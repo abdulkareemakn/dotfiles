@@ -26,6 +26,7 @@ return {
 			cpp = { "clang-format" },
 			sh = { "shfmt" },
 			sql = { "pg_format" },
+			json = { "jq" },
 		},
 		-- Set default options
 		default_format_opts = {
