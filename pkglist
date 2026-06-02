@@ -1,5 +1,7 @@
 7zip
+ab-download-manager-bin
 amberol
+antigravity-cli
 avahi
 awww
 backrest
@@ -14,6 +16,7 @@ bluez-utils
 bottom
 brave-origin-beta-bin
 brightnessctl
+bruno-bin
 btop
 btrfs-progs
 bun
@@ -32,7 +35,6 @@ downgrade
 dua-cli
 duf
 efibootmgr
-epy-ereader-git
 equibop-bin
 eza
 fakeroot
@@ -42,6 +44,7 @@ firefox
 flac
 flameshot
 flatpak
+fnm
 foliate
 fuzzel
 fzf
@@ -54,10 +57,9 @@ glow
 gnome-clocks
 gnome-keyring
 go
-golazo-bin
-google-chrome
 gopls
 grim
+gron
 grub
 hyprcursor
 hypridle
@@ -75,7 +77,6 @@ jdk-openjdk
 jdtls
 jetbrains-toolbox
 jq
-kanata-bin
 keepassxc
 kitty
 lazydocker
@@ -99,10 +100,11 @@ namcap
 neovim
 nerdfetch
 networkmanager
-noctalia-shell
 noto-fonts
 noto-fonts-emoji
+obs-studio
 oh-my-posh
+onefetch
 onlyoffice-bin
 opencode
 openssh
@@ -119,15 +121,12 @@ paru
 paru-debug
 pavucontrol
 pgformatter
-picard
 pipewire
 pipewire-pulse
-planify
 pnpm
 postgresql
 prismlauncher
 python-pip
-qbittorrent
 rclone
 reflector
 resvg
@@ -144,13 +143,15 @@ speedtest-cli
 spotiflac-bin
 stow
 stylua
+swaync
 tailscale
-terax
 tinymist
 tlp
 tlp-rdw
 topgrade
-trantor
+transmission-cli
+transmission-gtk
+trash-cli
 tree-sitter-cli
 ttf-cascadia-code-nerd
 ttf-ibm-plex
@@ -166,7 +167,6 @@ ufw
 unrar
 unzip
 uv
-vicinae-bin
 vim
 visual-studio-code-bin
 vlc
@@ -176,7 +176,6 @@ vulkan-intel
 waybar
 wget
 wireplumber
-wireshark-qt
 wl-clipboard
 wlctl-bin
 wlogout
@@ -186,6 +185,7 @@ yaml-language-server
 yay
 yazi
 yt-dlp
+zen-browser-bin
 zoxide
 zsh
 zsh-autosuggestions
